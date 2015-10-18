@@ -1,0 +1,1 @@
+v2.0, 05/12/2012 -- Initial release of rewrite for Python 3.x

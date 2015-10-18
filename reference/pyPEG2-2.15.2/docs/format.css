@@ -1,0 +1,175 @@
+html {
+    background-color: brightwhite;
+}
+
+.mark {
+        background:#ffff80;
+}
+
+.red {
+        background:#ffc0c0;
+}
+
+.green {
+        background:#c0ffc0;
+}
+
+.blue {
+        background:#c0c0ff;
+}
+
+.orange {
+        background:#ffe0c0;
+}
+
+#python1 {
+    position: absolute;
+    top: 40px; left: 910px;
+    width: 200px;
+    background: #f0f0f0;
+    font-size: 12pt;
+    font-weight: normal;
+    padding: 10px;
+}
+
+body {
+    counter-reset: chapter;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    width: 900px;
+    min-height: 768px;
+    background-color: white;
+    font-family: Sans-serif;
+    font-size: 12pt;
+}
+
+em {
+    color: darkblue;
+    font-weight: bold;
+    font-style: normal;
+}
+
+code, pre {
+    white-space: pre;
+    background: #f0f0f0;
+    font-size: 11pt;
+    line-height: 120%;
+    vertical-align: 2%;
+}
+
+#headline {
+    color: black;
+    font-size: 18pt;
+    font-weight: normal;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    padding: 10px;
+}
+
+table.glossary {
+    padding: 0;
+    border-collapse: collapse;
+    border: none;
+}
+
+td.glossary {
+    vertical-align: baseline;
+    margin: 0;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    border: solid gray 1px;
+    border-spacing: 0;
+}
+
+#navigation {
+    position: relative;
+    float: right;
+    width: 200px;
+    border-left-width: 1px;
+    border-left-style: dotted;
+    padding: 10px;
+    font-size: 10pt;
+}
+
+.head {
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+#entries {
+    width: 569px;
+    padding: 10px;
+}
+
+.statusline {
+    width: 569px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 10pt;
+}
+
+#bottom {
+    clear: both;
+    color: grey;
+    padding: 10px;
+}
+
+#entries h1:before {
+    counter-increment: chapter;
+    content: counter(chapter) ". ";
+}
+
+h1 {
+    counter-reset: section;
+}
+
+h2 {
+    counter-reset: subsection;
+}
+
+h2:before {
+    counter-increment: section;
+    content: counter(chapter) "." counter(section) " ";
+}
+
+h1, h2 {
+    font-size: 12pt;
+    color: darkblue;
+}
+
+h3:before {
+    counter-increment: subsection;
+    content: counter(chapter) "." counter(section) "." counter(subsection) " ";
+}
+
+h3 {
+    font-size: 12pt;
+    color: black;
+}
+
+h4 {
+    font-size: 12pt;
+    color: black;
+}
+
+h5 {
+    font-size: 12pt;
+    font-weight: normal;
+    font-style: italic;
+    color: black;
+}
+
+.subscript {
+    font-size: 10pt;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+}
+
+.small {
+    font-size: 10pt;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+}

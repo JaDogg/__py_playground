@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head><title>pyPEG – Grammar Elements</title><meta content="text/html;charset=UTF-8" http-equiv="Content-Type"/><link href="format.css" type="text/css" rel="stylesheet"/></head><body style="counter-reset: chapter 1;"><a name="top"/><div id="headline"><p>pyPEG – a PEG Parser-Interpreter in Python</p><div class="small">pyPEG 2.15.0 of Fr Jan 10 2014 – Copyleft 2009-2014, <a href="http://fdik.org">Volker Birk</a></div><div id="python1"><p>Requires Python 3.x or 2.7<br/>
+Older versions: <a href="http://fdik.org/pyPEG1">pyPEG 1.x</a>
+</p></div></div><div id="navigation"><p class="head"><a href="index.html">How to use pyPEG</a></p><div class="contents"><menu><li><em><a href="index.html#installation">Installation</a></em></li><li><em><a href="index.html#parsing">Parsing text with pyPEG</a></em></li><li><em><a href="index.html#composing">Composing text</a></em></li><li><a href="index.html#indenting">Indenting text</a></li><li><a href="index.html#usercallbacks">User defined Callback Functions</a></li><li><em><a href="index.html#xmlout">XML output</a></em></li></menu></div><p class="head"><a href="grammar_elements.html">Grammar Elements</a></p><div class="contents"><menu><li><em><a href="grammar_elements.html#basic">Basic Grammar Elements</a></em></li><li><a href="grammar_elements.html#literals">str instances and Literal</a></li><li><a href="grammar_elements.html#regex">Regular Expressions</a></li><li><a href="grammar_elements.html#tuple">tuple instances and Concat</a></li><li><a href="grammar_elements.html#lists">list instances</a></li><li><a href="grammar_elements.html#none">Constant None</a></li><li><em><a href="grammar_elements.html#goclasses">Grammar Element Classes</a></em></li><li><a href="grammar_elements.html#symbol">Class Symbol</a></li><li><a href="grammar_elements.html#keyword">Class Keyword</a></li><li><a href="grammar_elements.html#list">Class List</a></li><li><a href="grammar_elements.html#namespace">Class Namespace</a></li><li><a href="grammar_elements.html#enum">Class Enum</a></li><li><em><a href="grammar_elements.html#ggfunc">Grammar generator functions</a></em></li><li><a href="grammar_elements.html#some">Function some()</a></li><li><a href="grammar_elements.html#maybesome">Function maybe_some()</a></li><li><a href="grammar_elements.html#optional">Function optional()</a></li><li><a href="grammar_elements.html#csl">Function csl()</a></li><li><a href="grammar_elements.html#attr">Function attr()</a></li><li><a href="grammar_elements.html#flag">Function flag()</a></li><li><a href="grammar_elements.html#name">Function name()</a></li><li><a href="grammar_elements.html#ignore">Function ignore()</a></li><li><a href="grammar_elements.html#indent">Function indent()</a></li><li><a href="grammar_elements.html#contiguous">Function contiguous()</a></li><li><a href="grammar_elements.html#separated">Function separated()</a></li><li><a href="grammar_elements.html#omit">Function omit()</a></li><li><em><a href="grammar_elements.html#callbacks">Callback functions</a></em></li><li><a href="grammar_elements.html#blank">Callback function blank()</a></li><li><a href="grammar_elements.html#endl">Callback function endl()</a></li><li><a href="grammar_elements.html#udcf">User defined callback functions</a></li><li><em><a href="grammar_elements.html#common">Common class methods for grammar elements</a></em></li><li><a href="grammar_elements.html#override_parse">parse() class method of a grammar element</a></li><li><a href="grammar_elements.html#override_compose">compose() method of a grammar element</a></li></menu></div><p class="head"><a href="parser_engine.html">Parser Engine</a></p><div class="contents"><menu><li><em><a href="parser_engine.html#parser">Class Parser</a></em></li><li><a href="parser_engine.html#parser_vars">Instance variables</a></li><li><a href="parser_engine.html#parser_init">Method __init__()</a></li><li><a href="parser_engine.html#parser_clear_memory">Method clear_memory()</a></li><li><a href="parser_engine.html#parser_parse">Method parse()</a></li><li><a href="parser_engine.html#parser_compose">Method compose()</a></li><li><a href="parser_engine.html#gen_syntax_error">Method generate_syntax_error()</a></li><li><em><a href="parser_engine.html#convenience">Convenience functions</a></em></li><li><a href="parser_engine.html#parse">Function parse()</a></li><li><a href="parser_engine.html#compose">Function compose()</a></li><li><a href="parser_engine.html#attributes">Function attributes()</a></li><li><a href="parser_engine.html#howmany">Function how_many()</a></li><li><em><a href="parser_engine.html#errors">Exceptions</a></em></li><li><a href="parser_engine.html#gerror">GrammarError</a></li><li><a href="parser_engine.html#getype">GrammarTypeError</a></li><li><a href="parser_engine.html#gevalue">GrammarValueError</a></li></menu></div><p class="head"><a href="xml_backend.html">XML Backend</a></p><div class="contents"><menu><li><em><a href="xml_backend.html#workhorses">etree functions</a></em></li><li><a href="xml_backend.html#create_tree">Function create_tree()</a></li><li><a href="xml_backend.html#create_thing">Function create_thing()</a></li><li><em><a href="xml_backend.html#xmlconvenience">XML convenience functions</a></em></li><li><a href="xml_backend.html#thing2xml">Function thing2xml()</a></li><li><a href="xml_backend.html#xml2thing">Function xml2thing()</a></li></menu></div><p class="head">I want this!</p><menu><li><a href="http://fdik.org/pyPEG2/pyPEG2.tar.gz"><strong>Download pyPEG 2</strong></a></li><li><a href="LICENSE.txt">License</a></li><li><a href="https://bitbucket.org/fdik/pypeg/">Bitbucket Repository</a></li><li><a href="http://fdik.org/yml">YML is using pyPEG</a></li><li><a href="http://fdik.org/iec2xml/">The IEC 61131-3 Structured Text to XML Compiler is using pyPEG</a></li><li><a href="http://fdik.org/pyPEG1">pyPEG version 1.x</a></li></menu></div><div id="entries"><h1 id="gelements">Grammar Elements</h1><p><em>Caveat</em>: pyPEG 2.x is written for Python 3. That means, it accepts
+Unicode strings only.  You can use it with Python 2.7 by writing
+<code>u'string'</code> instead of <code>'string'</code> or with the following import (you
+don't need that for Python 3):
+</p><pre><code>from __future__ import unicode_literals
+</code></pre><p>The samples in this documentation are written for Python 3, too. To
+execute them with Python 2.7, you'll need this import:
+</p><pre><code>from __future__ import print_function
+</code></pre><p>pyPEG 2.x supports new-style classes only.
+</p><h2 id="basic">Basic Grammar Elements</h2><h3 id="literals">str instances and Literal</h3><h4>Parsing</h4><p>A <code>str</code> instance as well as an instance of <code>pypeg2.Literal</code> is parsed
+in the source text as a
+<a href="https://en.wikipedia.org/wiki/Terminal_and_nonterminal_symbols">Terminal Symbol</a>.
+It is removed and no result is put into the <a href="https://en.wikipedia.org/wiki/Abstract syntax tree">Abstract syntax tree</a>.
+If it does not exist at the correct position in the source text,
+a <code>SyntaxError</code> is raised.
+</p><p>Example:</p><pre><code>&gt;&gt;&gt; class Key(str):
+...     grammar = name(), <span class="mark">"="</span>, restline, endl
+... 
+&gt;&gt;&gt; k = parse("this=something", Key)
+&gt;&gt;&gt; k.name
+Symbol('this')
+&gt;&gt;&gt; k
+'something'
+</code></pre><h4>Composing</h4><p><code>str</code> instances and <code>pypeg2.Literal</code> instances are being output
+literally.
+</p><p>Example:</p><pre><code>&gt;&gt;&gt; class Key(str):
+...     grammar = name(), <span class="mark">"="</span>, restline, endl
+... 
+&gt;&gt;&gt; k = Key("a value")
+&gt;&gt;&gt; k.name = Symbol("give me")
+&gt;&gt;&gt; compose(k)
+'give me<span class="mark">=</span>a value\n'
+</code></pre><h3 id="regex">Regular Expressions</h3><h4>Parsing</h4><p><em>pyPEG</em> uses Python's <code>re</code> module. You can use
+<a href="http://docs.python.org/py3k/library/re.html#re-objects">Python Regular Expression Objects</a> purely, or use
+the <code>pypeg2.RegEx</code> encapsulation.  Regular Expressions are parsed as
+<a href="https://en.wikipedia.org/wiki/Terminal_and_nonterminal_symbols">Terminal Symbols</a>. The matching 
+result is put into the AST. If no match can be achieved, a 
+<code>SyntaxError</code> is raised.
+</p><p><em>pyPEG</em> predefines different RegEx objects:
+</p><table class="glossary"><tr><td class="glossary"><p><code>word = re.compile(r"\w+")</code></p></td><td class="glossary"><p>Regular expression for scanning a word.</p></td></tr><tr><td class="glossary"><p><code>restline = re.compile(r".*")</code></p></td><td class="glossary"><p>Regular expression for rest of line.</p></td></tr><tr><td class="glossary"><p><code>whitespace = re.compile("(?m)\s+")</code></p></td><td class="glossary"><p>Regular expression for scanning whitespace.</p></td></tr><tr><td class="glossary"><p><code>comment_sh  = re.compile(r"\#.*")</code></p></td><td class="glossary"><p>Shell script style comment.</p></td></tr><tr><td class="glossary"><p><code>comment_cpp = re.compile(r"//.*")</code></p></td><td class="glossary"><p>C++ style comment.</p></td></tr><tr><td class="glossary"><p><code>comment_c   = re.compile(r"(?m)/\*.*?\*/")</code></p></td><td class="glossary"><p>C style comment without nesting.</p></td></tr><tr><td class="glossary"><p><code>comment_pas = re.compile(r"(?m)\(\*.*?\*\)")</code></p></td><td class="glossary"><p>Pascal style comment without nesting.</p></td></tr></table><p>Example:</p><pre><code>&gt;&gt;&gt; class Key(str):
+...     grammar = name(), "=", <span class="mark">restline</span>, endl
+... 
+&gt;&gt;&gt; k = parse("this=something", Key)
+&gt;&gt;&gt; k.name
+Symbol('this')
+&gt;&gt;&gt; k
+<span class="mark">'something'</span>
+</code></pre><h4>Composing</h4><p>For <code>RegEx</code> objects their corresponding value in the AST will be
+output. If this value does not match the <code>RegEx</code> a <code>ValueError</code> is raised.
+</p><p>Example:</p><pre><code>&gt;&gt;&gt; class Key(str):
+...     grammar = name(), "=", <span class="mark">restline</span>, endl
+... 
+&gt;&gt;&gt; k = Key(<span class="mark">"a value"</span>)
+&gt;&gt;&gt; k.name = Symbol("give me")
+&gt;&gt;&gt; compose(k)
+'give me=<span class="mark">a value\n</span>'
+</code></pre><h3 id="tuple">tuple instances and Concat</h3><h4>Parsing</h4><p>A <code>tuple</code> or an instance of <code>pypeg2.Concat</code> specifies, that different
+things have to be parsed one after another. If not all of them parse in
+their sequence, a <code>SyntaxError</code> is raised.
+</p><p>Example:</p><pre><code>&gt;&gt;&gt; class Key(str):
+...     grammar = name()<span class="mark">, </span>"="<span class="mark">, </span>restline<span class="mark">, </span>endl
+... 
+&gt;&gt;&gt; k = parse("this=something", Key)
+&gt;&gt;&gt; k.name
+Symbol('this')
+&gt;&gt;&gt; k
+'something'
+</code></pre><p>In a <code>tuple</code> there may be integers preceding another thing in the
+<code>tuple</code>. These integers represent a cardinality. For example, to parse
+three times a <code>word</code>, you can have as a <code>grammar</code>:
+</p><pre><code>grammar = word, word, word
+</code></pre><p>or:</p><pre><code>grammar = 3, word
+</code></pre><p>which is equivalent. There are special cardinality values:</p><table class="glossary"><tr><td class="glossary"><p><code>-2, thing</code></p></td><td class="glossary"><p><code>some(thing)</code>; this represents the plus cardinality, +</p></td></tr><tr><td class="glossary"><p><code>-1, thing</code></p></td><td class="glossary"><p><code>maybe_some(thing)</code>; this represents the asterisk cardinality, *</p></td></tr><tr><td class="glossary"><p><code>0, thing</code></p></td><td class="glossary"><p><code>optional(thing)</code>; this represents the question mark cardinality, ?</p></td></tr></table><p>The special cardinality values can be generated with the
+<a href="#some">Cardinality Functions</a>. Other negative values are reserved
+and may not be used.
+</p><h4>Composing</h4><p>For <code>tuple</code> instances and instances of <code>pypeg2.Concat</code> all attributes of
+the corresponding thing (and elements of the corresponding collection
+if that applies) in the AST will be composed and the result is
+concatenated.
+</p><p>Example:</p><pre><code>&gt;&gt;&gt; class Key(str):
+...     grammar = name()<span class="mark">, </span>"="<span class="mark">, </span>restline<span class="mark">, </span>endl
+... 
+&gt;&gt;&gt; k = Key("a value")
+&gt;&gt;&gt; k.name = Symbol("give me")
+&gt;&gt;&gt; compose(k)
+<span class="mark">'give me=a value\n'</span>
+</code></pre><h3 id="lists">list instances</h3><h4>Parsing</h4><p>A <code>list</code> instance which is not derived from <code>pypeg2.Concat</code> represents
+different options. They're tested in their sequence. The first option
+which parses is chosen, the others are not tested any more. If none
+matches, a <code>SyntaxError</code> is raised.
+</p><p>Example:</p><pre><code>&gt;&gt;&gt; number = re.compile(r"\d+")
+&gt;&gt;&gt; parse("hello", <span class="mark">[number, word]</span>)
+'hello'
+</code></pre><h4>Composing</h4><p>The elements of the <code>list</code> are tried out in their sequence, if one of
+them can be composed. If none can a <code>ValueError</code> is raised.
+</p><p>Example:</p><pre><code>&gt;&gt;&gt; letters = re.compile(r"[a-zA-Z]")
+&gt;&gt;&gt; number = re.compile(r"\d+")
+&gt;&gt;&gt; compose(23, <span class="mark">[letters, number]</span>)
+'23'
+</code></pre><h3 id="none">Constant None</h3><p><code>None</code> parses to nothing. And it composes to nothing. It represents
+the no-operation value.
+</p><h2 id="goclasses">Grammar Element Classes</h2><h3 id="symbol">Class Symbol</h3><h4>Class definition</h4><p><code>Symbol(str)</code></p><p>Used to scan a <code>Symbol</code>.</p><p>If you're putting a <code>Symbol</code> somewhere in your <code>grammar</code>, then
+<code>Symbol.regex</code> is used to scan while parsing. The result will be a
+<code>Symbol</code> instance. Optionally it is possible to check that a <code>Symbol</code>
+instance will not be identical to any <code>Keyword</code> instance.  This can be
+helpful if the source language forbids that.
+</p><p>A class which is derived from <code>Symbol</code> can have an <code>Enum</code> as its
+<code>grammar</code> only. Other values for its <code>grammar</code> are forbidden and will
+raise a <code>TypeError</code>. If such an <code>Enum</code> is specified, each parsed value
+will be checked if being a member of this <code>Enum</code> additionally to the
+<code>RegEx</code> matching.
+</p><h4>Class variables</h4><table class="glossary"><tr><td class="glossary"><p><code>regex</code></p></td><td class="glossary"><p>regular expression to scan, default <code>re.compile(r"\w+")</code></p></td></tr><tr><td class="glossary"><p><code>check_keywords</code></p></td><td class="glossary"><p>flag if a <code>Symbol</code> has to be checked for not being a <code>Keyword</code>; default: <code>False</code></p></td></tr></table><h4>Instance variables</h4><table class="glossary"><tr><td class="glossary"><p><code>name</code></p></td><td class="glossary"><p>name of the <code>Keyword</code> as <code>str</code> instance</p></td></tr></table><h4>Method <code>__init__(self, name, namespace=None)</code></h4><p>Construct a <code>Symbol</code> with that <code>name</code> in <code>namespace</code>.</p><h5>Raises:</h5><table class="glossary"><tr><td class="glossary"><p><code>ValueError</code></p></td><td class="glossary"><p>if <code>check_keywords</code> is <code>True</code> and value is identical to a <code>Keyword</code></p></td></tr><tr><td class="glossary"><p><code>TypeError</code></p></td><td class="glossary"><p>if <code>namespace</code> is given and not an instance of <code>Namespace</code></p></td></tr></table><h4>Parsing</h4><p>Parsing a <code>Symbol</code> is done by scanning with <code>Symbol.regex</code>. In our
+example we're using the <code>name()</code> function, which is often used to parse
+a <code>Symbol</code>. <code>name()</code> equals to <code>attr("name", Symbol)</code>.
+</p><p>Example:</p><pre><code>&gt;&gt;&gt; <span class="mark">Symbol.regex = re.compile(r"[\w\s]+")</span>
+&gt;&gt;&gt; class Key(str):
+...     grammar = <span class="mark">name()</span>, "=", restline, endl
+...
+&gt;&gt;&gt; k = parse("this one=foo bar", Key)
+&gt;&gt;&gt; k.name
+<span class="mark">Symbol('this one')</span>
+&gt;&gt;&gt; k
+'foo bar'
+</code></pre><h4>Composing</h4><p>Composing a <code>Symbol</code> is done by converting it to text.</p><p>Example:</p><pre><code>&gt;&gt;&gt; k.name = <span class="mark">Symbol("that one")</span>
+&gt;&gt;&gt; compose(k)
+'<span class="mark">that one</span>=foo bar'
+</code></pre><h3 id="keyword">Class Keyword</h3><h4>Class definition</h4><p><code>Keyword(Symbol)</code></p><p>Used to access the keyword table.</p><p>The <code>Keyword</code> class is meant to be instanciated for each <code>Keyword</code> of
+the source language. The class holds the keyword table as a <code>Namespace</code>
+instance. There is the abbreviation <code>K</code> for <code>Keyword</code>. The latter is
+useful for instancing keywords.
+</p><h4>Class variables</h4><table class="glossary"><tr><td class="glossary"><p><code>regex</code></p></td><td class="glossary"><p>regular expression to scan; default <code>re.compile(r"\w+")</code></p></td></tr><tr><td class="glossary"><p><code>table</code></p></td><td class="glossary"><p><code>Namespace</code> with keyword table</p></td></tr></table><h4>Instance variables</h4><table class="glossary"><tr><td class="glossary"><p><code>name</code></p></td><td class="glossary"><p>name of the <code>Keyword</code> as <code>str</code> instance</p></td></tr></table><h4>Method <code>__init__(self, keyword)</code></h4><p>Adds <code>keyword</code> to the keyword table.</p><h4>Parsing</h4><p>When a <code>Keyword</code> instance is parsed, it is removed and nothing is put
+into the resulting AST. When a <code>Keyword</code> class is parsed, an
+instance is created and put into the AST.
+</p><p>Example:</p><pre><code>&gt;&gt;&gt; class <span class="mark">Type(Keyword)</span>:
+...     grammar = <span class="mark">Enum( K("int"), K("long") )</span>
+... 
+&gt;&gt;&gt; k = parse("long", <span class="mark">Type</span>)
+&gt;&gt;&gt; k.name
+'long'
+</code></pre><h4>Composing</h4><p>When a <code>Keyword</code> instance is in a <code>grammar</code>, it is converted into a
+<code>str</code> instance, and the resulting text is added to the result. When a
+<code>Keyword</code> class is in the <code>grammar</code>, the correspoding instance in the
+AST is converted into a <code>str</code> instance and added to the result.
+</p><p>Example:</p><pre><code>&gt;&gt;&gt; k = <span class="mark">K("do")</span>
+&gt;&gt;&gt; compose(k)
+'do'
+</code></pre><h3 id="list">Class List</h3><h4>Class definition</h4><p><code>List(list)</code></p><p>A List of things.</p><p>A <code>List</code> is a collection for parsed things. It can be used as a base class
+for collections in the <code>grammar</code>. If a <code>List</code> class has no class
+variable <code>grammar</code>, <code>grammar = csl(Symbol)</code> is assumed.
+</p><h4>Method <code>__init__(self, L=[], **kwargs)</code></h4><p>Construct a List, and construct its attributes from keyword
+arguments.
+</p><h4>Parsing</h4><p>A <code>List</code> is parsed by following its <code>grammar</code>. If a <code>List</code> is parsed,
+then all things which are parsed and which are not attributes are
+appended to the <code>List</code>.
+</p><p>Example:</p><pre><code>&gt;&gt;&gt; class Instruction(str): pass
+...
+&gt;&gt;&gt; class <span class="mark">Block(List)</span>:
+...     grammar = "{", maybe_some(Instruction), "}"
+... 
+&gt;&gt;&gt; b = parse("{ <span class="mark">hello world</span> }", <span class="mark">Block</span>)
+&gt;&gt;&gt; b<span class="mark">[0]</span>
+'hello'
+&gt;&gt;&gt; b<span class="mark">[1]</span>
+'world'
+&gt;&gt;&gt; 
+</code></pre><h4>Composing</h4><p>If a <code>List</code> is composed, then its grammar is followed and composed.
+</p><p>Example:</p><pre><code>&gt;&gt;&gt; class Instruction(str): pass
+... 
+&gt;&gt;&gt; class <span class="mark">Block(List)</span>:
+...     grammar = "{", blank, csl(Instruction), blank, "}"
+... 
+&gt;&gt;&gt; b = Block()
+&gt;&gt;&gt; b.<span class="mark">append(Instruction("hello"))</span>
+&gt;&gt;&gt; b.<span class="mark">append(Instruction("world"))</span>
+&gt;&gt;&gt; compose(b)
+'{ hello, world }'
+</code></pre><h3 id="namespace">Class Namespace</h3><h4>Class definition</h4><p><code>Namespace(_UserDict)</code></p><p>A dictionary of things, indexed by their name.</p><p>A Namespace holds an <code>OrderedDict</code> mapping the <code>name</code> attributes of the
+collected things to their respective representation instance. Unnamed
+things cannot be collected with a <code>Namespace</code>.
+</p><h4>Method <code>__init__(self, *args, **kwargs)</code></h4><p>Initialize an OrderedDict containing the data of the Namespace.
+Arguments are put into the Namespace, keyword arguments give the
+attributes of the Namespace.
+</p><h4>Parsing</h4><p>A <code>Namespace</code> is parsed by following its <code>grammar</code>. If a <code>Namespace</code> is
+parsed, then all things which are parsed and which are not attributes
+are appended to the <code>Namespace</code> and indexed by their <code>name</code>
+attribute.
+</p><p>Example:</p><pre><code>&gt;&gt;&gt; Symbol.regex = re.compile(r"[\w\s]+")
+&gt;&gt;&gt; class Key(str):
+...     grammar = <span class="mark">name()</span>, "=", restline, endl
+... 
+&gt;&gt;&gt; class Section(<span class="mark">Namespace</span>):
+...     grammar = "[", <span class="mark">name()</span>, "]", endl, maybe_some(Key)
+... 
+&gt;&gt;&gt; class IniFile(<span class="mark">Namespace</span>):
+...     grammar = some(Section)
+... 
+&gt;&gt;&gt; ini_file_text = """[Number 1]
+... this=something
+... that=something else
+... [Number 2]
+... once=anything
+... twice=goes
+... """
+&gt;&gt;&gt; ini_file = parse(ini_file_text, IniFile)
+&gt;&gt;&gt; ini_file<span class="mark">["Number 2"]["once"]</span>
+'anything'
+</code></pre><h4>Composing</h4><p>If a <code>Namespace</code> is composed, then its grammar is followed and
+composed.
+</p><p>Example:</p><pre><code>&gt;&gt;&gt; ini_file<span class="mark">["Number 1"]["that"]</span> = Key("new one")
+&gt;&gt;&gt; ini_file<span class="mark">["Number 3"]</span> = Section()
+&gt;&gt;&gt; print(<span class="mark">compose(ini_file)</span>)
+[Number 1]
+this=something
+that=new one
+[Number 2]
+once=anything
+twice=goes
+[Number 3]
+</code></pre><h3 id="enum">Class Enum</h3><h4>Class definition</h4><p><code>Enum(Namespace)</code></p><p>A Namespace which is treated as an Enum. Enums can only contain
+<code>Keyword</code> or <code>Symbol</code> instances. An <code>Enum</code> cannot be modified after
+creation. An <code>Enum</code> is allowed as the grammar of a <code>Symbol</code> only.
+</p><h4>Method <code>__init__(self, *things)</code></h4><p>Construct an <code>Enum</code> using a <code>tuple</code> of things.</p><h4>Parsing</h4><p>An <code>Enum</code> is parsed as a selection for possible values for a <code>Symbol</code>.
+If a value is parsed which is not member of the <code>Enum</code>, a <code>SyntaxError</code>
+is raised.
+</p><p>Example:</p><pre><code>&gt;&gt;&gt; class Type(Keyword):
+...     grammar = <span class="mark">Enum( K("int"), K("long") )</span>
+... 
+&gt;&gt;&gt; parse("int", Type)
+Type('int')
+&gt;&gt;&gt; parse("string", Type)
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+  File "pypeg2/__init__.py", line 382, in parse
+    t, r = parser.parse(text, thing)
+  File "pypeg2/__init__.py", line 469, in parse
+    raise r
+  File "&lt;string&gt;", line 1
+    string
+    ^
+SyntaxError: 'string' is not a member of Enum([Keyword('int'),
+Keyword('long')])
+&gt;&gt;&gt; 
+</code></pre><h4>Composing</h4><p>When a <code>Symbol</code> is composed which has an <code>Enum</code> as its grammar, the
+composed value is checked if it is a member of the <code>Enum</code>. If not, a
+<code>ValueError</code> is raised.
+</p><pre><code>&gt;&gt;&gt; class Type(Keyword):
+...     grammar = <span class="mark">Enum( K("int"), K("long") )</span>
+... 
+&gt;&gt;&gt; t = Type("int")
+&gt;&gt;&gt; compose(t)
+'int'
+&gt;&gt;&gt; t = Type("string")
+&gt;&gt;&gt; compose(t)
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+  File "pypeg2/__init__.py", line 403, in compose
+    return parser.compose(thing, grammar)
+  File "pypeg2/__init__.py", line 819, in compose
+    raise ValueError(repr(thing) + " is not in " + repr(grammar))
+ValueError: Type('string') is not in Enum([Keyword('int'),
+Keyword('long')])
+</code></pre><h2 id="ggfunc">Grammar generator functions</h2><p>Grammar generator function generate a piece of a <code>grammar</code>. They're
+meant to be used in a <code>grammar</code> directly.
+</p><h3 id="some">Function some()</h3><h4>Synopsis</h4><p><code>some(*thing)</code></p><p>At least one occurrence of thing, + operator. Inserts <code>-2</code> as
+cardinality before thing.
+</p><h4>Parsing</h4><p>Parsing <code>some()</code> parses at least one occurence of <code>thing</code>, or as many
+as there are. If there aren't things then a <code>SyntaxError</code> is generated.
+</p><p>Example:</p><pre><code>&gt;&gt;&gt; w = parse("hello world", <span class="mark">some(word)</span>)
+&gt;&gt;&gt; w
+['hello', 'world']
+&gt;&gt;&gt; w = parse("", <span class="mark">some(word)</span>)
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+  File "pypeg2/__init__.py", line 390, in parse
+    t, r = parser.parse(text, thing)
+  File "pypeg2/__init__.py", line 477, in parse
+    raise r
+  File "&lt;string&gt;", line 1
+    
+    ^
+SyntaxError: expecting match on \w+
+</code></pre><h4>Composing</h4><p>Composing <code>some()</code> composes as many things as there are, but at least
+one. If there is no matching thing, a <code>ValueError</code> is raised.
+</p><p>Example:</p><pre><code>&gt;&gt;&gt; class Words(List):
+...     grammar = <span class="mark">some(word, blank)</span>
+... 
+&gt;&gt;&gt; compose(Words("hello", "world"))
+'hello world '
+&gt;&gt;&gt; compose(Words())
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+  File "pypeg2/__init__.py", line 414, in compose
+    return parser.compose(thing, grammar)
+  File "pypeg2/__init__.py", line 931, in compose
+    result = compose_tuple(thing, thing[:], grammar)
+  File "pypeg2/__init__.py", line 886, in compose_tuple
+    raise ValueError("not enough things to compose")
+ValueError: not enough things to compose
+&gt;&gt;&gt; 
+</code></pre><h3 id="maybesome">Function maybe_some()</h3><h4>Synopsis</h4><p><code>maybe_some(*thing)</code></p><p>No thing or some of them, * operator. Inserts <code>-1</code> as cardinality
+before thing.
+</p><h4>Parsing</h4><p>Parsing <code>maybe_some()</code> parses all occurrences of <code>thing</code>. If there
+aren't things then the result is empty.
+</p><p>Example:</p><pre><code>&gt;&gt;&gt; parse("hello world", <span class="mark">maybe_some(word)</span>)
+['hello', 'world']
+&gt;&gt;&gt; parse("", <span class="mark">maybe_some(word)</span>)
+[]
+</code></pre><h4>Composing</h4><p>Composing <code>maybe_some()</code> composes as many things as there are.</p><pre><code>&gt;&gt;&gt; class Words(List):
+...     grammar = <span class="mark">maybe_some(word, blank)</span>
+... 
+&gt;&gt;&gt; compose(Words("hello", "world"))
+'hello world '
+&gt;&gt;&gt; compose(Words())
+''
+</code></pre><h3 id="optional">Function optional()</h3><h4>Synopsis</h4><p><code>optional(*thing)</code></p><p>Thing or no thing, ? operator. Inserts <code>0</code> as cardinality before thing.</p><h4>Parsing</h4><p>Parsing <code>optional()</code> parses one occurrence of <code>thing</code>. If there
+aren't things then the result is empty.
+</p><p>Example:</p><pre><code>&gt;&gt;&gt; parse("hello", <span class="mark">optional(word)</span>)
+['hello']
+&gt;&gt;&gt; parse("", <span class="mark">optional(word)</span>)
+[]
+&gt;&gt;&gt; number = re.compile("[-+]?\d+")
+&gt;&gt;&gt; parse("-23 world", (<span class="mark">optional(word)</span>, number, word))
+['-23', 'world']
+</code></pre><h4>Composing</h4><p>Composing <code>optional()</code> composes one thing if there is any.</p><p>Example:</p><pre><code>&gt;&gt;&gt; class OptionalWord(str):
+...     grammar = <span class="mark">optional(word)</span>
+... 
+&gt;&gt;&gt; compose(OptionalWord("hello"))
+'hello'
+&gt;&gt;&gt; compose(OptionalWord())
+''
+</code></pre><h3 id="csl">Function csl()</h3><h4>Synopsis</h4><h5>Python 3.x:</h5><p><code>csl(*thing, separator=",")</code></p><h5>Python 2.7:</h5><p><code>csl(*thing)</code></p><p>Generate a grammar for a simple comma separated list.</p><p><code>csl(Something)</code> generates
+<code>Something, maybe_some(",", blank, Something)</code>
+</p><h3 id="attr">Function attr()</h3><h4>Synopsis</h4><p><code>attr(name, thing=word, subtype=None)</code></p><p>Generate an <code>Attribute</code> with that <code>name</code>, referencing the <code>thing</code>. An
+<code>Attribute</code> is a <code>namedtuple("Attribute", ("name", "thing"))</code>.
+</p><h4>Instance variables</h4><table class="glossary"><tr><td class="glossary"><p><code>Class</code></p></td><td class="glossary"><p>reference to <code>Attribute</code> class generated by <code>namedtuple()</code></p></td></tr></table><h4>Parsing</h4><p>An <code>Attribute</code> is parsed following its grammar in <code>thing</code>. The result
+is not put into another thing directly; instead the result is added as
+an attribute to containing thing.
+</p><p>Example:</p><pre><code>&gt;&gt;&gt; class Type(Keyword):
+...     grammar = Enum( K("int"), K("long") )
+... 
+&gt;&gt;&gt; class Parameter:
+...     grammar = <span class="mark">attr("typing", Type)</span>, blank, name()
+... 
+&gt;&gt;&gt; p = parse("int a", Parameter)
+&gt;&gt;&gt; <span class="mark">p.typing</span>
+Type('int')
+</code></pre><h4>Composing</h4><p>An <code>Attribute</code> is cmposed following its grammar in <code>thing</code>.</p><p>Example:</p><pre><code>&gt;&gt;&gt; p = Parameter()
+&gt;&gt;&gt; <span class="mark">p.typing</span> = K("int")
+&gt;&gt;&gt; p.name = "x"
+&gt;&gt;&gt; compose(p)
+'int x'
+</code></pre><h3 id="flag">Function flag()</h3><h4>Synopsis</h4><p><code>flag(name, thing=None)</code></p><p>Generate an <code>Attribute</code> with that <code>name</code> which is valued <code>True</code> or
+<code>False</code>. If no <code>thing</code> is given, <code>Keyword(name)</code> is assumed.
+</p><h4>Parsing</h4><p>A <code>flag</code> is usually a <code>Keyword</code> which can be there or not. If it is
+there, the resulting value is <code>True</code>. If it is not there, the resulting
+value is <code>False</code>.
+</p><p>Example:</p><pre><code>&gt;&gt;&gt; class BoolLiteral(Symbol):
+...     grammar = Enum( K("True"), K("False") )
+... 
+&gt;&gt;&gt; class Fact:
+...     grammar = name(), K("is"), <span class="mark">flag("negated", K("not"))</span>, \
+...             attr("value", BoolLiteral)
+... 
+&gt;&gt;&gt; f1 = parse("a is not True", Fact)
+&gt;&gt;&gt; f2 = parse("b is False", Fact)
+&gt;&gt;&gt; f1.name
+Symbol('a')
+&gt;&gt;&gt; f1.value
+BoolLiteral('True')
+&gt;&gt;&gt; <span class="mark">f1.negated</span>
+True
+&gt;&gt;&gt; <span class="mark">f2.negated</span>
+False
+</code></pre><h4>Composing</h4><p>If the <code>flag</code> is <code>True</code> compose the grammar. If the <code>flag</code> is <code>False</code>
+don't compose anything.
+</p><p>Example:</p><pre><code>&gt;&gt;&gt; class ValidSign:
+...     grammar = <span class="mark">flag("invalid", K("not"))</span>, blank, "valid"
+... 
+&gt;&gt;&gt; v = ValidSign()
+&gt;&gt;&gt; <span class="mark">v.invalid = True</span>
+&gt;&gt;&gt; compose(v)
+'<span class="mark">not</span> valid'
+</code></pre><h3 id="name">Function name()</h3><h4>Synopsis</h4><p><code>name()</code></p><p>Generate a grammar for a Symbol with a name. This is a shortcut for
+<code>attr("name", Symbol)</code>.
+</p><h3 id="ignore">Function ignore()</h3><h4>Synopsis</h4><p><code>ignore(*grammar)</code></p><p>Ignore what matches to the grammar.</p><h4>Parsing</h4><p>Parse what's to be ignored. The result is added to an attribute
+named <code>"_ignore" + str(i)</code> with i as a serial number.
+</p><h4>Composing</h4><p>Compose the result as with any <code>attr()</code>.
+</p><h3 id="indent">Function indent()</h3><h4>Synopsis</h4><p><code>indent(*thing)</code></p><p>Indent thing by one level.
+</p><h4>Parsing</h4><p>The <code>indent</code> function has no meaning while parsing. The parameters are
+parsed as if they would be in a <code>tuple</code>.
+</p><h4>Composing</h4><p>While composing the <code>indent</code> function increases the level of indention.
+</p><p>Example:</p><pre><code>&gt;&gt;&gt; class Instruction(str):
+...     grammar = word, ";", endl
+... 
+&gt;&gt;&gt; class Block(List):
+...     grammar = "{", endl, maybe_some(<span class="mark">indent(Instruction)</span>), "}"
+... 
+&gt;&gt;&gt; print(compose(Block(Instruction("first"), \
+...         Instruction("second"))))
+{
+<span class="mark">    first;</span>
+<span class="mark">    second;</span>
+}
+</code></pre><h3 id="contiguous">Function contiguous()</h3><h4>Synopsis</h4><p><code>contiguous(*thing)</code></p><p>Temporary disable automated whitespace removing while parsing <code>thing</code>.
+</p><h4>Parsing</h4><p>While parsing whitespace removing is disabled. That means, if
+whitespace is not part of the grammar, it will lead to a <code>SyntaxError</code>
+if whitespace will be found between the parsed objects.
+</p><p>Example:</p><pre><code>class Path(List):
+    grammar = flag("relative", "."), maybe_some(Symbol, ".")
+
+class Reference(GrammarElement):
+    grammar = <span class="mark">contiguous(</span>attr("path", Path), name()<span class="mark">)</span>
+</code></pre><h4>Composing</h4><p>While composing the <code>contiguous</code> function has no effect.
+</p><h3 id="separated">Function separated()</h3><h4>Synopsis</h4><p><code>separated(*thing)</code></p><p>Temporary enable automated whitespace removing while parsing <code>thing</code>.
+Whitespace removing is enabled by default. This function is for
+temporary enabling whitespace removing after it was disabled with the
+<code>contiguous</code> function.
+</p><h4>Parsing</h4><p>While parsing whitespace removing is enabled again. That means, if
+whitespace is not part of the grammar, it will be omitted if whitespace
+will be found between parsed objects.
+</p><h4>Composing</h4><p>While composing the <code>separated</code> function has no effect.
+</p><h3 id="omit">Function omit()</h3><h4>Synopsis</h4><p><code>omit(*thing)</code></p><p>Omit what matches the grammar. This function cuts out <code>thing</code> and
+throws it away.
+</p><h4>Parsing</h4><p>While parsing <code>omit()</code> cuts out what matches the grammar <code>thing</code> and 
+throws it away.
+</p><p>Example:</p><pre><code>&gt;&gt;&gt; p = parse("hello", omit(Symbol))
+&gt;&gt;&gt; print(p)
+None
+&gt;&gt;&gt; _
+</code></pre><h4>Composing</h4><p>While composing <code>omit()</code> does not compose text for what matches the
+grammar <code>thing</code>.
+</p><p>Example:</p><pre><code>&gt;&gt;&gt; compose(Symbol('hello'), omit(Symbol))
+''
+&gt;&gt;&gt; _
+</code></pre><h2 id="callbacks">Callback functions</h2><p>Callback functions are called while composing only. They're ignored
+while parsing.
+</p><h3 id="blank">Callback function blank()</h3><h4>Synopsis</h4><p><code>blank(thing, parser)</code></p><p>Space marker for composing text.</p><p><code>blank</code> is outputting a space character (ASCII 32) when called.</p><h3 id="endl">Callback function endl()</h3><h4>Synopsis</h4><p><code>endl(thing, parser)</code></p><p>End of line marker for composing text.</p><p><code>endl</code> is outputting a linefeed charater (ASCII 10) when called. The
+indention system reacts when reading <code>endl</code> while composing.
+</p><h3 id="udcf">User defined callback functions</h3><h4>Synopsis</h4><p><code>callback_function(thing, parser)</code></p><p>Arbitrary callback functions can be defined and put into the <code>grammar</code>.
+They will be called while composing.
+</p><p>Example:</p><pre><code>&gt;&gt;&gt; class Instruction(str):
+...     <span class="mark">def heading(self, parser):</span>
+...     <span class="mark">    return "/* on level " + str(parser.indention_level) \</span>
+...     <span class="mark">            + " */", endl</span>
+...     grammar = <span class="mark">heading</span>, word, ";", endl
+... 
+&gt;&gt;&gt; print(compose(Instruction("do_this")))
+<span class="mark">/* on level 0 */</span>
+do_this;
+</code></pre><h2 id="common">Common class methods for grammar elements</h2><p>If a method of the following is present in a grammar element, it will
+override the standard behaviour.
+</p><h3 id="override_parse">parse() class method of a grammar element</h3><h4>Synopsis</h4><p><code>parse(cls, parser, text, pos)</code></p><p>Overwrites the parsing behaviour. If present, this class method is
+called at each place the grammar references the grammar element instead
+of automatic parsing.
+</p><table class="glossary"><tr><td class="glossary"><p><code>cls</code></p></td><td class="glossary"><p>class object of the grammar element</p></td></tr><tr><td class="glossary"><p><code>parser</code></p></td><td class="glossary"><p>parser object which is calling</p></td></tr><tr><td class="glossary"><p><code>text</code></p></td><td class="glossary"><p>text to be parsed</p></td></tr><tr><td class="glossary"><p><code>pos</code></p></td><td class="glossary"><p><code>(lineNo, charInText)</code> with positioning information</p></td></tr></table><h3 id="override_compose">compose() method of a grammar element</h3><h4>Synopsis</h4><p><code>compose(cls, parser)</code></p><p>Overwrites the composing behaviour. If present, this class method is
+called at each place the grammar references the grammar element instead
+of automatic composing.
+</p><table class="glossary"><tr><td class="glossary"><p><code>cls</code></p></td><td class="glossary"><p>class object of the grammar element</p></td></tr><tr><td class="glossary"><p><code>parser</code></p></td><td class="glossary"><p>parser object which is calling</p></td></tr></table><div id="bottom">Want to download? Go to the <a href="#top">^Top^</a> and look to the right ;-)</div></div></body></html>

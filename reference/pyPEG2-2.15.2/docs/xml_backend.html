@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head><title>pyPEG – XML Backend</title><meta content="text/html;charset=UTF-8" http-equiv="Content-Type"/><link href="format.css" type="text/css" rel="stylesheet"/></head><body style="counter-reset: chapter 3;"><a name="top"/><div id="headline"><p>pyPEG – a PEG Parser-Interpreter in Python</p><div class="small">pyPEG 2.15.0 of Fr Jan 10 2014 – Copyleft 2009-2014, <a href="http://fdik.org">Volker Birk</a></div><div id="python1"><p>Requires Python 3.x or 2.7<br/>
+Older versions: <a href="http://fdik.org/pyPEG1">pyPEG 1.x</a>
+</p></div></div><div id="navigation"><p class="head"><a href="index.html">How to use pyPEG</a></p><div class="contents"><menu><li><em><a href="index.html#installation">Installation</a></em></li><li><em><a href="index.html#parsing">Parsing text with pyPEG</a></em></li><li><em><a href="index.html#composing">Composing text</a></em></li><li><a href="index.html#indenting">Indenting text</a></li><li><a href="index.html#usercallbacks">User defined Callback Functions</a></li><li><em><a href="index.html#xmlout">XML output</a></em></li></menu></div><p class="head"><a href="grammar_elements.html">Grammar Elements</a></p><div class="contents"><menu><li><em><a href="grammar_elements.html#basic">Basic Grammar Elements</a></em></li><li><a href="grammar_elements.html#literals">str instances and Literal</a></li><li><a href="grammar_elements.html#regex">Regular Expressions</a></li><li><a href="grammar_elements.html#tuple">tuple instances and Concat</a></li><li><a href="grammar_elements.html#lists">list instances</a></li><li><a href="grammar_elements.html#none">Constant None</a></li><li><em><a href="grammar_elements.html#goclasses">Grammar Element Classes</a></em></li><li><a href="grammar_elements.html#symbol">Class Symbol</a></li><li><a href="grammar_elements.html#keyword">Class Keyword</a></li><li><a href="grammar_elements.html#list">Class List</a></li><li><a href="grammar_elements.html#namespace">Class Namespace</a></li><li><a href="grammar_elements.html#enum">Class Enum</a></li><li><em><a href="grammar_elements.html#ggfunc">Grammar generator functions</a></em></li><li><a href="grammar_elements.html#some">Function some()</a></li><li><a href="grammar_elements.html#maybesome">Function maybe_some()</a></li><li><a href="grammar_elements.html#optional">Function optional()</a></li><li><a href="grammar_elements.html#csl">Function csl()</a></li><li><a href="grammar_elements.html#attr">Function attr()</a></li><li><a href="grammar_elements.html#flag">Function flag()</a></li><li><a href="grammar_elements.html#name">Function name()</a></li><li><a href="grammar_elements.html#ignore">Function ignore()</a></li><li><a href="grammar_elements.html#indent">Function indent()</a></li><li><a href="grammar_elements.html#contiguous">Function contiguous()</a></li><li><a href="grammar_elements.html#separated">Function separated()</a></li><li><a href="grammar_elements.html#omit">Function omit()</a></li><li><em><a href="grammar_elements.html#callbacks">Callback functions</a></em></li><li><a href="grammar_elements.html#blank">Callback function blank()</a></li><li><a href="grammar_elements.html#endl">Callback function endl()</a></li><li><a href="grammar_elements.html#udcf">User defined callback functions</a></li><li><em><a href="grammar_elements.html#common">Common class methods for grammar elements</a></em></li><li><a href="grammar_elements.html#override_parse">parse() class method of a grammar element</a></li><li><a href="grammar_elements.html#override_compose">compose() method of a grammar element</a></li></menu></div><p class="head"><a href="parser_engine.html">Parser Engine</a></p><div class="contents"><menu><li><em><a href="parser_engine.html#parser">Class Parser</a></em></li><li><a href="parser_engine.html#parser_vars">Instance variables</a></li><li><a href="parser_engine.html#parser_init">Method __init__()</a></li><li><a href="parser_engine.html#parser_clear_memory">Method clear_memory()</a></li><li><a href="parser_engine.html#parser_parse">Method parse()</a></li><li><a href="parser_engine.html#parser_compose">Method compose()</a></li><li><a href="parser_engine.html#gen_syntax_error">Method generate_syntax_error()</a></li><li><em><a href="parser_engine.html#convenience">Convenience functions</a></em></li><li><a href="parser_engine.html#parse">Function parse()</a></li><li><a href="parser_engine.html#compose">Function compose()</a></li><li><a href="parser_engine.html#attributes">Function attributes()</a></li><li><a href="parser_engine.html#howmany">Function how_many()</a></li><li><em><a href="parser_engine.html#errors">Exceptions</a></em></li><li><a href="parser_engine.html#gerror">GrammarError</a></li><li><a href="parser_engine.html#getype">GrammarTypeError</a></li><li><a href="parser_engine.html#gevalue">GrammarValueError</a></li></menu></div><p class="head"><a href="xml_backend.html">XML Backend</a></p><div class="contents"><menu><li><em><a href="xml_backend.html#workhorses">etree functions</a></em></li><li><a href="xml_backend.html#create_tree">Function create_tree()</a></li><li><a href="xml_backend.html#create_thing">Function create_thing()</a></li><li><em><a href="xml_backend.html#xmlconvenience">XML convenience functions</a></em></li><li><a href="xml_backend.html#thing2xml">Function thing2xml()</a></li><li><a href="xml_backend.html#xml2thing">Function xml2thing()</a></li></menu></div><p class="head">I want this!</p><menu><li><a href="http://fdik.org/pyPEG2/pyPEG2.tar.gz"><strong>Download pyPEG 2</strong></a></li><li><a href="LICENSE.txt">License</a></li><li><a href="https://bitbucket.org/fdik/pypeg/">Bitbucket Repository</a></li><li><a href="http://fdik.org/yml">YML is using pyPEG</a></li><li><a href="http://fdik.org/iec2xml/">The IEC 61131-3 Structured Text to XML Compiler is using pyPEG</a></li><li><a href="http://fdik.org/pyPEG1">pyPEG version 1.x</a></li></menu></div><div id="entries"><h1 id="xmlbackend">XML Backend of <em>pyPEG</em></h1><h2 id="workhorses">etree functions</h2><p>The <em>pyPEG</em> XML Backend uses Python's <code>etree</code> semantic. This way it can
+easily be integrated into existing working code using XML. The usage of
+<a href="http://lxml.de/">lxml</a> is recommended. If the module <code>lxml</code> is
+installed, <em>pyPEG</em> uses it automatically.
+</p><h3 id="create_tree">Function create_tree()</h3><h4>Synopsis</h4><p><code>create_tree(thing, parent=None, object_names=False)</code></p><p>Create an XML etree from a thing.</p><h4>Arguments</h4><table class="glossary"><tr><td class="glossary"><p><code>thing</code></p></td><td class="glossary"><p><code>thing</code> to interpret</p></td></tr><tr><td class="glossary"><p><code>parent</code></p></td><td class="glossary"><p><code>etree.Element</code> to put subtree into; default: create a new <code>Element</code> tree</p></td></tr><tr><td class="glossary"><p><code>object_names</code></p></td><td class="glossary"><p>experimental feature: if <code>True</code> tag names are object
+names instead of types
+</p></td></tr></table><h4>Returns</h4><p><code>etree.Element</code> instance created</p><p>Example:</p><pre><code>&gt;&gt;&gt; from pypeg2.xmlast import create_tree
+&gt;&gt;&gt; from pypeg2 import name, restline
+&gt;&gt;&gt; class Key(str):
+...     grammar = name(), "=", restline
+... 
+&gt;&gt;&gt; k = Key("world")
+&gt;&gt;&gt; k.name = "hello"
+&gt;&gt;&gt; t = <span class="mark">create_tree(k)</span>
+&gt;&gt;&gt; t.attrib["name"]
+'hello'
+&gt;&gt;&gt; t.text
+'world'
+&gt;&gt;&gt; type(t)
+&lt;class 'lxml.etree._Element'&gt;
+</code></pre><h3 id="create_thing">Function create_thing()</h3><h4>Synopsis</h4><p><code>create_thing(element, symbol_table)</code></p><p>Create thing from an XML element.</p><h4>Arguments</h4><table class="glossary"><tr><td class="glossary"><p><code>element</code></p></td><td class="glossary"><p><code>etree.Element</code> instance to read</p></td></tr><tr><td class="glossary"><p><code>symbol_table</code></p></td><td class="glossary"><p>symbol table where the classes can be found; usually call <code>globals()</code></p></td></tr></table><h4>Returns</h4><p><code>thing</code> created</p><p>Example:</p><pre><code>&gt;&gt;&gt; from pypeg2.xmlast import create_thing, etree
+&gt;&gt;&gt; from pypeg2 import name, restline
+&gt;&gt;&gt; class Key(str):
+...     grammar = name(), "=", restline
+... 
+&gt;&gt;&gt; e = etree.fromstring("&lt;Key name='hello'&gt;world&lt;/Key&gt;")
+&gt;&gt;&gt; k = <span class="mark">create_thing(e, globals())</span>
+&gt;&gt;&gt; k.name
+Symbol('hello')
+&gt;&gt;&gt; k
+'world'
+&gt;&gt;&gt; type(k)
+&lt;class '__main__.Key'&gt;
+</code></pre><h2 id="xmlconvenience">XML convenience functions</h2><h3 id="thing2xml">Function thing2xml()</h3><h4>Synopsis</h4><p><code>thing2xml(thing, pretty=False, object_names=False)</code></p><p>Create XML text from a thing.</p><h4>Arguments</h4><table class="glossary"><tr><td class="glossary"><p><code>thing</code></p></td><td class="glossary"><p><code>thing</code> to interpret</p></td></tr><tr><td class="glossary"><p><code>pretty</code></p></td><td class="glossary"><p><code>True</code> if XML should be indented, <code>False</code> if XML should be plain
+(this feature requires <a href="http://lxml.de">lxml</a>)
+</p></td></tr><tr><td class="glossary"><p><code>object_names</code></p></td><td class="glossary"><p>experimental feature: if <code>True</code> tag names are object
+names instead of types
+</p></td></tr></table><h4>Returns</h4><p><code>bytes</code> with encoded XML </p><p>Example:</p><pre><code>&gt;&gt;&gt; from pypeg2 import name, restline
+&gt;&gt;&gt; from pypeg2.xmlast import thing2xml
+&gt;&gt;&gt; class Key(str):
+...     grammar = name(), "=", restline
+... 
+&gt;&gt;&gt; k = Key("world")
+&gt;&gt;&gt; k.name = "hello"
+&gt;&gt;&gt; <span class="mark">thing2xml(k)</span>
+b'&lt;Key name="hello"&gt;world&lt;/Key&gt;'
+</code></pre><h3 id="xml2thing">Function xml2thing()</h3><h4>Synopsis</h4><p><code>xml2thing(xml, symbol_table)</code></p><p>Create <code>thing</code> from XML text.</p><h4>Arguments</h4><table class="glossary"><tr><td class="glossary"><p><code>xml</code></p></td><td class="glossary"><p><code>bytes</code> with encoded XML</p></td></tr><tr><td class="glossary"><p><code>symbol_table</code></p></td><td class="glossary"><p>symbol table where the classes can be found; usually call <code>globals()</code></p></td></tr></table><h4>Returns</h4><p>created <code>thing</code></p><p>Example:</p><pre><code>&gt;&gt;&gt; from pypeg2 import name, restline
+&gt;&gt;&gt; from pypeg2.xmlast import xml2thing
+&gt;&gt;&gt; class Key(str):
+...     grammar = name(), "=", restline
+... 
+&gt;&gt;&gt; k = <span class="mark">xml2thing(b"&lt;Key name='hello'&gt;world&lt;/Key&gt;", globals())</span>
+&gt;&gt;&gt; k.name
+Symbol('hello')
+&gt;&gt;&gt; k
+'world'
+</code></pre><div id="bottom">Want to download? Go to the <a href="#top">^Top^</a> and look to the right ;-)</div></div></body></html>

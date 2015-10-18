@@ -1,0 +1,81 @@
+#!/usr/bin/env python3
+"""
+    $ gimme foo bar baz
+
+Runs
+    goal=foo ./foo.maker tmpdest  # for a fresh tmpdest filename
+and expects either
+    $? is 0 and tmpdest exists: Rename tmpdest to foo.
+or
+    $? is 137 and foo exists:   Do nothing.
+else:
+    Exit with 1.
+And likewise for bar and baz.
+
+Now exit with 137 if goal was set at entry and the goal file exists
+and is younger than any of foo, bar, baz; else exit with 0.
+
+The purpose of all this: foo.maker should work like
+
+    #!/bin/sh
+    set -e
+    gimme this that the-other
+    make-foo this that the-other >$1
+
+so that, at top level,
+
+    $ gimme foo
+
+runs make-foo and mv's the result to foo, but only if foo is stale
+after recursively gimme-ing this, that, and the-other.
+"""
+# XXX todo: 
+#  auto-dependency on maker script
+#  verbose mode
+#  notice if dependencies are invalidated dynamically?
+#  allow no maker if goal exists?
+
+import os, sys
+
+def gimme(goals, supergoal=None):
+    if supergoal is None:
+        for goal in goals:
+            make(goal)
+    else:
+        youngest = max(map(make, goals)) if goals else 0
+        try: superstat = os.stat(supergoal)
+        except OSError: pass
+        else:
+            if youngest < superstat.st_mtime:
+                sys.exit(137)
+
+def make(goal):
+    os.environ['goal'] = goal
+    destination = 'gimme-tmp'  # XXX os.tempnam(None, 'gimme-')
+    maker = find_maker(goal)
+    status = os.spawnl(os.P_WAIT, maker, maker, destination)
+    if status == 0 and os.access(destination, os.F_OK):
+        os.rename(destination, goal)
+    elif not (status == 137 and os.access(goal, os.F_OK)):
+        try: os.remove(destination) # XXX a bit too eager?
+        except OSError: pass
+        panic("failed on %s", goal)
+    return os.stat(goal).st_mtime
+
+def find_maker(goal):
+    ext = os.path.splitext(goal)[1]
+    for stem in [goal] + (['default'+ext] if ext else []) + ['default']:
+        filename = stem+'.maker'
+        if os.access(filename, os.F_OK):
+            return filename
+    panic("no maker for %s", goal)
+
+def panic(format, *args):
+    sys.stderr.write(("%s: " % sys.argv[0]) + (format % args) + '\n')
+    sys.exit(1)
+
+
+if __name__ == '__main__':
+    if sys.argv[1:2] == ['-h']:
+        panic("usage: %s goal ...", sys.argv[0])
+    gimme(sys.argv[1:], os.environ.get('goal'))
