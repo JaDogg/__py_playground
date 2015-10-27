@@ -2,556 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e26f7475-ab20-41f1-aec4-4cc4a094df6d" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\PROJECTS\P\__py_playground\test_peg.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/__py_playground.iml" afterPath="$PROJECT_DIR$/.idea/__py_playground.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/ply-3.8/example/BASIC/basinterp.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/BASIC/basinterp.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/metatoo/bootstrap.py" afterPath="$PROJECT_DIR$/reference/sketchbook/metatoo/bootstrap.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/calculator.py" afterPath="$PROJECT_DIR$/calculator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/editor/editor.py" afterPath="$PROJECT_DIR$/reference/sketchbook/editor/editor.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/parson/eg_basic.py" afterPath="$PROJECT_DIR$/reference/parson/eg_basic.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/gimme/gimme" afterPath="$PROJECT_DIR$/reference/sketchbook/gimme/gimme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/regexercise/hal_watch.py" afterPath="$PROJECT_DIR$/reference/regexercise/hal_watch.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/hdl/hdl1.py" afterPath="$PROJECT_DIR$/reference/sketchbook/hdl/hdl1.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json_parser.py" afterPath="$PROJECT_DIR$/json_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/ply-3.8/ply/lex.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/ply/lex.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/misc/macroe.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/macroe.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/metatoo/metametoo/meta.py" afterPath="$PROJECT_DIR$/reference/sketchbook/metatoo/metametoo/meta.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/peggy/peggy.py" afterPath="$PROJECT_DIR$/peggy/peggy.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/metatoo/runmetameta.py" afterPath="$PROJECT_DIR$/reference/sketchbook/metatoo/runmetameta.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/semiforth_punybasic/semiforth.py" afterPath="$PROJECT_DIR$/reference/sketchbook/semiforth_punybasic/semiforth.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/misc/sokoban.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/sokoban.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/TPG-3.2.2/tpg.py" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/tpg.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/TPG-3.2.2/tpg.pyg" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/tpg.pyg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/TPG-3.2.2/tpg" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/tpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/sat/ttypuzzle.py" afterPath="$PROJECT_DIR$/reference/sketchbook/sat/ttypuzzle.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/regex/ibm7094/vmwatch.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/ibm7094/vmwatch.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\ChangeLog" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/ChangeLog" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\License.txt" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/License.txt" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\MANIFEST.in" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/MANIFEST.in" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\PKG-INFO" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/PKG-INFO" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\README" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/README" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\THANKS" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/THANKS" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\doc\CSL.tex" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/doc/CSL.tex" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\doc\calc.tex" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/doc/calc.tex" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\doc\debug.tex" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/doc/debug.tex" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\doc\grammar.tex" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/doc/grammar.tex" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\doc\install.tex" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/doc/install.tex" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\doc\intro.tex" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/doc/intro.tex" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\doc\lexer.tex" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/doc/lexer.tex" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\doc\notation.tex" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/doc/notation.tex" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\doc\parser.tex" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/doc/parser.tex" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\doc\tpg.pdf" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/doc/tpg.pdf" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\doc\tpg.tex" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/doc/tpg.tex" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\doc\tutorial.tex" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/doc/tutorial.tex" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\doc\usage.tex" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/doc/usage.tex" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\examples\calc.pyg" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/examples/calc.pyg" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\examples\notation.pyg" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/examples/notation.pyg" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\setup.py" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/setup.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\tpg" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/tpg" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\tpg.pdf" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/tpg.pdf" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\tpg.py" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/tpg.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\tpg.pyg" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/tpg.pyg" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\tpg_tests.py" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/tpg_tests.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\tpg_tests.sh" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/tpg_tests.sh" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\TPG-3.2.2\tpg_tests_py2.py" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/tpg_tests_py2.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\parson\.gitignore" afterPath="$PROJECT_DIR$/reference/parson/.gitignore" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\parson\README.md" afterPath="$PROJECT_DIR$/reference/parson/README.md" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\parson\eg_basic.py" afterPath="$PROJECT_DIR$/reference/parson/eg_basic.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\parson\eg_calc.py" afterPath="$PROJECT_DIR$/reference/parson/eg_calc.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\parson\eg_json.py" afterPath="$PROJECT_DIR$/reference/parson/eg_json.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\parson\eg_metapeg.py" afterPath="$PROJECT_DIR$/reference/parson/eg_metapeg.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\parson\eg_misc.py" afterPath="$PROJECT_DIR$/reference/parson/eg_misc.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\parson\eg_mutagen_from_js.py" afterPath="$PROJECT_DIR$/reference/parson/eg_mutagen_from_js.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\parson\eg_oberon0.py" afterPath="$PROJECT_DIR$/reference/parson/eg_oberon0.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\parson\eg_pother.py" afterPath="$PROJECT_DIR$/reference/parson/eg_pother.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\parson\eg_precedence.py" afterPath="$PROJECT_DIR$/reference/parson/eg_precedence.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\parson\eg_regex.py" afterPath="$PROJECT_DIR$/reference/parson/eg_regex.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\parson\eg_trees.py" afterPath="$PROJECT_DIR$/reference/parson/eg_trees.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\parson\eg_wc.py" afterPath="$PROJECT_DIR$/reference/parson/eg_wc.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\parson\parson.py" afterPath="$PROJECT_DIR$/reference/parson/parson.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\parson\peg.py" afterPath="$PROJECT_DIR$/reference/parson/peg.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\parson\peglet_to_parson.py" afterPath="$PROJECT_DIR$/reference/parson/peglet_to_parson.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\parson\pegvm.py" afterPath="$PROJECT_DIR$/reference/parson/pegvm.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\parson\setup.py" afterPath="$PROJECT_DIR$/reference/parson/setup.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\parson\treepeg.py" afterPath="$PROJECT_DIR$/reference/parson/treepeg.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\peglet\.gitignore" afterPath="$PROJECT_DIR$/reference/peglet/.gitignore" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\peglet\CHANGES" afterPath="$PROJECT_DIR$/reference/peglet/CHANGES" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\peglet\LICENSE" afterPath="$PROJECT_DIR$/reference/peglet/LICENSE" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\peglet\MANIFEST.in" afterPath="$PROJECT_DIR$/reference/peglet/MANIFEST.in" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\peglet\README.rst" afterPath="$PROJECT_DIR$/reference/peglet/README.rst" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\peglet\examples\examples.py" afterPath="$PROJECT_DIR$/reference/peglet/examples/examples.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\peglet\examples\fp.py" afterPath="$PROJECT_DIR$/reference/peglet/examples/fp.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\peglet\examples\infix.py" afterPath="$PROJECT_DIR$/reference/peglet/examples/infix.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\peglet\examples\js.py" afterPath="$PROJECT_DIR$/reference/peglet/examples/js.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\peglet\examples\json.py" afterPath="$PROJECT_DIR$/reference/peglet/examples/json.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\peglet\examples\mutagen.py" afterPath="$PROJECT_DIR$/reference/peglet/examples/mutagen.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\peglet\examples\mutagen_grammar.py" afterPath="$PROJECT_DIR$/reference/peglet/examples/mutagen_grammar.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\peglet\examples\regex.py" afterPath="$PROJECT_DIR$/reference/peglet/examples/regex.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\peglet\examples\url.py" afterPath="$PROJECT_DIR$/reference/peglet/examples/url.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\peglet\extras\compiler.py" afterPath="$PROJECT_DIR$/reference/peglet/extras/compiler.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\peglet\peglet.py" afterPath="$PROJECT_DIR$/reference/peglet/peglet.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\peglet\setup.py" afterPath="$PROJECT_DIR$/reference/peglet/setup.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\picoparse\LICENSE" afterPath="$PROJECT_DIR$/reference/picoparse/LICENSE" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\picoparse\MANIFEST" afterPath="$PROJECT_DIR$/reference/picoparse/MANIFEST" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\picoparse\README.markdown" afterPath="$PROJECT_DIR$/reference/picoparse/README.markdown" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\picoparse\examples\calculator.py" afterPath="$PROJECT_DIR$/reference/picoparse/examples/calculator.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\picoparse\examples\emailaddress.py" afterPath="$PROJECT_DIR$/reference/picoparse/examples/emailaddress.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\picoparse\examples\lambda.py" afterPath="$PROJECT_DIR$/reference/picoparse/examples/lambda.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\picoparse\examples\paren.py" afterPath="$PROJECT_DIR$/reference/picoparse/examples/paren.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\picoparse\examples\paren2.py" afterPath="$PROJECT_DIR$/reference/picoparse/examples/paren2.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\picoparse\examples\xml.py" afterPath="$PROJECT_DIR$/reference/picoparse/examples/xml.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\picoparse\picoparse\__init__.py" afterPath="$PROJECT_DIR$/reference/picoparse/picoparse/__init__.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\picoparse\picoparse\text.py" afterPath="$PROJECT_DIR$/reference/picoparse/picoparse/text.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\picoparse\setup.py" afterPath="$PROJECT_DIR$/reference/picoparse/setup.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\picoparse\test.py" afterPath="$PROJECT_DIR$/reference/picoparse/test.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\picoparse\tests\__init__.py" afterPath="$PROJECT_DIR$/reference/picoparse/tests/__init__.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\picoparse\tests\backend.py" afterPath="$PROJECT_DIR$/reference/picoparse/tests/backend.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\picoparse\tests\core_parsers.py" afterPath="$PROJECT_DIR$/reference/picoparse/tests/core_parsers.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\picoparse\tests\text_parsers.py" afterPath="$PROJECT_DIR$/reference/picoparse/tests/text_parsers.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\picoparse\tests\utils.py" afterPath="$PROJECT_DIR$/reference/picoparse/tests/utils.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\ANNOUNCE" afterPath="$PROJECT_DIR$/reference/ply-3.8/ANNOUNCE" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\CHANGES" afterPath="$PROJECT_DIR$/reference/ply-3.8/CHANGES" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\MANIFEST.in" afterPath="$PROJECT_DIR$/reference/ply-3.8/MANIFEST.in" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\PKG-INFO" afterPath="$PROJECT_DIR$/reference/ply-3.8/PKG-INFO" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\README.md" afterPath="$PROJECT_DIR$/reference/ply-3.8/README.md" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\TODO" afterPath="$PROJECT_DIR$/reference/ply-3.8/TODO" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\doc\internal.html" afterPath="$PROJECT_DIR$/reference/ply-3.8/doc/internal.html" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\doc\makedoc.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/doc/makedoc.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\doc\ply.html" afterPath="$PROJECT_DIR$/reference/ply-3.8/doc/ply.html" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\BASIC\README" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/BASIC/README" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\BASIC\basic.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/BASIC/basic.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\BASIC\basiclex.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/BASIC/basiclex.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\BASIC\basiclog.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/BASIC/basiclog.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\BASIC\basinterp.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/BASIC/basinterp.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\BASIC\basparse.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/BASIC/basparse.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\BASIC\dim.bas" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/BASIC/dim.bas" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\BASIC\func.bas" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/BASIC/func.bas" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\BASIC\gcd.bas" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/BASIC/gcd.bas" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\BASIC\gosub.bas" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/BASIC/gosub.bas" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\BASIC\hello.bas" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/BASIC/hello.bas" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\BASIC\linear.bas" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/BASIC/linear.bas" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\BASIC\maxsin.bas" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/BASIC/maxsin.bas" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\BASIC\powers.bas" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/BASIC/powers.bas" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\BASIC\rand.bas" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/BASIC/rand.bas" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\BASIC\sales.bas" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/BASIC/sales.bas" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\BASIC\sears.bas" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/BASIC/sears.bas" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\BASIC\sqrt1.bas" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/BASIC/sqrt1.bas" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\BASIC\sqrt2.bas" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/BASIC/sqrt2.bas" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\GardenSnake\GardenSnake.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/GardenSnake/GardenSnake.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\GardenSnake\README" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/GardenSnake/README" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\README" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/README" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\ansic\README" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/ansic/README" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\ansic\clex.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/ansic/clex.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\ansic\cparse.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/ansic/cparse.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\calc\calc.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/calc/calc.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\calcdebug\calc.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/calcdebug/calc.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\calceof\calc.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/calceof/calc.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\classcalc\calc.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/classcalc/calc.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\cleanup.sh" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/cleanup.sh" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\closurecalc\calc.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/closurecalc/calc.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\hedit\hedit.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/hedit/hedit.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\newclasscalc\calc.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/newclasscalc/calc.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\optcalc\README" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/optcalc/README" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\optcalc\calc.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/optcalc/calc.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\unicalc\calc.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/unicalc/calc.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\yply\README" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/yply/README" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\yply\ylex.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/yply/ylex.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\yply\yparse.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/yply/yparse.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\example\yply\yply.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/yply/yply.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\ply\__init__.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/ply/__init__.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\ply\cpp.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/ply/cpp.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\ply\ctokens.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/ply/ctokens.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\ply\lex.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/ply/lex.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\ply\yacc.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/ply/yacc.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\ply\ygen.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/ply/ygen.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\setup.cfg" afterPath="$PROJECT_DIR$/reference/ply-3.8/setup.cfg" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\setup.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/setup.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\README" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/README" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\calclex.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/calclex.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\cleanup.sh" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/cleanup.sh" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_closure.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_closure.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_doc1.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_doc1.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_dup1.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_dup1.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_dup2.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_dup2.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_dup3.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_dup3.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_empty.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_empty.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_error1.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_error1.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_error2.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_error2.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_error3.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_error3.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_error4.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_error4.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_hedit.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_hedit.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_ignore.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_ignore.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_ignore2.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_ignore2.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_literal1.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_literal1.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_literal2.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_literal2.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_literal3.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_literal3.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_many_tokens.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_many_tokens.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_module.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_module.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_module_import.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_module_import.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_object.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_object.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_opt_alias.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_opt_alias.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_optimize.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_optimize.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_optimize2.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_optimize2.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_optimize3.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_optimize3.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_re1.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_re1.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_re2.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_re2.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_re3.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_re3.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_rule1.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_rule1.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_rule2.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_rule2.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_rule3.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_rule3.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_state1.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_state1.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_state2.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_state2.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_state3.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_state3.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_state4.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_state4.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_state5.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_state5.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_state_noerror.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_state_noerror.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_state_norule.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_state_norule.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_state_try.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_state_try.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_token1.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_token1.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_token2.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_token2.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_token3.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_token3.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_token4.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_token4.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_token5.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_token5.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\lex_token_dup.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/lex_token_dup.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\parser.out" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/parser.out" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test1\__init__.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test1/__init__.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test1\parsing\__init__.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test1/parsing/__init__.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test1\parsing\calclex.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test1/parsing/calclex.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test1\parsing\calcparse.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test1/parsing/calcparse.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test1\parsing\lextab.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test1/parsing/lextab.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test1\parsing\parser.out" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test1/parsing/parser.out" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test1\parsing\parsetab.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test1/parsing/parsetab.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test2\__init__.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test2/__init__.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test2\parsing\__init__.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test2/parsing/__init__.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test2\parsing\calclex.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test2/parsing/calclex.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test2\parsing\calclextab.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test2/parsing/calclextab.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test2\parsing\calcparse.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test2/parsing/calcparse.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test2\parsing\calcparsetab.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test2/parsing/calcparsetab.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test2\parsing\parser.out" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test2/parsing/parser.out" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test3\__init__.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test3/__init__.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test3\generated\__init__.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test3/generated/__init__.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test3\generated\lextab.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test3/generated/lextab.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test3\generated\parser.out" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test3/generated/parser.out" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test3\generated\parsetab.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test3/generated/parsetab.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test3\parsing\__init__.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test3/parsing/__init__.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test3\parsing\calclex.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test3/parsing/calclex.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test3\parsing\calcparse.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test3/parsing/calcparse.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test4\__init__.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test4/__init__.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test4\parsing\__init__.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test4/parsing/__init__.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test4\parsing\calclex.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test4/parsing/calclex.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test4\parsing\calcparse.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test4/parsing/calcparse.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test5\__init__.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test5/__init__.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test5\parsing\__init__.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test5/parsing/__init__.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test5\parsing\calclex.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test5/parsing/calclex.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test5\parsing\calcparse.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test5/parsing/calcparse.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test5\parsing\lextab.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test5/parsing/lextab.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test5\parsing\parser.out" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test5/parsing/parser.out" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test5\parsing\parsetab.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test5/parsing/parsetab.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test6\__init__.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test6/__init__.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test6\parsing\__init__.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test6/parsing/__init__.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test6\parsing\calclex.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test6/parsing/calclex.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test6\parsing\calcparse.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test6/parsing/calcparse.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test6\parsing\expression.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test6/parsing/expression.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test6\parsing\lextab.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test6/parsing/lextab.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test6\parsing\parser.out" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test6/parsing/parser.out" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test6\parsing\parsetab.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test6/parsing/parsetab.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\pkg_test6\parsing\statement.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/pkg_test6/parsing/statement.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\testlex.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/testlex.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\testyacc.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/testyacc.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_badargs.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_badargs.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_badid.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_badid.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_badprec.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_badprec.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_badprec2.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_badprec2.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_badprec3.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_badprec3.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_badrule.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_badrule.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_badtok.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_badtok.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_dup.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_dup.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_error1.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_error1.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_error2.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_error2.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_error3.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_error3.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_error4.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_error4.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_error5.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_error5.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_error6.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_error6.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_error7.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_error7.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_inf.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_inf.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_literal.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_literal.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_misplaced.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_misplaced.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_missing1.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_missing1.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_nested.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_nested.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_nodoc.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_nodoc.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_noerror.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_noerror.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_nop.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_nop.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_notfunc.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_notfunc.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_notok.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_notok.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_prec1.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_prec1.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_rr.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_rr.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_rr_unused.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_rr_unused.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_simple.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_simple.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_sr.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_sr.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_term1.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_term1.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_unicode_literals.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_unicode_literals.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_unused.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_unused.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_unused_rule.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_unused_rule.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_uprec.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_uprec.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\ply-3.8\test\yacc_uprec2.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/test/yacc_uprec2.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\pyPEG2-2.15.2\CHANGES.txt" afterPath="$PROJECT_DIR$/reference/pyPEG2-2.15.2/CHANGES.txt" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\pyPEG2-2.15.2\LICENSE.txt" afterPath="$PROJECT_DIR$/reference/pyPEG2-2.15.2/LICENSE.txt" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\pyPEG2-2.15.2\PKG-INFO" afterPath="$PROJECT_DIR$/reference/pyPEG2-2.15.2/PKG-INFO" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\pyPEG2-2.15.2\README.txt" afterPath="$PROJECT_DIR$/reference/pyPEG2-2.15.2/README.txt" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\pyPEG2-2.15.2\TODO.txt" afterPath="$PROJECT_DIR$/reference/pyPEG2-2.15.2/TODO.txt" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\pyPEG2-2.15.2\docs\format.css" afterPath="$PROJECT_DIR$/reference/pyPEG2-2.15.2/docs/format.css" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\pyPEG2-2.15.2\docs\grammar_elements.html" afterPath="$PROJECT_DIR$/reference/pyPEG2-2.15.2/docs/grammar_elements.html" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\pyPEG2-2.15.2\docs\index.html" afterPath="$PROJECT_DIR$/reference/pyPEG2-2.15.2/docs/index.html" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\pyPEG2-2.15.2\docs\parser_engine.html" afterPath="$PROJECT_DIR$/reference/pyPEG2-2.15.2/docs/parser_engine.html" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\pyPEG2-2.15.2\docs\xml_backend.html" afterPath="$PROJECT_DIR$/reference/pyPEG2-2.15.2/docs/xml_backend.html" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\pyPEG2-2.15.2\pypeg2\__init__.py" afterPath="$PROJECT_DIR$/reference/pyPEG2-2.15.2/pypeg2/__init__.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\pyPEG2-2.15.2\pypeg2\test\__init__.py" afterPath="$PROJECT_DIR$/reference/pyPEG2-2.15.2/pypeg2/test/__init__.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\pyPEG2-2.15.2\pypeg2\test\test_pyPEG2.py" afterPath="$PROJECT_DIR$/reference/pyPEG2-2.15.2/pypeg2/test/test_pyPEG2.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\pyPEG2-2.15.2\pypeg2\test\test_xmlast.py" afterPath="$PROJECT_DIR$/reference/pyPEG2-2.15.2/pypeg2/test/test_xmlast.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\pyPEG2-2.15.2\pypeg2\xmlast.py" afterPath="$PROJECT_DIR$/reference/pyPEG2-2.15.2/pypeg2/xmlast.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\pyPEG2-2.15.2\samples\sample1.py" afterPath="$PROJECT_DIR$/reference/pyPEG2-2.15.2/samples/sample1.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\pyPEG2-2.15.2\samples\sample2.py" afterPath="$PROJECT_DIR$/reference/pyPEG2-2.15.2/samples/sample2.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\pyPEG2-2.15.2\setup.py" afterPath="$PROJECT_DIR$/reference/pyPEG2-2.15.2/setup.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise\.gitignore" afterPath="$PROJECT_DIR$/reference/regexercise/.gitignore" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise\LICENSE" afterPath="$PROJECT_DIR$/reference/regexercise/LICENSE" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise\README.md" afterPath="$PROJECT_DIR$/reference/regexercise/README.md" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise\ansi.py" afterPath="$PROJECT_DIR$/reference/regexercise/ansi.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise\assembler.py" afterPath="$PROJECT_DIR$/reference/regexercise/assembler.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise\both.py" afterPath="$PROJECT_DIR$/reference/regexercise/both.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise\finite.py" afterPath="$PROJECT_DIR$/reference/regexercise/finite.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise\hal-100.md" afterPath="$PROJECT_DIR$/reference/regexercise/hal-100.md" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise\hal_vm.py" afterPath="$PROJECT_DIR$/reference/regexercise/hal_vm.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise\hal_watch.py" afterPath="$PROJECT_DIR$/reference/regexercise/hal_watch.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise\literals.py" afterPath="$PROJECT_DIR$/reference/regexercise/literals.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise\literals_hal.py" afterPath="$PROJECT_DIR$/reference/regexercise/literals_hal.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise\plus.py" afterPath="$PROJECT_DIR$/reference/regexercise/plus.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise\plus_compiled.py" afterPath="$PROJECT_DIR$/reference/regexercise/plus_compiled.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise\regex_parse.py" afterPath="$PROJECT_DIR$/reference/regexercise/regex_parse.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise\star.py" afterPath="$PROJECT_DIR$/reference/regexercise/star.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise\star_compiled.py" afterPath="$PROJECT_DIR$/reference/regexercise/star_compiled.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise\tests.py" afterPath="$PROJECT_DIR$/reference/regexercise/tests.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise_solutions\.gitignore" afterPath="$PROJECT_DIR$/reference/regexercise_solutions/.gitignore" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise_solutions\LICENSE" afterPath="$PROJECT_DIR$/reference/regexercise_solutions/LICENSE" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise_solutions\README.md" afterPath="$PROJECT_DIR$/reference/regexercise_solutions/README.md" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise_solutions\both.py" afterPath="$PROJECT_DIR$/reference/regexercise_solutions/both.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise_solutions\finite.py" afterPath="$PROJECT_DIR$/reference/regexercise_solutions/finite.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise_solutions\literals.py" afterPath="$PROJECT_DIR$/reference/regexercise_solutions/literals.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise_solutions\literals_hal.py" afterPath="$PROJECT_DIR$/reference/regexercise_solutions/literals_hal.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise_solutions\literals_runtime.s" afterPath="$PROJECT_DIR$/reference/regexercise_solutions/literals_runtime.s" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise_solutions\plus.py" afterPath="$PROJECT_DIR$/reference/regexercise_solutions/plus.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise_solutions\plus_compiled.py" afterPath="$PROJECT_DIR$/reference/regexercise_solutions/plus_compiled.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise_solutions\plus_thompsonlike.py" afterPath="$PROJECT_DIR$/reference/regexercise_solutions/plus_thompsonlike.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise_solutions\star.py" afterPath="$PROJECT_DIR$/reference/regexercise_solutions/star.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise_solutions\star_compiled.py" afterPath="$PROJECT_DIR$/reference/regexercise_solutions/star_compiled.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise_solutions\star_oo.py" afterPath="$PROJECT_DIR$/reference/regexercise_solutions/star_oo.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise_solutions\star_shorter.py" afterPath="$PROJECT_DIR$/reference/regexercise_solutions/star_shorter.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\regexercise_solutions\star_thompsonlike.py" afterPath="$PROJECT_DIR$/reference/regexercise_solutions/star_thompsonlike.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\.gitignore" afterPath="$PROJECT_DIR$/reference/sketchbook/.gitignore" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\README" afterPath="$PROJECT_DIR$/reference/sketchbook/README" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\boole\bdd.py" afterPath="$PROJECT_DIR$/reference/sketchbook/boole/bdd.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\boole\boole.py" afterPath="$PROJECT_DIR$/reference/sketchbook/boole/boole.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\boole\carroll" afterPath="$PROJECT_DIR$/reference/sketchbook/boole/carroll" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\boole\puzzler.py" afterPath="$PROJECT_DIR$/reference/sketchbook/boole/puzzler.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\boole\validity.py" afterPath="$PROJECT_DIR$/reference/sketchbook/boole/validity.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\boole\validity_iter.py" afterPath="$PROJECT_DIR$/reference/sketchbook/boole/validity_iter.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\boole\validity_smallerfirst.py" afterPath="$PROJECT_DIR$/reference/sketchbook/boole/validity_smallerfirst.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\chess\chess.py" afterPath="$PROJECT_DIR$/reference/sketchbook/chess/chess.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\coroutines\README.md" afterPath="$PROJECT_DIR$/reference/sketchbook/coroutines/README.md" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\coroutines\crunchchannels.py" afterPath="$PROJECT_DIR$/reference/sketchbook/coroutines/crunchchannels.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\coroutines\io.py" afterPath="$PROJECT_DIR$/reference/sketchbook/coroutines/io.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\coroutines\multitask.py" afterPath="$PROJECT_DIR$/reference/sketchbook/coroutines/multitask.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\coroutines\simplest.py" afterPath="$PROJECT_DIR$/reference/sketchbook/coroutines/simplest.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\coroutines\tryme.py" afterPath="$PROJECT_DIR$/reference/sketchbook/coroutines/tryme.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\editor\README" afterPath="$PROJECT_DIR$/reference/sketchbook/editor/README" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\editor\ansi.py" afterPath="$PROJECT_DIR$/reference/sketchbook/editor/ansi.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\editor\editor.py" afterPath="$PROJECT_DIR$/reference/sketchbook/editor/editor.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\gimme\README.md" afterPath="$PROJECT_DIR$/reference/sketchbook/gimme/README.md" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\gimme\bar.maker" afterPath="$PROJECT_DIR$/reference/sketchbook/gimme/bar.maker" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\gimme\foo.maker" afterPath="$PROJECT_DIR$/reference/sketchbook/gimme/foo.maker" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\gimme\gimme" afterPath="$PROJECT_DIR$/reference/sketchbook/gimme/gimme" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\gimme\gimme-ab-initio" afterPath="$PROJECT_DIR$/reference/sketchbook/gimme/gimme-ab-initio" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\hand-fsm-in-c\Makefile" afterPath="$PROJECT_DIR$/reference/sketchbook/hand-fsm-in-c/Makefile" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\hand-fsm-in-c\Notes.text" afterPath="$PROJECT_DIR$/reference/sketchbook/hand-fsm-in-c/Notes.text" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\hand-fsm-in-c\sketch.c" afterPath="$PROJECT_DIR$/reference/sketchbook/hand-fsm-in-c/sketch.c" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\hdl\README.md" afterPath="$PROJECT_DIR$/reference/sketchbook/hdl/README.md" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\hdl\hdl1.py" afterPath="$PROJECT_DIR$/reference/sketchbook/hdl/hdl1.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\hdl\hdl2.py" afterPath="$PROJECT_DIR$/reference/sketchbook/hdl/hdl2.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\lex\DFA.py" afterPath="$PROJECT_DIR$/reference/sketchbook/lex/DFA.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\lex\README" afterPath="$PROJECT_DIR$/reference/sketchbook/lex/README" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\lex\UnionFind.py" afterPath="$PROJECT_DIR$/reference/sketchbook/lex/UnionFind.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\lex\c-lex0" afterPath="$PROJECT_DIR$/reference/sketchbook/lex/c-lex0" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\lex\deriv2.py" afterPath="$PROJECT_DIR$/reference/sketchbook/lex/deriv2.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\lex\dfa_deriv2.py" afterPath="$PROJECT_DIR$/reference/sketchbook/lex/dfa_deriv2.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\lex\dfa_minimize.py" afterPath="$PROJECT_DIR$/reference/sketchbook/lex/dfa_minimize.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\lex\dfa_nfa.py" afterPath="$PROJECT_DIR$/reference/sketchbook/lex/dfa_nfa.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\lex\dfa_statecount.py" afterPath="$PROJECT_DIR$/reference/sketchbook/lex/dfa_statecount.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\lex\enum_res.py" afterPath="$PROJECT_DIR$/reference/sketchbook/lex/enum_res.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\lex\lex.py" afterPath="$PROJECT_DIR$/reference/sketchbook/lex/lex.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\lex\memo.py" afterPath="$PROJECT_DIR$/reference/sketchbook/lex/memo.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\lex\parse.py" afterPath="$PROJECT_DIR$/reference/sketchbook/lex/parse.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\lispmachine\README.md" afterPath="$PROJECT_DIR$/reference/sketchbook/lispmachine/README.md" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\lispmachine\lispmachine.scm" afterPath="$PROJECT_DIR$/reference/sketchbook/lispmachine/lispmachine.scm" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\lispmachine\testme.scm" afterPath="$PROJECT_DIR$/reference/sketchbook/lispmachine/testme.scm" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\lispy\lllis.py" afterPath="$PROJECT_DIR$/reference/sketchbook/lispy/lllis.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\lz\lz77.py" afterPath="$PROJECT_DIR$/reference/sketchbook/lz/lz77.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\lz\lz78.py" afterPath="$PROJECT_DIR$/reference/sketchbook/lz/lz78.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\lz\lzw.py" afterPath="$PROJECT_DIR$/reference/sketchbook/lz/lzw.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\lz\thuemorse.py" afterPath="$PROJECT_DIR$/reference/sketchbook/lz/thuemorse.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\metatoo\README.md" afterPath="$PROJECT_DIR$/reference/sketchbook/metatoo/README.md" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\metatoo\bootstrap.py" afterPath="$PROJECT_DIR$/reference/sketchbook/metatoo/bootstrap.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\metatoo\build.sh" afterPath="$PROJECT_DIR$/reference/sketchbook/metatoo/build.sh" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\metatoo\metalib.py" afterPath="$PROJECT_DIR$/reference/sketchbook/metatoo/metalib.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\metatoo\metametoo\README.md" afterPath="$PROJECT_DIR$/reference/sketchbook/metatoo/metametoo/README.md" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\metatoo\metametoo\check-fixpoint.sh" afterPath="$PROJECT_DIR$/reference/sketchbook/metatoo/metametoo/check-fixpoint.sh" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\metatoo\metametoo\infix.meta" afterPath="$PROJECT_DIR$/reference/sketchbook/metatoo/metametoo/infix.meta" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\metatoo\metametoo\meta.asm" afterPath="$PROJECT_DIR$/reference/sketchbook/metatoo/metametoo/meta.asm" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\metatoo\metametoo\meta.meta" afterPath="$PROJECT_DIR$/reference/sketchbook/metatoo/metametoo/meta.meta" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\metatoo\metametoo\meta.py" afterPath="$PROJECT_DIR$/reference/sketchbook/metatoo/metametoo/meta.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\metatoo\metametoo\meta.sh" afterPath="$PROJECT_DIR$/reference/sketchbook/metatoo/metametoo/meta.sh" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\metatoo\metametoo\renly.meta" afterPath="$PROJECT_DIR$/reference/sketchbook/metatoo/metametoo/renly.meta" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\metatoo\metametoo\testme.sh" afterPath="$PROJECT_DIR$/reference/sketchbook/metatoo/metametoo/testme.sh" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\metatoo\metatoo.metatoo" afterPath="$PROJECT_DIR$/reference/sketchbook/metatoo/metatoo.metatoo" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\metatoo\metatoo.py" afterPath="$PROJECT_DIR$/reference/sketchbook/metatoo/metatoo.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\metatoo\runmetameta.py" afterPath="$PROJECT_DIR$/reference/sketchbook/metatoo/runmetameta.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\agingcache.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/agingcache.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\arrayviews.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/arrayviews.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\chat.el" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/chat.el" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\chat.sh" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/chat.sh" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\decorator.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/decorator.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\fliptrick.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/fliptrick.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\hex.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/hex.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\initter.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/initter.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\kernel.scm" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/kernel.scm" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\macroe.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/macroe.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\multisub.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/multisub.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\pike.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/pike.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\pokerhands.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/pokerhands.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\polytypic_walk.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/polytypic_walk.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\primesieve.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/primesieve.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\quasiquote.scm" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/quasiquote.scm" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\rationalize.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/rationalize.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\retrying.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/retrying.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\runN.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/runN.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\sokoban.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/sokoban.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\streams.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/streams.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\sub1.lambda" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/sub1.lambda" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\subpalindrome.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/subpalindrome.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\throttling.js" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/throttling.js" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\trampoline.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/trampoline.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\trivial72.scm" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/trivial72.scm" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\trm.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/trm.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\txtzyme.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/txtzyme.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\misc\write_offside.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/write_offside.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\mit-class\README" afterPath="$PROJECT_DIR$/reference/sketchbook/mit-class/README" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\mit-class\ps02\pdispatch.py" afterPath="$PROJECT_DIR$/reference/sketchbook/mit-class/ps02/pdispatch.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\mit-class\ps03\initial-match.scm" afterPath="$PROJECT_DIR$/reference/sketchbook/mit-class/ps03/initial-match.scm" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\mit-class\ps03\match.scm" afterPath="$PROJECT_DIR$/reference/sketchbook/mit-class/ps03/match.scm" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\mit-class\ps03\notes.text" afterPath="$PROJECT_DIR$/reference/sketchbook/mit-class/ps03/notes.text" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\mit-class\ps03\rule-language.scm" afterPath="$PROJECT_DIR$/reference/sketchbook/mit-class/ps03/rule-language.scm" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\mit-class\ps03\rules.scm" afterPath="$PROJECT_DIR$/reference/sketchbook/mit-class/ps03/rules.scm" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\mit-class\ps04\load.scm" afterPath="$PROJECT_DIR$/reference/sketchbook/mit-class/ps04/load.scm" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\mit-class\ps04\rule-language.scm" afterPath="$PROJECT_DIR$/reference/sketchbook/mit-class/ps04/rule-language.scm" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\mit-class\ps04\rules.scm" afterPath="$PROJECT_DIR$/reference/sketchbook/mit-class/ps04/rules.scm" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\mit-class\todo.text" afterPath="$PROJECT_DIR$/reference/sketchbook/mit-class/todo.text" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\mutagen\mutagen.py" afterPath="$PROJECT_DIR$/reference/sketchbook/mutagen/mutagen.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\mutagen\renderers.py" afterPath="$PROJECT_DIR$/reference/sketchbook/mutagen/renderers.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\packmouse\packmouse.scm" afterPath="$PROJECT_DIR$/reference/sketchbook/packmouse/packmouse.scm" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\packmouse\peg.peg" afterPath="$PROJECT_DIR$/reference/sketchbook/packmouse/peg.peg" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\packmouse\pegger.peg" afterPath="$PROJECT_DIR$/reference/sketchbook/packmouse/pegger.peg" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\packmouse\pegger0.peg" afterPath="$PROJECT_DIR$/reference/sketchbook/packmouse/pegger0.peg" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\parsing\crusoemonoidal.py" afterPath="$PROJECT_DIR$/reference/sketchbook/parsing/crusoemonoidal.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\parsing\crusoeparse.py" afterPath="$PROJECT_DIR$/reference/sketchbook/parsing/crusoeparse.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\parsing\deriv.py" afterPath="$PROJECT_DIR$/reference/sketchbook/parsing/deriv.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\parsing\derivparse.py" afterPath="$PROJECT_DIR$/reference/sketchbook/parsing/derivparse.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\parsing\monadic.py" afterPath="$PROJECT_DIR$/reference/sketchbook/parsing/monadic.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\parsing\monoidal.py" afterPath="$PROJECT_DIR$/reference/sketchbook/parsing/monoidal.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\parsing\peg.py" afterPath="$PROJECT_DIR$/reference/sketchbook/parsing/peg.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\parsing\pratt.py" afterPath="$PROJECT_DIR$/reference/sketchbook/parsing/pratt.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\parsing\precedence_climbing.py" afterPath="$PROJECT_DIR$/reference/sketchbook/parsing/precedence_climbing.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\pushy\README" afterPath="$PROJECT_DIR$/reference/sketchbook/pushy/README" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\pushy\compiling.scm" afterPath="$PROJECT_DIR$/reference/sketchbook/pushy/compiling.scm" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\pushy\lowlevel.scm" afterPath="$PROJECT_DIR$/reference/sketchbook/pushy/lowlevel.scm" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\pushy\schemier.scm" afterPath="$PROJECT_DIR$/reference/sketchbook/pushy/schemier.scm" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\backtrack.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/backtrack.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\backtrack0.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/backtrack0.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\deriv.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/deriv.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\deriv0.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/deriv0.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\deriv1.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/deriv1.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\deriv2.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/deriv2.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\derivplus.hs" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/derivplus.hs" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\enum_res.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/enum_res.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\find_min_re.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/find_min_re.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\generate.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/generate.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\grep.c" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/grep.c" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\ibm7094\assembler.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/ibm7094/assembler.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\ibm7094\catfind.s" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/ibm7094/catfind.s" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\ibm7094\catsfind.s" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/ibm7094/catsfind.s" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\ibm7094\ibm7094.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/ibm7094/ibm7094.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\ibm7094\ibm7094asm.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/ibm7094/ibm7094asm.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\ibm7094\runtime.vm.s" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/ibm7094/runtime.vm.s" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\ibm7094\thompson.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/ibm7094/thompson.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\ibm7094\thompson.s" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/ibm7094/thompson.s" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\ibm7094\thompson.vm.s" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/ibm7094/thompson.vm.s" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\ibm7094\visiblemachine.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/ibm7094/visiblemachine.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\ibm7094\vmcompile.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/ibm7094/vmcompile.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\ibm7094\vmwatch.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/ibm7094/vmwatch.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\integrated1.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/integrated1.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\integrated2.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/integrated2.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\integrated3.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/integrated3.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\memo.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/memo.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\nfa.hs" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/nfa.hs" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\nfa.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/nfa.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\nfa_avoidloops.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/nfa_avoidloops.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\nfa_failstoploops.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/nfa_failstoploops.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\nfa_hs.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/nfa_hs.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\nfa_loopsloop.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/nfa_loopsloop.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\nfa_position.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/nfa_position.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\nfa_rpn.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/nfa_rpn.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\nfa_rpn_vm.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/nfa_rpn_vm.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\nfa_stifleloops.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/nfa_stifleloops.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\nfa_twostage.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/nfa_twostage.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\normalize.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/normalize.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\parse.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/parse.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\regex\parse2.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/parse2.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\rete\Notes.text" afterPath="$PROJECT_DIR$/reference/sketchbook/rete/Notes.text" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\rete\production.py" afterPath="$PROJECT_DIR$/reference/sketchbook/rete/production.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\rete\retenet.py" afterPath="$PROJECT_DIR$/reference/sketchbook/rete/retenet.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\rete\samplecompiled.py" afterPath="$PROJECT_DIR$/reference/sketchbook/rete/samplecompiled.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\sat\ansi.py" afterPath="$PROJECT_DIR$/reference/sketchbook/sat/ansi.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\sat\dimacs.py" afterPath="$PROJECT_DIR$/reference/sketchbook/sat/dimacs.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\sat\factoring.dimacs" afterPath="$PROJECT_DIR$/reference/sketchbook/sat/factoring.dimacs" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\sat\impwatch1sat.py" afterPath="$PROJECT_DIR$/reference/sketchbook/sat/impwatch1sat.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\sat\indexedsat.py" afterPath="$PROJECT_DIR$/reference/sketchbook/sat/indexedsat.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\sat\nqueens.py" afterPath="$PROJECT_DIR$/reference/sketchbook/sat/nqueens.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\sat\problems\factoring2.dimacs" afterPath="$PROJECT_DIR$/reference/sketchbook/sat/problems/factoring2.dimacs" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\sat\problems\factoring6.dimacs" afterPath="$PROJECT_DIR$/reference/sketchbook/sat/problems/factoring6.dimacs" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\sat\problems\subsetsum_random.dimacs" afterPath="$PROJECT_DIR$/reference/sketchbook/sat/problems/subsetsum_random.dimacs" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\sat\problems\trivial.dimacs" afterPath="$PROJECT_DIR$/reference/sketchbook/sat/problems/trivial.dimacs" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\sat\prunettsat.py" afterPath="$PROJECT_DIR$/reference/sketchbook/sat/prunettsat.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\sat\sat.py" afterPath="$PROJECT_DIR$/reference/sketchbook/sat/sat.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\sat\sudoku.py" afterPath="$PROJECT_DIR$/reference/sketchbook/sat/sudoku.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\sat\ttsat.py" afterPath="$PROJECT_DIR$/reference/sketchbook/sat/ttsat.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\sat\ttypuzzle.py" afterPath="$PROJECT_DIR$/reference/sketchbook/sat/ttypuzzle.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\sat\unitsat.py" afterPath="$PROJECT_DIR$/reference/sketchbook/sat/unitsat.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\sat\watch1sat.py" afterPath="$PROJECT_DIR$/reference/sketchbook/sat/watch1sat.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\sat\watch1unitsat.py" afterPath="$PROJECT_DIR$/reference/sketchbook/sat/watch1unitsat.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\semiforth_punybasic\basic.py" afterPath="$PROJECT_DIR$/reference/sketchbook/semiforth_punybasic/basic.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\semiforth_punybasic\semiforth.py" afterPath="$PROJECT_DIR$/reference/sketchbook/semiforth_punybasic/semiforth.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\spew\README.md" afterPath="$PROJECT_DIR$/reference/sketchbook/spew/README.md" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\spew\menu.text" afterPath="$PROJECT_DIR$/reference/sketchbook/spew/menu.text" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\spew\spew.py" afterPath="$PROJECT_DIR$/reference/sketchbook/spew/spew.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\sturm\README.md" afterPath="$PROJECT_DIR$/reference/sketchbook/sturm/README.md" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\textsearch\README" afterPath="$PROJECT_DIR$/reference/sketchbook/textsearch/README" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\textsearch\ark\1.tush" afterPath="$PROJECT_DIR$/reference/sketchbook/textsearch/ark/1.tush" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\textsearch\ark\Akefile" afterPath="$PROJECT_DIR$/reference/sketchbook/textsearch/ark/Akefile" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\textsearch\ark\README" afterPath="$PROJECT_DIR$/reference/sketchbook/textsearch/ark/README" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\textsearch\ark\ark-get.c" afterPath="$PROJECT_DIR$/reference/sketchbook/textsearch/ark/ark-get.c" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\textsearch\ark\idx-extract-keys" afterPath="$PROJECT_DIR$/reference/sketchbook/textsearch/ark/idx-extract-keys" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\textsearch\ark\idx-make" afterPath="$PROJECT_DIR$/reference/sketchbook/textsearch/ark/idx-make" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\textsearch\ark\idx-search" afterPath="$PROJECT_DIR$/reference/sketchbook/textsearch/ark/idx-search" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\textsearch\ark\idx-searching" afterPath="$PROJECT_DIR$/reference/sketchbook/textsearch/ark/idx-searching" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\textsearch\simple2\1.tush" afterPath="$PROJECT_DIR$/reference/sketchbook/textsearch/simple2/1.tush" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\textsearch\simple2\README" afterPath="$PROJECT_DIR$/reference/sketchbook/textsearch/simple2/README" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\textsearch\simple2\idx-fetch" afterPath="$PROJECT_DIR$/reference/sketchbook/textsearch/simple2/idx-fetch" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\textsearch\simple2\idx-make" afterPath="$PROJECT_DIR$/reference/sketchbook/textsearch/simple2/idx-make" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\textsearch\simple2\idx-search" afterPath="$PROJECT_DIR$/reference/sketchbook/textsearch/simple2/idx-search" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\textsearch\simple2\idx-searching" afterPath="$PROJECT_DIR$/reference/sketchbook/textsearch/simple2/idx-searching" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\textsearch\simplest\1.tush" afterPath="$PROJECT_DIR$/reference/sketchbook/textsearch/simplest/1.tush" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\textsearch\simplest\README" afterPath="$PROJECT_DIR$/reference/sketchbook/textsearch/simplest/README" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\textsearch\simplest\idx-extract-keys" afterPath="$PROJECT_DIR$/reference/sketchbook/textsearch/simplest/idx-extract-keys" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\textsearch\simplest\idx-make" afterPath="$PROJECT_DIR$/reference/sketchbook/textsearch/simplest/idx-make" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\textsearch\simplest\idx-search" afterPath="$PROJECT_DIR$/reference/sketchbook/textsearch/simplest/idx-search" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\textsearch\tarred\1.tush" afterPath="$PROJECT_DIR$/reference/sketchbook/textsearch/tarred/1.tush" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\textsearch\tarred\README" afterPath="$PROJECT_DIR$/reference/sketchbook/textsearch/tarred/README" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\textsearch\tarred\idx-extract-keys" afterPath="$PROJECT_DIR$/reference/sketchbook/textsearch/tarred/idx-extract-keys" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\textsearch\tarred\idx-make" afterPath="$PROJECT_DIR$/reference/sketchbook/textsearch/tarred/idx-make" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\textsearch\tarred\idx-search" afterPath="$PROJECT_DIR$/reference/sketchbook/textsearch/tarred/idx-search" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\textsearch\tarred\idx-searching" afterPath="$PROJECT_DIR$/reference/sketchbook/textsearch/tarred/idx-searching" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\winston-horn\blocks.scm" afterPath="$PROJECT_DIR$/reference/sketchbook/winston-horn/blocks.scm" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\winston-horn\prove.scm" afterPath="$PROJECT_DIR$/reference/sketchbook/winston-horn/prove.scm" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\zippers\treezip.py" afterPath="$PROJECT_DIR$/reference/sketchbook/zippers/treezip.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\sketchbook\zippers\zipper.py" afterPath="$PROJECT_DIR$/reference/sketchbook/zippers/zipper.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\tt.py" afterPath="$PROJECT_DIR$/peggy/peggy.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/ply-3.8/ply/yacc.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/ply/yacc.py" />
     </list>
     <ignored path="__py_playground.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -566,8 +39,12 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/__py_playground$Unittests_in_TestPeg.coverage" NAME="Unittests in TestPeg Coverage Results" MODIFIED="1445767237991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/__py_playground$Unittest_TestJsonParser_test_json_basic.coverage" NAME="Unittest TestJsonParser.test_json_basic Coverage Results" MODIFIED="1445773864043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__py_playground$Unittest_TestCalculator_test_calculator__1_.coverage" NAME="Unittest TestCalculator.test_calculator (1) Coverage Results" MODIFIED="1445834051164" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__py_playground$Unittest_TestJsonParser_test_json_basic.coverage" NAME="Unittest TestJsonParser.test_json_basic Coverage Results" MODIFIED="1445912253784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__py_playground$Unittest_TestCalculator_test_calculator.coverage" NAME="Unittest TestCalculator.test_calculator Coverage Results" MODIFIED="1445921908782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/__py_playground$Unittest_TestPeg_test_calculator__1_.coverage" NAME="Unittest TestPeg.test_calculator (1) Coverage Results" MODIFIED="1445766805487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__py_playground$tuple_test.coverage" NAME="tuple_test Coverage Results" MODIFIED="1445914095144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/reference/playground" />
+    <SUITE FILE_PATH="coverage/__py_playground$peggy.coverage" NAME="peggy Coverage Results" MODIFIED="1445915756896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/peggy" />
     <SUITE FILE_PATH="coverage/__py_playground$Unittests_in_TestCalculator__1_.coverage" NAME="Unittests in TestCalculator (1) Coverage Results" MODIFIED="1445768433866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/__py_playground$Unittest_TestPeg_test_key_value_parser.coverage" NAME="Unittest TestPeg.test_key_value_parser Coverage Results" MODIFIED="1445766683956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -580,26 +57,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="peggy.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="peggy.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/peggy/peggy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2857143">
-              <caret line="85" column="55" selection-start-line="85" selection-start-column="55" selection-end-line="85" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="248" column="20" selection-start-line="248" selection-start-column="15" selection-end-line="248" selection-end-column="20" />
               <folding>
-                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#0#38#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="json_parser.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/json_parser.py">
+      <file leaf-file-name="calc_tree.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/calc_tree.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
               <folding>
-                <element signature="e#0#37#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="display.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/peggy/display.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.25578833">
+              <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -623,11 +110,14 @@
         <option value="$PROJECT_DIR$/test_peg.py" />
         <option value="$PROJECT_DIR$/tt.py" />
         <option value="$PROJECT_DIR$/test_peggy.py" />
-        <option value="$PROJECT_DIR$/calculator.py" />
         <option value="$PROJECT_DIR$/json.py" />
         <option value="$PROJECT_DIR$/keyvalue.py" />
-        <option value="$PROJECT_DIR$/peggy/peggy.py" />
         <option value="$PROJECT_DIR$/json_parser.py" />
+        <option value="$PROJECT_DIR$/calculator.py" />
+        <option value="$PROJECT_DIR$/reference/playground/tuple_test.py" />
+        <option value="$PROJECT_DIR$/peggy/peggy.py" />
+        <option value="$PROJECT_DIR$/calc_tree.py" />
+        <option value="$PROJECT_DIR$/peggy/display.py" />
       </list>
     </option>
   </component>
@@ -641,8 +131,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1376" />
-    <option name="height" value="754" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -668,6 +158,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -686,9 +177,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="__py_playground" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="__py_playground" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="peggy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -700,105 +204,16 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PROJECTS\P\__py_playground" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\PROJECTS\P\__py_playground\peggy" />
       <recent name="D:\PROJECTS\P\__py_playground\reference" />
       <recent name="D:\PRJ\play\__py_playground" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittest TestJsonParser.test_json_basic">
-    <configuration default="false" name="Unittest TestCalculator.test_calculator" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="__py_playground" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\PROJECTS\P\__py_playground\calculator.py" />
-      <option name="CLASS_NAME" value="TestCalculator" />
-      <option name="METHOD_NAME" value="test_calculator" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittest TestPeg.test_key_value_parser" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="__py_playground" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\PROJECTS\P\__py_playground\peggy\peggy.py" />
-      <option name="CLASS_NAME" value="TestPeg" />
-      <option name="METHOD_NAME" value="test_key_value_parser" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in TestCalculator" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="__py_playground" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\PROJECTS\P\__py_playground\calculator.py" />
-      <option name="CLASS_NAME" value="TestCalculator" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_CLASS" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in TestCalculator (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="__py_playground" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/calculator.py" />
-      <option name="CLASS_NAME" value="TestCalculator" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_CLASS" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Unittest TestCalculator.test_calculator">
     <configuration default="false" name="Unittest TestJsonParser.test_json_basic" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -820,6 +235,88 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest TestCalculator.test_calculator (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="__py_playground" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/calculator.py" />
+      <option name="CLASS_NAME" value="TestCalculator" />
+      <option name="METHOD_NAME" value="test_calculator" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="tuple_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/reference/playground" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="__py_playground" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/reference/playground/tuple_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest TestCalculator.test_calculator" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="__py_playground" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/calc_tree.py" />
+      <option name="CLASS_NAME" value="TestCalculator" />
+      <option name="METHOD_NAME" value="test_calculator" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="peggy" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/peggy" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="__py_playground" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/peggy/peggy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -1011,19 +508,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest TestCalculator.test_calculator" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest TestPeg.test_key_value_parser" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in TestCalculator" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in TestCalculator (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestJsonParser.test_json_basic" />
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest TestJsonParser.test_json_basic" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest TestCalculator.test_calculator (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.tuple_test" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestCalculator.test_calculator" />
+      <item index="4" class="java.lang.String" itemvalue="Python.peggy" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest TestJsonParser.test_json_basic" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in TestCalculator (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in TestCalculator" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestCalculator.test_calculator" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestPeg.test_key_value_parser" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest TestCalculator.test_calculator" />
+        <item index="1" class="java.lang.String" itemvalue="Python.peggy" />
+        <item index="2" class="java.lang.String" itemvalue="Python.tuple_test" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestJsonParser.test_json_basic" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestCalculator.test_calculator (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -1041,7 +538,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1049,12 +546,12 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32834226" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258427" sideWeight="0.4969605" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45561498" sideWeight="0.4969605" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26595744" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2739872" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32744783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272727" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1078,24 +575,74 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/peggy/peggy.py">
+    <entry file="file://$PROJECT_DIR$/calculator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/calculator.py">
+    <entry file="file://$PROJECT_DIR$/peggy/peggy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="233" column="0" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#37#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyvalue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/peggy/peggy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="233" column="0" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#37#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyvalue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1105,7 +652,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1114,7 +661,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/peggy/peggy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/calculator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1123,7 +686,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="343" column="17" selection-start-line="343" selection-start-column="17" selection-end-line="343" selection-end-column="17" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1140,7 +703,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="337" column="21" selection-start-line="337" selection-start-column="21" selection-end-line="337" selection-end-column="21" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1157,7 +720,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="339" column="18" selection-start-line="339" selection-start-column="18" selection-end-line="339" selection-end-column="18" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1174,7 +737,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="320" column="18" selection-start-line="320" selection-start-column="18" selection-end-line="320" selection-end-column="18" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1191,7 +754,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="161" column="47" selection-start-line="161" selection-start-column="47" selection-end-line="161" selection-end-column="47" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1208,7 +771,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1332,58 +895,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reference/parson/eg_calc.py">
+    <entry file="file://$PROJECT_DIR$/test_peggy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14261745">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.12700106">
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyvalue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.68171805">
+          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/calculator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40128067">
-          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_peggy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12700106">
-          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
           <folding>
             <element signature="e#0#15#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/keyvalue.py">
+    <entry file="file://$USER_HOME$/.PyCharm40/system/python_stubs/-946255732/operator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2627551">
-          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+        <state vertical-scroll-proportion="-2.0992281">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reference/parson/eg_calc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.037486218">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reference/peglet/examples/infix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.76185226">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#15#0" expanded="false" />
+            <element signature="e#0#851#1" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/json_parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.4370861">
+          <caret line="93" column="9" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reference/playground/tuple_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42218542">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm40/system/python_stubs/-946255732/__builtin__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12679163">
+          <caret line="4366" column="0" selection-start-line="4365" selection-start-column="12" selection-end-line="4366" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/peggy/peggy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2857143">
-          <caret line="85" column="55" selection-start-line="85" selection-start-column="55" selection-end-line="85" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="248" column="20" selection-start-line="248" selection-start-column="15" selection-end-line="248" selection-end-column="20" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/calc_tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/peggy/display.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.25578833">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>

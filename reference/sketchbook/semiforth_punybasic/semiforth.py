@@ -162,9 +162,9 @@ primitives = {
     'negate': mkprim(1, operator.neg),
     'int':    mkprim(1, int),
 
-    'write':  mkstacker(1, lambda x: null(sys.stdout.write(str(x)))),
-    'space':  mkaction(lambda: sys.stdout.write(' ')),
-    'newline': mkaction(lambda: sys.stdout.write('\n')),
+    'write':  mkstacker(1, lambda x: null(sys.stdout._write(str(x)))),
+    'space':  mkaction(lambda: sys.stdout._write(' ')),
+    'newline': mkaction(lambda: sys.stdout._write('\n')),
 
     '<':      mkpred(2, operator.lt),
     '<=':     mkpred(2, operator.le),

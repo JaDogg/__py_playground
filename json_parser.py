@@ -8,13 +8,15 @@ from peggy.peggy import PackratParser, Not, ZeroOrMore
 
 # References : https://github.com/antlr/grammars-v4/blob/master/json/JSON.g4
 
+# TODO Think and optimize spaces
+
 
 class JsonParser(PackratParser):
     def __init__(self, text):
         rules = {
             "parse": [
                 ["_", "object", "_", Not(r".")],
-                ["_", "array", "_", Not(r".")],
+                ["_", "array", "_", Not(r".")]
             ],
             "object": [
                 [r"[{]", "_", "pair", "_",
@@ -45,7 +47,7 @@ class JsonParser(PackratParser):
                 [r"(\d+)", "@to_int"]
             ],
             "_": [
-                [r"\s*"]
+                [r"(?:\s|\r|\n)*"]
             ]
         }
         PackratParser.__init__(self, rules, text)
@@ -93,7 +95,7 @@ class TestJsonParser(unittest.TestCase):
         objects = [
             {"he\\l\"lo": "world", "hi": {"alternative": "reality"}},
             {"null_checker": None, "hi": {"false": False, "true": True}},
-            [["A"], "2", [[[]], []]],
+            [["A"], "2", [[[]], {}]],
             {"Hello": None, "World": [[[1]]]}
         ]
         for obj in objects:

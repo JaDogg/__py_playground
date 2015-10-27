@@ -28,8 +28,8 @@ import sys
 import tpg
 
 def say(msg, file=sys.stdout):
-    file.write(msg)
-    file.write("\n")
+    file._write(msg)
+    file._write("\n")
 
 class ArgError(Exception): pass
 

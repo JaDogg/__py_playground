@@ -8,7 +8,7 @@ import visiblemachine
 def watch(filename, inputs):
     vm = visiblemachine.load(filename, inputs)
     while True:
-        sys.stdout.write(ansi.clear_screen)
+        sys.stdout._write(ansi.clear_screen)
         vm.show()
         sys.stdin.read(1)
         try:

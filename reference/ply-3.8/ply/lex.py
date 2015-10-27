@@ -77,13 +77,13 @@ class PlyLogger(object):
         self.f = f
 
     def critical(self, msg, *args, **kwargs):
-        self.f.write((msg % args) + '\n')
+        self.f._write((msg % args) + '\n')
 
     def warning(self, msg, *args, **kwargs):
-        self.f.write('WARNING: ' + (msg % args) + '\n')
+        self.f._write('WARNING: ' + (msg % args) + '\n')
 
     def error(self, msg, *args, **kwargs):
-        self.f.write('ERROR: ' + (msg % args) + '\n')
+        self.f._write('ERROR: ' + (msg % args) + '\n')
 
     info = critical
     debug = critical
@@ -1057,7 +1057,7 @@ def runmain(lexer=None, data=None):
             data = f.read()
             f.close()
         except IndexError:
-            sys.stdout.write('Reading from standard input (type EOF to end):\n')
+            sys.stdout._write('Reading from standard input (type EOF to end):\n')
             data = sys.stdin.read()
 
     if lexer:
@@ -1074,7 +1074,7 @@ def runmain(lexer=None, data=None):
         tok = _token()
         if not tok:
             break
-        sys.stdout.write('(%s,%r,%d,%d)\n' % (tok.type, tok.value, tok.lineno, tok.lexpos))
+        sys.stdout._write('(%s,%r,%d,%d)\n' % (tok.type, tok.value, tok.lineno, tok.lexpos))
 
 # -----------------------------------------------------------------------------
 # @TOKEN(regex)

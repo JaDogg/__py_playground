@@ -141,7 +141,7 @@ ansi_hide_cursor     = esc + '[?25l'
 ansi_show_cursor     = esc + '[?25h'
 
 def write(s):
-    sys.stdout.write(s.replace('\n', ansi_clear_to_right + '\r\n'))
+    sys.stdout._write(s.replace('\n', ansi_clear_to_right + '\r\n'))
 
 def in_raw_mode(reacting):
     # It looks like this could be done with the tty and termios

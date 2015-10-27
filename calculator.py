@@ -1,3 +1,5 @@
+import unittest
+
 from peggy.peggy import *
 
 
@@ -98,7 +100,8 @@ class InfixToPostfixCompiler(InfixTree):
 
 class TestCalculator(unittest.TestCase):
     def test_calculator(self):
-        t = r"""5+2+3"""
-        p = InfixTree(t)
-        _, _, t = p.parse()
-        display(t)
+        t = r"""5++2+2-1*3"""
+        p = Calculator(t)
+        _, _, t_ = p.parse()
+        t_, = t_
+        display((t_, eval(t)))

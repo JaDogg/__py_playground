@@ -76,14 +76,14 @@ def forward_move_char(): move_char(1)
 os.system('stty raw -echo')
 try:
 
-    sys.stdout.write(ansi.clear_screen)
+    sys.stdout._write(ansi.clear_screen)
     while True:
 
         if not redisplay(origin, lambda s: None):
             for origin in range(max(0, point - cols * rows), point+1):
                 if redisplay(origin, lambda s: None):
                     break
-        redisplay(origin, sys.stdout.write)
+        redisplay(origin, sys.stdout._write)
 
         ch = sys.stdin.read(1)
         if ch in ('', C('x'), C('q')):

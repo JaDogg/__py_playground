@@ -1,4 +1,5 @@
-from abc import abstractmethod, ABCMeta
+from __future__ import absolute_import
+
 import re
 from functools import wraps
 
@@ -26,14 +27,6 @@ def flatten(items):
                 yield item_
         else:
             yield item
-
-
-def display(items, depth=1):
-    for item in items:
-        if isinstance(item, tuple):
-            display(item, depth + 1)
-        else:
-            print("{t}({i})".format(t="  " * depth, i=item))
 
 
 def merge_dictionary(destination, source):
@@ -113,6 +106,9 @@ class PackratParser(TupleUtils):
         if isinstance(token, Matcher):
             return token(self, position, values)
 
+        if isinstance(token, Invoker):
+            return position, position, token(*values)
+
         # Match a sub rule
         if token in self._rules:
             rightmost, current_pos, current_values = \
@@ -138,20 +134,14 @@ class PackratParser(TupleUtils):
 
 
 class Matcher(object):
-    __metaclass__ = ABCMeta
-
     def __init__(self, *args):
         self._atoms = args
 
-    @abstractmethod
     def __call__(self, parser, position, values):
         pass
 
 
 class One(Matcher):
-    def __init__(self, *args):
-        Matcher.__init__(self, *args)
-
     def __call__(self, parser, position, values):
         current_pos, current_values = position, values
         rightmost = position
@@ -168,9 +158,6 @@ class One(Matcher):
 
 
 class OneOrMore(One):
-    def __init__(self, *args):
-        Matcher.__init__(self, *args)
-
     def __call__(self, parser, position, values):
         current_rightmost, current_pos, current_values = position, None, values
         while True:
@@ -186,9 +173,6 @@ class OneOrMore(One):
 
 
 class ZeroOrMore(OneOrMore):
-    def __init__(self, *args):
-        Matcher.__init__(self, *args)
-
     def __call__(self, parser, position, values):
         current_rightmost, current_pos, current_values = \
             OneOrMore.__call__(self, parser, position, values)
@@ -200,9 +184,6 @@ class ZeroOrMore(OneOrMore):
 
 
 class ZeroOrOne(One):
-    def __init__(self, *args):
-        Matcher.__init__(self, *args)
-
     def __call__(self, parser, position, values):
         current_rightmost, current_pos, current_values = \
             One.__call__(self, parser, position, values)
@@ -214,9 +195,6 @@ class ZeroOrOne(One):
 
 
 class Or(Matcher):
-    def __init__(self, *args):
-        Matcher.__init__(self, *args)
-
     def __call__(self, parser, position, values):
         for matcher in self._atoms:
             current_rightmost, current_pos, current_values \
@@ -229,12 +207,47 @@ class Or(Matcher):
 
 
 class Not(One):
-    def __init__(self, *args):
-        Matcher.__init__(self, *args)
-
     def __call__(self, parser, position, values):
         current_rightmost, current_pos, current_values \
             = One.__call__(self, parser, position, values)
 
         return current_rightmost, current_rightmost if current_pos is None \
             else None, values if current_pos is None else ()
+
+
+class Nothing(Not):
+    def __init__(self):
+        Not.__init__(self, r".")
+
+
+class Invoker(object):
+    def __call__(self, *values):
+        pass
+
+
+class Label(tuple):
+    def __new__(cls, _, *args):
+        return super(Label, cls).__new__(cls, tuple(args))
+
+    def __init__(self, label_string, *_):
+        self.label = label_string
+
+    def __add__(self, other):
+        new_tuple = tuple.__add__(self, other)
+        return Label(self.label, *new_tuple)
+
+    def __radd__(self, other):
+        new_tuple = tuple.__add__(other, self)
+        return Label(self.label, *new_tuple)
+
+
+class _LabelInvoker(Invoker):
+    def __init__(self, label_str):
+        self.label = label_str
+
+    def __call__(self, *values):
+        return Label(self.label, *values),
+
+
+def label(label_str):
+    return _LabelInvoker(label_str)
