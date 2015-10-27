@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e26f7475-ab20-41f1-aec4-4cc4a094df6d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/ply-3.8/example/BASIC/basinterp.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/BASIC/basinterp.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/metatoo/bootstrap.py" afterPath="$PROJECT_DIR$/reference/sketchbook/metatoo/bootstrap.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/editor/editor.py" afterPath="$PROJECT_DIR$/reference/sketchbook/editor/editor.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/parson/eg_basic.py" afterPath="$PROJECT_DIR$/reference/parson/eg_basic.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/gimme/gimme" afterPath="$PROJECT_DIR$/reference/sketchbook/gimme/gimme" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/regexercise/hal_watch.py" afterPath="$PROJECT_DIR$/reference/regexercise/hal_watch.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/hdl/hdl1.py" afterPath="$PROJECT_DIR$/reference/sketchbook/hdl/hdl1.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/ply-3.8/ply/lex.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/ply/lex.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/misc/macroe.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/macroe.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/metatoo/metametoo/meta.py" afterPath="$PROJECT_DIR$/reference/sketchbook/metatoo/metametoo/meta.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/metatoo/runmetameta.py" afterPath="$PROJECT_DIR$/reference/sketchbook/metatoo/runmetameta.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/semiforth_punybasic/semiforth.py" afterPath="$PROJECT_DIR$/reference/sketchbook/semiforth_punybasic/semiforth.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/misc/sokoban.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/sokoban.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/TPG-3.2.2/tpg.py" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/tpg.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/TPG-3.2.2/tpg.pyg" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/tpg.pyg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/TPG-3.2.2/tpg" afterPath="$PROJECT_DIR$/reference/TPG-3.2.2/tpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/sat/ttypuzzle.py" afterPath="$PROJECT_DIR$/reference/sketchbook/sat/ttypuzzle.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/regex/ibm7094/vmwatch.py" afterPath="$PROJECT_DIR$/reference/sketchbook/regex/ibm7094/vmwatch.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/ply-3.8/ply/yacc.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/ply/yacc.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/calc_tree.py" afterPath="$PROJECT_DIR$/calc_tree.py" />
     </list>
     <ignored path="__py_playground.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,10 +19,11 @@
     <SUITE FILE_PATH="coverage/__py_playground$Unittests_in_TestPeg.coverage" NAME="Unittests in TestPeg Coverage Results" MODIFIED="1445767237991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/__py_playground$Unittest_TestCalculator_test_calculator__1_.coverage" NAME="Unittest TestCalculator.test_calculator (1) Coverage Results" MODIFIED="1445834051164" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/__py_playground$Unittest_TestJsonParser_test_json_basic.coverage" NAME="Unittest TestJsonParser.test_json_basic Coverage Results" MODIFIED="1445912253784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/__py_playground$Unittest_TestCalculator_test_calculator.coverage" NAME="Unittest TestCalculator.test_calculator Coverage Results" MODIFIED="1445921908782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__py_playground$Unittest_TestCalculator_test_calculator.coverage" NAME="Unittest TestCalculator.test_calculator Coverage Results" MODIFIED="1445924229183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/__py_playground$Unittest_TestPeg_test_calculator__1_.coverage" NAME="Unittest TestPeg.test_calculator (1) Coverage Results" MODIFIED="1445766805487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/__py_playground$tuple_test.coverage" NAME="tuple_test Coverage Results" MODIFIED="1445914095144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/reference/playground" />
     <SUITE FILE_PATH="coverage/__py_playground$peggy.coverage" NAME="peggy Coverage Results" MODIFIED="1445915756896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/peggy" />
+    <SUITE FILE_PATH="coverage/__py_playground$dot_render.coverage" NAME="dot_render Coverage Results" MODIFIED="1445923800750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/peggy" />
     <SUITE FILE_PATH="coverage/__py_playground$Unittests_in_TestCalculator__1_.coverage" NAME="Unittests in TestCalculator (1) Coverage Results" MODIFIED="1445768433866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/__py_playground$Unittest_TestPeg_test_key_value_parser.coverage" NAME="Unittest TestPeg.test_key_value_parser Coverage Results" MODIFIED="1445766683956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -66,27 +48,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="calc_tree.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/calc_tree.py">
+      <file leaf-file-name="dot_render.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/peggy/dot_render.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+            <state vertical-scroll-proportion="1.5197505">
+              <caret line="76" column="43" selection-start-line="76" selection-start-column="43" selection-end-line="76" selection-end-column="43" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
-                <marker date="1445920897919" expanded="true" signature="1432:1592" placeholder="..." />
-                <marker date="1445920897919" expanded="true" signature="1463:1592" placeholder="..." />
+                <element signature="e#0#36#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="display.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/peggy/display.py">
+      <file leaf-file-name="calc_tree.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/calc_tree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60399336">
-              <caret line="38" column="38" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="49" column="17" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
               <folding>
-                <element signature="e#0#38#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -117,8 +97,9 @@
         <option value="$PROJECT_DIR$/calculator.py" />
         <option value="$PROJECT_DIR$/reference/playground/tuple_test.py" />
         <option value="$PROJECT_DIR$/peggy/peggy.py" />
-        <option value="$PROJECT_DIR$/calc_tree.py" />
         <option value="$PROJECT_DIR$/peggy/display.py" />
+        <option value="$PROJECT_DIR$/calc_tree.py" />
+        <option value="$PROJECT_DIR$/peggy/dot_render.py" />
       </list>
     </option>
   </component>
@@ -238,29 +219,6 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittest TestCalculator.test_calculator (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="__py_playground" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/calculator.py" />
-      <option name="CLASS_NAME" value="TestCalculator" />
-      <option name="METHOD_NAME" value="test_calculator" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="tuple_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -316,6 +274,24 @@
       <module name="__py_playground" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/peggy/peggy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="dot_render" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/peggy" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="__py_playground" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/peggy/dot_render.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -510,18 +486,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest TestJsonParser.test_json_basic" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest TestCalculator.test_calculator (1)" />
-      <item index="2" class="java.lang.String" itemvalue="Python.tuple_test" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestCalculator.test_calculator" />
-      <item index="4" class="java.lang.String" itemvalue="Python.peggy" />
+      <item index="1" class="java.lang.String" itemvalue="Python.tuple_test" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestCalculator.test_calculator" />
+      <item index="3" class="java.lang.String" itemvalue="Python.peggy" />
+      <item index="4" class="java.lang.String" itemvalue="Python.dot_render" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest TestCalculator.test_calculator" />
-        <item index="1" class="java.lang.String" itemvalue="Python.peggy" />
-        <item index="2" class="java.lang.String" itemvalue="Python.tuple_test" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestJsonParser.test_json_basic" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestCalculator.test_calculator (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.dot_render" />
+        <item index="2" class="java.lang.String" itemvalue="Python.peggy" />
+        <item index="3" class="java.lang.String" itemvalue="Python.tuple_test" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestJsonParser.test_json_basic" />
       </list>
     </recent_temporary>
   </component>
@@ -547,12 +523,12 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32834226" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45561498" sideWeight="0.4969605" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.45561498" sideWeight="0.4969605" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2739872" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3272727" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272727" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -582,16 +558,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/calculator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/peggy/peggy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -973,6 +939,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/peggy/display.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1797005">
+          <caret line="38" column="38" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/peggy/peggy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -986,21 +962,19 @@
     <entry file="file://$PROJECT_DIR$/calc_tree.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+          <caret line="49" column="17" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <marker date="1445920897919" expanded="true" signature="1432:1592" placeholder="..." />
-            <marker date="1445920897919" expanded="true" signature="1463:1592" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/peggy/display.py">
+    <entry file="file://$PROJECT_DIR$/peggy/dot_render.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60399336">
-          <caret line="38" column="38" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
+        <state vertical-scroll-proportion="1.5197505">
+          <caret line="76" column="43" selection-start-line="76" selection-start-column="43" selection-end-line="76" selection-end-column="43" />
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#0#36#0" expanded="true" />
           </folding>
         </state>
       </provider>

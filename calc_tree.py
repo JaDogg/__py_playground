@@ -1,4 +1,5 @@
 import unittest
+from dot_render import render_dot
 
 from peggy.peggy import *
 from peggy.display import *
@@ -51,4 +52,4 @@ class TestCalculator(unittest.TestCase):
         p = InfixTree(t)
         _, _, t_ = p.parse()
         # t_, = t_
-        print(build_dot(t_))
+        render_dot(build_dot(t_))
