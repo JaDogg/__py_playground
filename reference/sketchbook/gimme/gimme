@@ -71,7 +71,7 @@ def find_maker(goal):
     panic("no maker for %s", goal)
 
 def panic(format, *args):
-    sys.stderr._write(("%s: " % sys.argv[0]) + (format % args) + '\n')
+    sys.stderr.write(("%s: " % sys.argv[0]) + (format % args) + '\n')
     sys.exit(1)
 
 

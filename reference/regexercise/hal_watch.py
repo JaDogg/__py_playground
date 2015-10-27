@@ -12,7 +12,7 @@ def main(filename, inputs):
 
 def run(vm):
     while True:
-        sys.stdout._write(ansi.clear_screen)
+        sys.stdout.write(ansi.clear_screen)
         vm.show()
         sys.stdin.read(1)
         try:

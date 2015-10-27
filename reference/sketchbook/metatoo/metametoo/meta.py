@@ -26,7 +26,7 @@ def main(argv):
     else:
         input_text += sys.stdin.read()
 
-    sys.stdout._write(vm.run(input_text))
+    sys.stdout.write(vm.run(input_text))
     sys.stdout.flush()
     if vm.poisoned:
         vm.inspect()

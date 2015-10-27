@@ -111,15 +111,15 @@ class PlyLogger(object):
         self.f = f
 
     def debug(self, msg, *args, **kwargs):
-        self.f._write((msg % args) + '\n')
+        self.f.write((msg % args) + '\n')
 
     info = debug
 
     def warning(self, msg, *args, **kwargs):
-        self.f._write('WARNING: ' + (msg % args) + '\n')
+        self.f.write('WARNING: ' + (msg % args) + '\n')
 
     def error(self, msg, *args, **kwargs):
-        self.f._write('ERROR: ' + (msg % args) + '\n')
+        self.f.write('ERROR: ' + (msg % args) + '\n')
 
     critical = debug
 
@@ -607,11 +607,11 @@ class LRParser:
                             else:
                                 lineno = 0
                             if lineno:
-                                sys.stderr._write('yacc: Syntax error at line %d, token=%s\n' % (lineno, errtoken.type))
+                                sys.stderr.write('yacc: Syntax error at line %d, token=%s\n' % (lineno, errtoken.type))
                             else:
-                                sys.stderr._write('yacc: Syntax error, token=%s' % errtoken.type)
+                                sys.stderr.write('yacc: Syntax error, token=%s' % errtoken.type)
                         else:
-                            sys.stderr._write('yacc: Parse error in input. EOF\n')
+                            sys.stderr.write('yacc: Parse error in input. EOF\n')
                             return
 
                 else:
@@ -907,11 +907,11 @@ class LRParser:
                             else:
                                 lineno = 0
                             if lineno:
-                                sys.stderr._write('yacc: Syntax error at line %d, token=%s\n' % (lineno, errtoken.type))
+                                sys.stderr.write('yacc: Syntax error at line %d, token=%s\n' % (lineno, errtoken.type))
                             else:
-                                sys.stderr._write('yacc: Syntax error, token=%s' % errtoken.type)
+                                sys.stderr.write('yacc: Syntax error, token=%s' % errtoken.type)
                         else:
-                            sys.stderr._write('yacc: Parse error in input. EOF\n')
+                            sys.stderr.write('yacc: Parse error in input. EOF\n')
                             return
 
                 else:
@@ -1193,11 +1193,11 @@ class LRParser:
                             else:
                                 lineno = 0
                             if lineno:
-                                sys.stderr._write('yacc: Syntax error at line %d, token=%s\n' % (lineno, errtoken.type))
+                                sys.stderr.write('yacc: Syntax error at line %d, token=%s\n' % (lineno, errtoken.type))
                             else:
-                                sys.stderr._write('yacc: Syntax error, token=%s' % errtoken.type)
+                                sys.stderr.write('yacc: Syntax error, token=%s' % errtoken.type)
                         else:
-                            sys.stderr._write('yacc: Parse error in input. EOF\n')
+                            sys.stderr.write('yacc: Parse error in input. EOF\n')
                             return
 
                 else:

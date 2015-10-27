@@ -4,17 +4,14 @@
     <list default="true" id="e26f7475-ab20-41f1-aec4-4cc4a094df6d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/ply-3.8/example/BASIC/basinterp.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/example/BASIC/basinterp.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/metatoo/bootstrap.py" afterPath="$PROJECT_DIR$/reference/sketchbook/metatoo/bootstrap.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/calculator.py" afterPath="$PROJECT_DIR$/calculator.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/editor/editor.py" afterPath="$PROJECT_DIR$/reference/sketchbook/editor/editor.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/parson/eg_basic.py" afterPath="$PROJECT_DIR$/reference/parson/eg_basic.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/gimme/gimme" afterPath="$PROJECT_DIR$/reference/sketchbook/gimme/gimme" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/regexercise/hal_watch.py" afterPath="$PROJECT_DIR$/reference/regexercise/hal_watch.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/hdl/hdl1.py" afterPath="$PROJECT_DIR$/reference/sketchbook/hdl/hdl1.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json_parser.py" afterPath="$PROJECT_DIR$/json_parser.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/ply-3.8/ply/lex.py" afterPath="$PROJECT_DIR$/reference/ply-3.8/ply/lex.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/misc/macroe.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/macroe.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/metatoo/metametoo/meta.py" afterPath="$PROJECT_DIR$/reference/sketchbook/metatoo/metametoo/meta.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/peggy/peggy.py" afterPath="$PROJECT_DIR$/peggy/peggy.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/metatoo/runmetameta.py" afterPath="$PROJECT_DIR$/reference/sketchbook/metatoo/runmetameta.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/semiforth_punybasic/semiforth.py" afterPath="$PROJECT_DIR$/reference/sketchbook/semiforth_punybasic/semiforth.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reference/sketchbook/misc/sokoban.py" afterPath="$PROJECT_DIR$/reference/sketchbook/misc/sokoban.py" />
@@ -76,6 +73,8 @@
               <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
+                <marker date="1445920897919" expanded="true" signature="1432:1592" placeholder="..." />
+                <marker date="1445920897919" expanded="true" signature="1463:1592" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -84,9 +83,11 @@
       <file leaf-file-name="display.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/peggy/display.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.25578833">
-              <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-              <folding />
+            <state vertical-scroll-proportion="0.60399336">
+              <caret line="38" column="38" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -551,7 +552,7 @@
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2739872" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272727" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3272727" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -988,15 +989,19 @@
           <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+            <marker date="1445920897919" expanded="true" signature="1432:1592" placeholder="..." />
+            <marker date="1445920897919" expanded="true" signature="1463:1592" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/peggy/display.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.25578833">
-          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-          <folding />
+        <state vertical-scroll-proportion="0.60399336">
+          <caret line="38" column="38" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

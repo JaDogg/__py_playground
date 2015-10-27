@@ -34,7 +34,7 @@ def play(games):
     game_num = 0
     while True:
         game = games[game_num]
-        sys.stdout._write(ansi.clear_screen)
+        sys.stdout.write(ansi.clear_screen)
         while True:
             game.refresh()
             print '\r'
@@ -60,7 +60,7 @@ class Game(object):
         self.labels = ('1234567890' + string.ascii_uppercase)[:len(variables)]
 
     def refresh(self):
-        sys.stdout._write(ansi.home)
+        sys.stdout.write(ansi.home)
         self.show(coloring=True)
         set_color(helping)
         print '\r'
@@ -75,7 +75,7 @@ class Game(object):
 
         def write(color, s):
             if coloring: set_color(color)
-            sys.stdout._write(s)
+            sys.stdout.write(s)
 
         def present(v, clause):
             color = (satisfied if self.clause_is_satisfied(clause) else unsatisfied)
@@ -124,8 +124,8 @@ unsatisfied = (bg, ansi.bright(ansi.yellow))
 #unsatisfied = (bg, ansi.yellow)
 
 def set_color((bg, fg)):
-    sys.stdout._write(ansi.set_background(bg))
-    sys.stdout._write(ansi.set_foreground(fg))
+    sys.stdout.write(ansi.set_background(bg))
+    sys.stdout.write(ansi.set_foreground(fg))
 
 helping = (ansi.bright(ansi.white), ansi.black)
 

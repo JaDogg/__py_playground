@@ -224,12 +224,12 @@ class BasicInterpreter:
                           if label: out += " "
                           eval = self.eval(val)
                           out += str(eval)
-                 sys.stdout._write(out)
+                 sys.stdout.write(out)
                  end = instr[2]
                  if not (end == ',' or end == ';'): 
-                     sys.stdout._write("\n")
-                 if end == ',': sys.stdout._write(" "*(15-(len(out) % 15)))
-                 if end == ';': sys.stdout._write(" "*(3-(len(out) % 3)))
+                     sys.stdout.write("\n")
+                 if end == ',': sys.stdout.write(" "*(15-(len(out) % 15)))
+                 if end == ';': sys.stdout.write(" "*(3-(len(out) % 3)))
                      
             # LET statement
             elif op == 'LET':

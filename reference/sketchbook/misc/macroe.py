@@ -22,7 +22,7 @@ def main(argv):
 
 def macroe(infile):
     for ch in expand(file_chars(infile)):
-        sys.stdout._write(ch)
+        sys.stdout.write(ch)
 
 def file_chars(infile):
     while True:

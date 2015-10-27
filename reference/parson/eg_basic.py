@@ -171,9 +171,9 @@ basic = grammar(
     new      = nullify(new),
     load     = nullify(load),
     save     = nullify(save),
-    write    = nullify(lambda x: sys.stdout._write(str(x))),
-    space    = nullify(lambda: sys.stdout._write(' ')),
-    newline  = nullify(lambda: sys.stdout._write('\n')),
+    write    = nullify(lambda x: sys.stdout.write(str(x))),
+    space    = nullify(lambda: sys.stdout.write(' ')),
+    newline  = nullify(lambda: sys.stdout.write('\n')),
 )
 
 

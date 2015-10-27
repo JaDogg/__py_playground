@@ -1081,12 +1081,12 @@ class VerboseParser(Parser):
             value = Parser.eat(self, name)
             if self.verbose >= 1:
                 #print(self.token_info(token, "==", name))
-                sys.stderr._write(self.token_info(token, "==", name)+"\n")
+                sys.stderr.write(self.token_info(token, "==", name)+"\n")
             return value
         except WrongToken:
             if self.verbose >= 2:
                 #print(self.token_info(token, "!=", name))
-                sys.stderr._write(self.token_info(token, "!=", name)+"\n")
+                sys.stderr.write(self.token_info(token, "!=", name)+"\n")
             raise
 
     def eatCSL(self, name):
@@ -1103,13 +1103,13 @@ class VerboseParser(Parser):
             if self.verbose >= 1:
                 token = self.lexer.token()
                 #print(self.token_info(token, "==", name))
-                sys.stderr._write(self.token_info(token, "==", name)+"\n")
+                sys.stderr.write(self.token_info(token, "==", name)+"\n")
             return value
         except WrongToken:
             if self.verbose >= 2:
                 token = Token("???", self.lexer.input[self.lexer.pos:self.lexer.pos+10].replace('\n', ' '), "???", self.lexer.line, self.lexer.column, self.lexer.line, self.lexer.column, self.lexer.pos, self.lexer.pos, self.lexer.pos)
                 #print(self.token_info(token, "!=", name))
-                sys.stderr._write(self.token_info(token, "!=", name)+"\n")
+                sys.stderr.write(self.token_info(token, "!=", name)+"\n")
             raise
 
     def parse(self, axiom, input, *args, **kws):

@@ -63,7 +63,7 @@ def run_stdio_hdl(text):
         if env.get('stdout-putchar'):
             byte = sum(env.get(bit_key('stdout-putchar', bit), 0) << bit
                        for bit in range(8))
-            sys.stdout._write(chr(byte))
+            sys.stdout.write(chr(byte))
         env['stdin-getchar'] = 0
         env['stdout-putchar'] = 0
         eval_hdl(text, env)
