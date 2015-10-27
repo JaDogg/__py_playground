@@ -183,7 +183,7 @@ class ZeroOrMore(OneOrMore):
         return current_rightmost, current_pos, current_values
 
 
-class ZeroOrOne(One):
+class Optional(One):
     def __call__(self, parser, position, values):
         current_rightmost, current_pos, current_values = \
             One.__call__(self, parser, position, values)

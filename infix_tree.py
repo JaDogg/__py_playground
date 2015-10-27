@@ -1,5 +1,4 @@
 import unittest
-from dot_render import render_dot
 
 from peggy.peggy import *
 from peggy.display import *
@@ -28,7 +27,7 @@ class InfixTree(PackratParser):
                 ), label("exp1")]
             ],
             "exp2": [
-                ["exp3", ZeroOrOne(r"([\^])", "_", "exp2", label("exp0_pow")),
+                ["exp3", Optional(r"([\^])", "_", "exp2", label("exp0_pow")),
                  label("exp2")]
             ],
             "exp3": [
@@ -51,5 +50,4 @@ class TestCalculator(unittest.TestCase):
         t = r"""5+2*3+4"""
         p = InfixTree(t)
         _, _, t_ = p.parse()
-        # t_, = t_
-        render_dot(build_dot(t_))
+        display_labeled(t_)

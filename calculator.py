@@ -1,4 +1,5 @@
 import unittest
+from display import display
 
 from peggy.peggy import *
 
@@ -26,7 +27,7 @@ class InfixTree(PackratParser):
                 )]
             ],
             "exp2": [
-                ["exp3", ZeroOrOne(r"([\^])", "_", "exp2", "@do_math")]
+                ["exp3", Optional(r"([\^])", "_", "exp2", "@do_math")]
             ],
             "exp3": [
                 [r"[\(]", "_", "exp0", r"[\)]", "_"],
