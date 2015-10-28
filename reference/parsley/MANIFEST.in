@@ -1,0 +1,8 @@
+include README
+include LICENSE
+include NEWS
+include terml/README.txt
+graft examples
+graft bin
+graft doc
+global-exclude *.pyc
