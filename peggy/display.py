@@ -5,65 +5,15 @@ from StringIO import StringIO
 
 from peggy.peggy import Label
 
-_HTML_TEMPLATE = r"""
-<html>
-<head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
-<script src="http://cpettitt.github.io/project/graphlib-dot/v0.4.10/graphlib-dot.min.js"></script>
-<script src="http://cpettitt.github.io/project/dagre-d3/v0.1.5/dagre-d3.min.js"></script>
-
-<script>
-<!--
-window.onload = function() {
-  // Parse the DOT syntax into a graphlib object.
-  var g = graphlibDot.parse(
-##graph##
-  )
-
-  // Render the graphlib object using d3.
-  var renderer = new dagreD3.Renderer();
-  renderer.run(g, d3.select("svg g"));
+_HTML_TEMPLATE_FILE = "data/template.html"
+_HTML_TEMPLATE = ""
 
 
-  // Optional - resize the SVG element based on the contents.
-  var svg = document.querySelector('#graphContainer');
-  var bbox = svg.getBBox();
-  svg.style.width = bbox.width + 40.0 + "px";
-  svg.style.height = bbox.height + 40.0 + "px";
-}
--->
-</script>
-<style>
-<!--
-svg {
-  overflow: hidden;
-}
-.node rect {
-  stroke: #333;
-  stroke-width: 1.5px;
-  fill: #fff;
-}
-.edgeLabel rect {
-  fill: #fff;
-}
-.edgePath {
-  stroke: #333;
-  stroke-width: 1.5px;
-  fill: none;
-}
--->
-</style>
-</head>
-<body>
-  <script type='text/javascript'>
-  </script>
-  <svg id="graphContainer">
-    <g/>
-  </svg>
-</body>
-
-</html>
-"""
+def __init():
+    global _HTML_TEMPLATE
+    path = os.path.dirname(os.path.abspath(__file__))
+    with open(os.path.join(path, _HTML_TEMPLATE_FILE), "r") as html:
+        _HTML_TEMPLATE = html.read()
 
 
 class _LabelToDotConverter(object):
@@ -118,7 +68,7 @@ def display(items, depth=1):
             print("{t}({i})".format(t="  " * depth, i=item))
 
 
-def display_labeled(items):
+def render_labeled(items):
     converter = _LabelToDotConverter(items)
     converter.build_dot()
     return _render_dot_or_print(converter.get_dot(), items)
@@ -134,14 +84,14 @@ def _render_dot_or_print(dot_string, items):
     try:
         _qt_render_dot(dot_string)
     except ImportError:
-        _display_labeled(items)
+        display_labeled(items)
 
 
-def _display_labeled(items, depth=1):
+def display_labeled(items, depth=1):
     for item in items:
         if isinstance(item, Label):
             print("{t}({i})".format(t="  " * depth, i=item.label))
-            _display_labeled(item, depth + 1)
+            display_labeled(item, depth + 1)
         else:
             print("{t}{i}".format(t="  " * depth, i=item))
 
@@ -149,10 +99,15 @@ def _display_labeled(items, depth=1):
 def _qt_render_dot(dot_string):
     from PyQt4.QtGui import QApplication
     from PyQt4.QtWebKit import QWebView
+    from PyQt4.QtNetwork import QNetworkProxyFactory
     html = _HTML_TEMPLATE.replace("##graph##", repr(dot_string))
+    QNetworkProxyFactory.setUseSystemConfiguration(True)
     app = QApplication([])
     view = QWebView()
     view.setHtml(html)
     view.setWindowTitle("Peggy Dot Renderer")
     view.show()
     app.exec_()
+
+
+__init()
