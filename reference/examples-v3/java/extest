@@ -1,0 +1,62 @@
+#!/usr/bin/ruby
+
+#
+# Build, compile, and run each example in this dir.
+#
+# Each dir must have at least one .g file and an input/output pair so
+# the script can check for valid output. [this is my first ruby script]
+#
+# TODO: make stderr go away
+#
+
+def process_example
+	if FileTest.exist?("antlr")
+		cmd = File.open("antlr").gets
+	end
+	if cmd != nil
+		system(cmd)
+	else
+		ex = Dir["*.g"]
+		grammars = ""
+		ex.each {|g| grammars+=" "+g}
+		system("java -Xmx200M org.antlr.Tool" + grammars)
+	end
+	system("javac *.java")
+	channel = IO.popen("java Main input")
+	result = channel.readlines
+	expecting = File.open("output").readlines
+	if expecting != result
+		puts "FAILED"
+		# (expecting - result).each {|line| puts "line}
+	end
+end
+
+# kill anything not in the files file
+def cleanup
+	# clean it up first
+	shiplist = ["files"] # always keep "files" file
+	File.open("files").each {|line| shiplist.push(line.strip)}
+	# puts "shiplist:"+shiplist.to_s
+	allfiles = Dir["*"]
+	killfiles = (allfiles - shiplist).each {|f| File.delete(f)}
+end
+
+# find all examples
+examples = Dir["*"];
+examples.each {|d|
+	if File.stat(d).directory?
+		# process this example
+		puts "# building "+d
+		curDir = Dir.getwd
+		Dir.chdir(d);
+		begin
+			cleanup
+			process_example
+			cleanup
+		rescue SystemCallError
+			# do nothing if we can't find the files file that has list of files
+		end
+		Dir.chdir(curDir)
+	end
+}
+

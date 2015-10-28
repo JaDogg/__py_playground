@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e26f7475-ab20-41f1-aec4-4cc4a094df6d" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\PROJECTS\P\__py_playground\peggy\dot_render.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/calculator.py" afterPath="$PROJECT_DIR$/calculator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/peggy/display.py" afterPath="$PROJECT_DIR$/peggy/display.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/peggy/peggy.py" afterPath="$PROJECT_DIR$/peggy/peggy.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\calc_tree.py" afterPath="$PROJECT_DIR$/infix_tree.py" />
-    </list>
+    <list default="true" id="e26f7475-ab20-41f1-aec4-4cc4a094df6d" name="Default" comment="" />
     <ignored path="__py_playground.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
