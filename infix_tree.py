@@ -32,7 +32,8 @@ class InfixTree(PackratParser):
             ],
             "exp3": [
                 [r"[\(]", "_", "exp0", r"[\)]", "_", label("exp3_paren")],
-                [r"([-+])", "_", "exp1", label("exp3_sign")],
+                [r"([\-])", "_", "exp3", label("exp3_sign")],
+                [r"([+])", "_", "exp3", label("exp3_sign")],
                 [r"(\d+)", "_", label("exp3_int")]
             ],
             "_": [
@@ -47,7 +48,8 @@ class InfixTree(PackratParser):
 
 class TestCalculator(unittest.TestCase):
     def test_calculator(self):
-        t = r"""-5*+2"""
+        t = r"""+5*(1+2)*(2-3-4-5)+2"""
         p = InfixTree(t)
         _, _, t_ = p.parse()
+        display_labeled(t_)
         render_labeled(t_)

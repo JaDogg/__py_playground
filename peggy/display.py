@@ -2,10 +2,12 @@ from __future__ import absolute_import
 
 import os
 from StringIO import StringIO
+from tempfile import NamedTemporaryFile
+import webbrowser
 
 from peggy.peggy import Label
 
-_HTML_TEMPLATE_FILE = "data/template.html"
+_HTML_TEMPLATE_FILE = "data/dot_renderer.html"
 _HTML_TEMPLATE = ""
 
 
@@ -68,25 +70,6 @@ def display(items, depth=1):
             print("{t}({i})".format(t="  " * depth, i=item))
 
 
-def render_labeled(items):
-    converter = _LabelToDotConverter(items)
-    converter.build_dot()
-    return _render_dot_or_print(converter.get_dot(), items)
-
-
-# References:
-# http://stackoverflow.com/a/13386109/1355145
-# http://stackoverflow.com/a/20981629/1355145
-# http://stackoverflow.com/a/24736418/1355145
-# https://pythonspot.com/qt4-window/
-
-def _render_dot_or_print(dot_string, items):
-    try:
-        _qt_render_dot(dot_string)
-    except ImportError:
-        display_labeled(items)
-
-
 def display_labeled(items, depth=1):
     for item in items:
         if isinstance(item, Label):
@@ -96,18 +79,17 @@ def display_labeled(items, depth=1):
             print("{t}{i}".format(t="  " * depth, i=item))
 
 
-def _qt_render_dot(dot_string):
-    from PyQt4.QtGui import QApplication
-    from PyQt4.QtWebKit import QWebView
-    from PyQt4.QtNetwork import QNetworkProxyFactory
+def render_labeled(items):
+    converter = _LabelToDotConverter(items)
+    converter.build_dot()
+    return _display_dot_string_in_browser(converter.get_dot())
+
+
+def _display_dot_string_in_browser(dot_string):
     html = _HTML_TEMPLATE.replace("##graph##", repr(dot_string))
-    QNetworkProxyFactory.setUseSystemConfiguration(True)
-    app = QApplication([])
-    view = QWebView()
-    view.setHtml(html)
-    view.setWindowTitle("Peggy Dot Renderer")
-    view.show()
-    app.exec_()
+    f = NamedTemporaryFile(suffix="_peg.html", delete=False)
+    f.write(html)
+    webbrowser.open(f.name)
 
 
 __init()
