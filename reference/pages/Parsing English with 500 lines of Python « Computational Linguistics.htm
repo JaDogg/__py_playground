@@ -1,0 +1,1608 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Parsing English with 500 lines of Python &laquo; Computational Linguistics</title>
+<link rel="stylesheet" href="https://s0.wp.com/wp-content/themes/pub/andreas04/style.css" type="text/css" media="screen" />
+<link rel="pingback" href="https://honnibal.wordpress.com/xmlrpc.php" />
+<link rel="alternate" type="application/rss+xml" title="Computational Linguistics &raquo; Feed" href="https://honnibal.wordpress.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Computational Linguistics &raquo; Comments Feed" href="https://honnibal.wordpress.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Computational Linguistics &raquo; Parsing English with 500 lines of&nbsp;Python Comments Feed" href="https://honnibal.wordpress.com/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/feed/" />
+<script type="text/javascript">
+/* <![CDATA[ */
+function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!='function'){window.onload=func;}else{window.onload=function(){oldonload();func();}}}
+/* ]]> */
+</script>
+<link rel='stylesheet' id='all-css-0' href='https://s2.wp.com/_static/??-eJx9kNFuwyAMRX9oDKVrK+1h2rcQcKlTGyMgQv37klbdGqXixfJF58g2ukZlJRQIRfOsIs0eQ9aZkeAak0xgyzp92pw/9HuN8AJZT1CisRd1Txt8JPH/gngPTuaiTkIkVVd0HrYzVlKV5IzL2pOMhnr7WEnQ3jmashAMDg0QcMN6Gsfj01racztme8cLX2Oj1TjGBDmrVhlnVuXcBnU9YJnwUR8Y6iAFG5n/mp7vQRSJNQUlrII6kcHUUxMsX9parxv1Ehfpl3+G/f5rtxu+h8N0A/zZzdI=' type='text/css' media='all' />
+<link rel='stylesheet' id='print-css-1' href='https://s1.wp.com/wp-content/mu-plugins/global-print/global-print.css?m=1444132114g' type='text/css' media='print' />
+<link rel='stylesheet' id='all-css-2' href='https://s0.wp.com/wp-content/themes/h4/global.css?m=1420737423g' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var LoggedOutFollow = {"invalid_email":"Your subscription did not succeed, please try again with a valid email address."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJyFzs0KwjAMAOAXsiub8+BBfJb9ZCW1bWqTrujTW0EP4lAIJCRfQnSJCsPk8gysbY1rhnR7pcbyTv8CyqNJg0DjMbzxREEgyNN6GtGBygxpMLVXDy204SKxeGCuaGP6+RKGFaH8ZRYkDtNFJWC8f10dHRkVXTYYWNfawExZ1ELOUdEFZwNSd87+1Pb9vuvaY3uwD0gZb60='></script>
+<link rel='stylesheet' id='all-css-0' href='https://s2.wp.com/wp-content/mu-plugins/highlander-comments/style.css?m=1377793621g' type='text/css' media='all' />
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563g&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://honnibal.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='A good POS tagger in about 200 lines of&nbsp;Python' href='https://honnibal.wordpress.com/2013/09/11/a-good-part-of-speechpos-tagger-in-about-200-lines-of-python/' />
+<link rel='next' title='Writing C in&nbsp;Cython' href='https://honnibal.wordpress.com/2014/10/21/writing-c-in-cython/' />
+<meta name="generator" content="WordPress.com" />
+<link rel='canonical' href='https://honnibal.wordpress.com/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/' />
+<link rel='shortlink' href='http://wp.me/pIgIm-2L' />
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=json&amp;url=https%3A%2F%2Fhonnibal.wordpress.com%2F2013%2F12%2F18%2Fa-simple-fast-algorithm-for-natural-language-dependency-parsing%2F&amp;for=wpcom-auto-discovery" /><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=xml&amp;url=https%3A%2F%2Fhonnibal.wordpress.com%2F2013%2F12%2F18%2Fa-simple-fast-algorithm-for-natural-language-dependency-parsing%2F&amp;for=wpcom-auto-discovery" />
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Parsing English with 500 lines of Python" />
+<meta property="og:url" content="https://honnibal.wordpress.com/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/" />
+<meta property="og:description" content="A syntactic parser describes a sentence&#039;s grammatical structure, to help another application reason about it. Natural languages introduce many unexpected ambiguities, which our world-knowledge imme..." />
+<meta property="article:published_time" content="2013-12-17T17:32:57+00:00" />
+<meta property="article:modified_time" content="2015-05-04T15:46:21+00:00" />
+<meta property="og:site_name" content="Computational Linguistics" />
+<meta property="og:image" content="http://i.imgur.com/zJkw9w9.png" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:site" content="@wordpressdotcom" />
+<meta name="twitter:image" content="http://i.imgur.com/z2hzXAp.jpg?w=240" />
+<meta name="twitter:card" content="summary" />
+<meta property="fb:app_id" content="249643311490" />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+<link rel="shortcut icon" type="image/x-icon" href="https://secure.gravatar.com/blavatar/a24521441e95a5ac63b91fa959d741ca?s=16" sizes="16x16" />
+<link rel="icon" type="image/x-icon" href="https://secure.gravatar.com/blavatar/a24521441e95a5ac63b91fa959d741ca?s=16" sizes="16x16" />
+<link rel="apple-touch-icon-precomposed" href="https://secure.gravatar.com/blavatar/4d0019d42f2307e29a86be9d6ef147cc?s=114" />
+<link rel='openid.server' href='http://honnibal.wordpress.com/?openidserver=1' />
+<link rel='openid.delegate' href='http://honnibal.wordpress.com/' />
+<link rel="search" type="application/opensearchdescription+xml" href="https://honnibal.wordpress.com/osd.xml" title="Computational Linguistics" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://wordpress.com/opensearch.xml" title="WordPress.com" />
+<meta name="application-name" content="Computational Linguistics" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="Demystifying NLP" /><meta name="msapplication-task" content="name=Subscribe;action-uri=https://honnibal.wordpress.com/feed/;icon-uri=https://secure.gravatar.com/blavatar/a24521441e95a5ac63b91fa959d741ca?s=16" /><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico" /><meta name="title" content="Parsing English with 500 lines of&nbsp;Python | Computational Linguistics on WordPress.com" />
+<meta name="description" content="A syntactic parser describes a sentence&#039;s grammatical structure, to help another application reason about it. Natural languages introduce many unexpected ambiguities, which our world-knowledge immediately filters out. A favourite example: They ate the pizza with anchovies A correct parse links &quot;with&quot; to &quot;pizza&quot;, while an incorrect parse links &quot;with&quot; to &quot;eat&quot;: The Natural Language Processing&hellip;" />
+		<script type="text/javascript" src="//c.amazon-adsystem.com/aax2/amzn_ads.js"></script>
+		<script type="text/javascript">
+		try { amznads.getAds("3033"); } catch(e) { /* ignore */ }
+		</script>
+		<script type="text/javascript">
+		var a9_p = amznads.getKeys(),
+		_ipw_custom = {
+			wordAds: '0',
+			adSafe: '0',
+			domain: 'honnibal.wordpress.com',
+			pageURL: 'https://honnibal.wordpress.com/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/'
+		};
+		if("undefined"!=typeof a9_p&&""!=a9_p&&null!==a9_p&&"[object Array]"===Object.prototype.toString.call(a9_p)){var a="",b=0,c=a9_p.length;a9_p.sort();for(var d=0;d<c;d++){a9_p[d-b]=a9_p[d-b].replace(/a1x6p/,"a160x600p");var e=a9_p[d-b].split("p");e[0]==a&&(a9_p.splice(d-b,1),b++);a=e[0]}_ipw_custom.amznPay=a9_p};document.close();
+		</script>		<!-- IPONWEB header script -->
+		<script type="text/javascript">
+			window.__ATA = {
+				scriptSrc: '//s.pubmine.com/showad.js',
+				slotPrefix: 'automattic-id-',
+				initAd: function(o) {
+					var o = o || {},
+						g = window,
+						d = g.document,
+						wr = d.write,
+						id = g.__ATA.id();
+					wr.call(d, '<div id="' + id + '" data-section="' + (o.sectionId || 0) + '"' + (o.type ? ('data-type="' + o.type + '"') : '') + ' ' + (o.forcedUrl ? ('data-forcedurl="' + o.forcedUrl + '"') : '') + ' style="width:' + (o.width || 0) + 'px; height:' + (o.height || 0) + 'px;">');
+					g.__ATA.displayAd(id);
+					wr.call(d, '</div>');
+				},
+				displayAd: function(id) {
+					window.__ATA.ids = window.__ATA.ids || {};
+					window.__ATA.ids[id] = 1;
+				},
+				customParams: _ipw_custom,
+				id: function() {
+					return window.__ATA.slotPrefix + (parseInt(Math.random() * 10000, 10) + 1 + (new Date()).getMilliseconds());
+				}
+			};
+			(function(d, ata) {
+				var pr = "https:" === d.location.protocol ? "https:" : "http:",
+					src = pr + ata.scriptSrc,
+					st = "text/javascript";
+				d.write('<scr' + 'ipt type="' + st + '" src="' + src + '"><\/scr' + 'ipt>');
+			})(window.document, window.__ATA);
+		</script>
+		<script type="text/javascript">
+		jQuery(window).ready(function () {
+			jQuery("a.wpa-about").text("About these ads");
+		});
+		</script><style type="text/css" id="syntaxhighlighteranchor"></style>
+<script type="text/javascript">
+	window.google_analytics_uacct = "UA-52447-2";
+</script>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-52447-2']);
+	_gaq.push(['_setDomainName', 'wordpress.com']);
+	_gaq.push(['_initData']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+	})();
+</script>
+</head>
+
+<body class="single single-post postid-171 single-format-standard mp6 customizer-styles-applied highlander-enabled highlander-light">
+  <div id="container">
+
+<div id="sitetitle">
+<h1><a href="https://honnibal.wordpress.com/" rel="home">Computational Linguistics</a></h1>
+<h2>Demystifying NLP</h2>
+</div>
+
+<div id="menu">
+	<ul>
+	<li><a href="https://honnibal.wordpress.com/">Home</a></li>
+	<li class="page_item page-item-2"><a href="https://honnibal.wordpress.com/about/">About</a></li>
+</ul>
+</div>
+
+    <div id="content">
+
+      <div id="left">
+
+        
+          
+              <div id="post-171" class="entry post-171 post type-post status-publish format-standard hentry category-uncategorized">
+
+                <h2>Parsing English with 500 lines of&nbsp;Python</h2>
+
+                <p>A <a href="http://googleresearch.blogspot.com.au/2013/05/syntactic-ngrams-over-time.html">syntactic parser</a> describes a sentence&#8217;s grammatical structure, to help another application reason about it. Natural languages introduce many unexpected ambiguities, which our world-knowledge immediately filters out. A favourite example:</p>
+<p style="font-size:1.5em;" align="center"><em>They ate the pizza with anchovies</em></p>
+<p><a href="http://imgur.com/z2hzXAp"><img class="aligncenter" title="Eat-with Pizza-with ambiguity" src="https://i1.wp.com/i.imgur.com/z2hzXAp.jpg" alt="" width="450" height="200" /></a></p>
+<p>A correct parse links &#8220;with&#8221; to &#8220;pizza&#8221;, while an incorrect parse links &#8220;with&#8221; to &#8220;eat&#8221;:</p>
+<p><a href="http://imgur.com/zJkw9w9"><img class="aligncenter" title="Anchovy arcs" src="https://i2.wp.com/i.imgur.com/zJkw9w9.png" alt="" width="450" height="150" /></a></p>
+<p>The Natural Language Processing (NLP) community has made big progress in syntactic parsing over the last few years. It&#8217;s now possible for a tiny Python implementation to perform better than the widely-used Stanford PCFG parser:</p>
+<p><b>Update! The Stanford CoreNLP library now includes a greedy transition-based dependency parser, similar to the one described in this post, but with an improved learning strategy. It is much faster and more accurate than this simple Python implementation.</b></p>
+<table class="aligncenter">
+<thead>
+<tr>
+<th>Parser</th>
+<th>Accuracy</th>
+<th>Speed (w/s)</th>
+<th>Language</th>
+<th>LOC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stanford</td>
+<td>89.6%</td>
+<td>19</td>
+<td>Java</td>
+<td>&gt; 50,000[1]</td>
+</tr>
+<tr>
+<td><strong>parser.py</strong></td>
+<td>89.8%</td>
+<td>2,020</td>
+<td>Python</td>
+<td>~<b>500</b></td>
+</tr>
+<tr>
+<td>Redshift</td>
+<td><b>93.6%</b></td>
+<td><b>2,580</b></td>
+<td>Cython</td>
+<td>~4,000</td>
+</tr>
+</tbody>
+</table>
+<p>The rest of the post sets up the problem, and then takes you through <a href="https://gist.github.com/syllog1sm/10343947">a concise implementation</a>, prepared for this post. The first 200 lines of parser.py, the part-of-speech tagger and learner, are described <a href="https://honnibal.wordpress.com/2013/09/11/a-good-part-of-speechpos-tagger-in-about-200-lines-of-python/">here</a>. You should probably at least skim that post before reading this one, unless you&#8217;re very familiar with NLP research.</p>
+<p>The Cython system, Redshift, was written for my current research. I plan to improve it for general use in June, after my contract ends at Macquarie University. The current version is <a href="http://github.com/syllog1sm/redshift">hosted on GitHub</a>.</p>
+<h2>Problem Description</h2>
+<p>It&#8217;d be nice to type an instruction like this into your phone:</p>
+<p style="font-size:1.5em;" align="center"><em>Set volume to zero when I&#8217;m in a meeting, unless John&#8217;s school calls.</em></p>
+<p>And have it set the appropriate policy. On Android you can do this sort of thing with <a href="https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm">Tasker</a>, but an NL interface would be much better. It&#8217;d be especially nice to receive a meaning representation you could edit, so you could see what it thinks you said, and correct it.</p>
+<p>There are lots of problems to solve to make that work, but some sort of syntactic representation is definitely necessary. We need to know that:</p>
+<p style="font-size:1.5em;" align="center"><em>Unless John&#8217;s school calls, when I&#8217;m in a meeting, set volume to zero</em></p>
+<p>is another way of phrasing the first instruction, while:</p>
+<p style="font-size:1.5em;" align="center"><em>Unless John&#8217;s school, call when I&#8217;m in a meeting</em></p>
+<p>means something completely different.</p>
+<p>A dependency parser returns a graph of word-word relationships, intended to make such reasoning easier. Our graphs will be trees &#8212; edges will be directed, and every node (word) will have exactly one incoming arc (one dependency, with its head), except one.</p>
+<p>Example usage:</p>
+<pre class="brush: python; title: ; notranslate" title="">
+    &gt;&gt;&gt; parser = parser.Parser()
+    &gt;&gt;&gt; tokens = &quot;Set the volume to zero when I 'm in a meeting unless John 's school calls&quot;.split()
+    &gt;&gt;&gt; tags, heads = parser.parse(tokens)
+    &gt;&gt;&gt; heads
+    [-1, 2, 0, 0, 3, 0, 7, 5, 7, 10, 8, 0, 13, 15, 15, 11]
+    &gt;&gt;&gt; for i, h in enumerate(heads): 
+    ...   head = tokens[heads[h]] if h &amp;amp;amp;gt;= 1 else 'None'
+    ...   print(tokens[i] + ' &lt;-- ' + head])
+    Set &lt;-- None
+    the &lt;-- volume
+    volume &lt;-- Set
+    to &lt;-- Set
+    zero &lt;-- to
+    when &lt;-- Set
+    I &lt;-- 'm
+    'm &lt;-- when
+    in &lt;-- 'm
+    a &lt;-- meeting
+    meeting &lt;-- in
+    unless &lt;-- Set
+    John &lt;-- 's
+    's   &lt;-- calls
+    school &lt;-- calls
+    calls &lt;-- unless
+</pre>
+<p>The idea is that it should be slightly easier to reason from the parse, than it was from the string. The parse-to-meaning mapping is hopefully simpler than the string-to-meaning mapping.</p>
+<p>The most confusing thing about this problem area is that &#8220;correctness&#8221; is defined by convention &#8212; by annotation guidelines. If you haven&#8217;t read the guidelines and you&#8217;re not a linguist, you can&#8217;t tell whether the parse is &#8220;wrong&#8221; or &#8220;right&#8221;, which makes the whole task feel weird and artificial.</p>
+<p>For instance, there&#8217;s a mistake in the parse above: &#8220;John&#8217;s school calls&#8221; is structured wrongly, according to the Stanford annotation guidelines. The structure of that part of the sentence is how the annotators were instructed to parse an example like &#8220;John&#8217;s school clothes&#8221;.</p>
+<p>It&#8217;s worth dwelling on this point a bit. We could, in theory, have written our guidelines so that the &#8220;correct&#8221; parses were reversed. There&#8217;s good reason to believe the parsing task will be harder if we reversed our convention, as it&#8217;d be less consistent with the rest of the grammar.[2] But we could test that empirically, and we&#8217;d be pleased to gain an advantage by reversing the policy.</p>
+<p>We definitely do want that distinction in the guidelines &#8212; we don&#8217;t want both to receive the same structure, or our output will be less useful. The annotation guidelines strike a balance between what distinctions downstream applications will find useful, and what parsers will be able to predict easily.</p>
+<h3>Projective trees</h3>
+<p>There&#8217;s a particularly useful simplification that we can make, when deciding what we want the graph to look like: we can restrict the graph structures we&#8217;ll be dealing with. This doesn&#8217;t just give us a likely advantage in learnability; it can have deep algorithmic implications. We follow most work on English in constraining the dependency graphs to be <em>projective trees</em>:</p>
+<ol>
+<li>Tree. Every word has exactly one head, except for the dummy ROOT symbol.</li>
+<li>Projective. For every pair of dependencies (a1, a2) and (b1, b2), if a1 &lt; b2, then a2 &gt;= b2. In other words, dependencies cannot &#8220;cross&#8221;. You can&#8217;t have a pair of dependencies that goes a1 b1 a2 b2, or b1 a1 b2 a2.</li>
+</ol>
+<p>There&#8217;s a rich literature on parsing non-projective trees, and a smaller literature on parsing DAGs. But the parsing algorithm I&#8217;ll be explaining deals with projective trees.</p>
+<h2>Greedy transition-based parsing</h2>
+<p>Our parser takes as input a list of string tokens, and outputs a list of head indices, representing edges in the graph. If the <em>i</em>th member of heads is <em>j</em>, the dependency parse contains an edge (j, i). A transition-based parser is a finite-state transducer; it maps an array of N words onto an output array of N head indices:</p>
+<table>
+<thead>
+<tr>
+<th><em>start</em></th>
+<th>MSNBC</th>
+<th>reported</th>
+<th>that</th>
+<th>Facebook</th>
+<th>bought</th>
+<th>WhatsApp</th>
+<th>for</th>
+<th>$16bn</th>
+<th><em>root</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>2</td>
+<td>9</td>
+<td>2</td>
+<td>4</td>
+<td>2</td>
+<td>4</td>
+<td>4</td>
+<td>7</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>The heads array denotes that the head of <em>MSNBC</em> is <em>reported</em>: <em>MSNBC</em> is word 1, and <em>reported</em> is word 2, and <tt>heads[1] == 2</tt>. You can already see why parsing a tree is handy &#8212; this data structure wouldn&#8217;t work if we had to output a DAG, where words may have multiple heads.</p>
+<p>Although <tt>heads</tt> can be represented as an array, we&#8217;d actually like to maintain some alternate ways to access the parse, to make it easy and efficient to extract features. Our <tt>Parse</tt> class looks like this:</p>
+<pre class="brush: python; title: ; notranslate" title="">
+
+    class Parse(object):
+        def __init__(self, n):
+            self.n = n
+            self.heads = [None] * (n-1)
+            self.lefts = []
+            self.rights = []
+            for i in range(n+1):
+                self.lefts.append(DefaultList(0))
+                self.rights.append(DefaultList(0))
+
+        def add_arc(self, head, child):
+            self.heads[child] = head
+            if child &amp;amp;amp;lt; head:
+                self.lefts[head].append(child)
+            else:
+                self.rights[head].append(child)
+</pre>
+<p>As well as the parse, we also have to keep track of where we&#8217;re up to in the sentence. We&#8217;ll do this with an index into the <tt>words</tt> array, and a stack, to which we&#8217;ll push words, before popping them once their head is set. So our state data structure is fundamentally:</p>
+<ul>
+<li>An index, i, into the list of tokens;</li>
+<li>The dependencies added so far, in Parse</li>
+<li>A stack, containing words that occurred before i, for which we&#8217;re yet to assign a head.</li>
+</ul>
+<p>Each step of the parsing process applies one of three actions to the state:</p>
+<pre class="brush: python; title: ; notranslate" title="">
+    SHIFT = 0; RIGHT = 1; LEFT = 2
+    MOVES = [SHIFT, RIGHT, LEFT]
+
+    def transition(move, i, stack, parse):
+        global SHIFT, RIGHT, LEFT
+        if move == SHIFT:
+            stack.append(i)
+            return i + 1
+        elif move == RIGHT:
+            parse.add_arc(stack[-2], stack.pop())
+            return i
+        elif move == LEFT:
+            parse.add_arc(i, stack.pop())
+            return i
+        raise GrammarError(&quot;Unknown move: %d&quot; % move)
+</pre>
+<p>The <tt>LEFT</tt> and <tt>RIGHT</tt> actions add dependencies and pop the stack, while <tt>SHIFT</tt> pushes the stack and advances i into the buffer.</p>
+<p>So, the parser starts with an empty stack, and a buffer index at 0, with no dependencies recorded. It chooses one of the (valid) actions, and applies it to the state. It continues choosing actions and applying them until the stack is empty and the buffer index is at the end of the input. (It&#8217;s hard to understand this sort of algorithm without stepping through it. Try coming up with a sentence, drawing a projective parse tree over it, and then try to reach the parse tree by choosing the right sequence of transitions.)</p>
+<p>Here&#8217;s what the parsing loop looks like in code:</p>
+<pre class="brush: python; title: ; notranslate" title="">
+    class Parser(object):
+        ...
+        def parse(self, words):
+            tags = self.tagger(words)
+            n = len(words)
+            idx = 1
+            stack = [0]
+            deps = Parse(n)
+            while stack or idx &amp;amp;amp;lt; n:
+                features = extract_features(words, tags, idx, n, stack, deps)
+                scores = self.model.score(features)
+                valid_moves = get_valid_moves(i, n, len(stack))
+                next_move = max(valid_moves, key=lambda move: scores[move])
+                idx = transition(next_move, idx, stack, parse)
+            return tags, parse
+
+    def get_valid_moves(i, n, stack_depth):
+        moves = []
+        if i &amp;amp;amp;lt; n:
+            moves.append(SHIFT)
+        if stack_depth &lt;= 2:
+            moves.append(RIGHT)
+        if stack_depth &lt;= 1:
+            moves.append(LEFT)
+        return moves
+</pre>
+<p>We start by tagging the sentence, and initializing the state. We then map the state to a set of features, which we score using a linear model. We then find the best-scoring valid move, and apply it to the state.</p>
+<p>The model scoring works the same as it did in <a href="https://honnibal.wordpress.com/2013/09/11/a-good-part-of-speechpos-tagger-in-about-200-lines-of-python/">the POS tagger</a>. If you&#8217;re confused about the idea of extracting features and scoring them with a linear model, you should review that post. Here&#8217;s a reminder of how the model scoring works:</p>
+<pre class="brush: python; title: ; notranslate" title="">
+    class Perceptron(object)
+        ...
+        def score(self, features):
+            all_weights = self.weights
+            scores = dict((clas, 0) for clas in self.classes)
+            for feat, value in features.items():
+                if value == 0:
+                    continue
+                if feat not in all_weights:
+                    continue
+                weights = all_weights[feat]
+                for clas, weight in weights.items():
+                    scores[clas] += value * weight
+            return scores
+</pre>
+<p>It&#8217;s just summing the class-weights for each feature. This is often expressed as a dot-product, but when you&#8217;re dealing with multiple classes, that gets awkward, I find.</p>
+<p>The beam parser (RedShift) tracks multiple candidates, and only decides on the best one at the very end. We&#8217;re going to trade away accuracy in favour of efficiency and simplicity. We&#8217;ll only follow a single analysis. Our search strategy will be entirely greedy, as it was with the POS tagger. We&#8217;ll lock-in our choices at every step.</p>
+<p>If you read the POS tagger post carefully, you might see the underlying similarity. What we&#8217;ve done is mapped the parsing problem onto a sequence-labelling problem, which we address using a &#8220;flat&#8221;, or unstructured, learning algorithm (by doing greedy search).</p>
+<h2>Features</h2>
+<p>Feature extraction code is always pretty ugly. The features for the parser refer to a few tokens from the context::</p>
+<ul>
+<li>The first three words of the buffer (n0, n1, n2)</li>
+<li>The top three words of the stack (s0, s1, s2)</li>
+<li>The two leftmost children of s0 (s0b1, s0b2);</li>
+<li>The two rightmost children of s0 (s0f1, s0f2);</li>
+<li>The two leftmost children of n0 (n0b1, n0b2)</li>
+</ul>
+<p>For these 12 tokens, we refer to the word-form, the part-of-speech tag, and the number of left and right children attached to the token.</p>
+<p>Because we&#8217;re using a linear model, we have our features refer to pairs and triples of these atomic properties.</p>
+<pre class="brush: python; title: ; notranslate" title="">
+def extract_features(words, tags, n0, n, stack, parse):
+    def get_stack_context(depth, stack, data):
+        if depth &gt;= 3:
+            return data[stack[-1]], data[stack[-2]], data[stack[-3]]
+        elif depth &gt;= 2:
+            return data[stack[-1]], data[stack[-2]], ''
+        elif depth == 1:
+            return data[stack[-1]], '', ''
+        else:
+            return '', '', ''
+
+    def get_buffer_context(i, n, data):
+        if i + 1 &gt;= n:
+            return data[i], '', ''
+        elif i + 2 &gt;= n:
+            return data[i], data[i + 1], ''
+        else:
+            return data[i], data[i + 1], data[i + 2]
+
+    def get_parse_context(word, deps, data):
+        if word == -1:
+            return 0, '', ''
+        deps = deps[word]
+        valency = len(deps)
+        if not valency:
+            return 0, '', ''
+        elif valency == 1:
+            return 1, data[deps[-1]], ''
+        else:
+            return valency, data[deps[-1]], data[deps[-2]]
+
+    features = {}
+    # Set up the context pieces --- the word, W, and tag, T, of:
+    # S0-2: Top three words on the stack
+    # N0-2: First three words of the buffer
+    # n0b1, n0b2: Two leftmost children of the first word of the buffer
+    # s0b1, s0b2: Two leftmost children of the top word of the stack
+    # s0f1, s0f2: Two rightmost children of the top word of the stack
+
+    depth = len(stack)
+    s0 = stack[-1] if depth else -1
+
+    Ws0, Ws1, Ws2 = get_stack_context(depth, stack, words)
+    Ts0, Ts1, Ts2 = get_stack_context(depth, stack, tags)
+
+    Wn0, Wn1, Wn2 = get_buffer_context(n0, n, words)
+    Tn0, Tn1, Tn2 = get_buffer_context(n0, n, tags)
+
+    Vn0b, Wn0b1, Wn0b2 = get_parse_context(n0, parse.lefts, words)
+    Vn0b, Tn0b1, Tn0b2 = get_parse_context(n0, parse.lefts, tags)
+
+    Vn0f, Wn0f1, Wn0f2 = get_parse_context(n0, parse.rights, words)
+    _, Tn0f1, Tn0f2 = get_parse_context(n0, parse.rights, tags)
+
+    Vs0b, Ws0b1, Ws0b2 = get_parse_context(s0, parse.lefts, words)
+    _, Ts0b1, Ts0b2 = get_parse_context(s0, parse.lefts, tags)
+
+    Vs0f, Ws0f1, Ws0f2 = get_parse_context(s0, parse.rights, words)
+    _, Ts0f1, Ts0f2 = get_parse_context(s0, parse.rights, tags)
+
+    # Cap numeric features at 5? 
+    # String-distance
+    Ds0n0 = min((n0 - s0, 5)) if s0 != 0 else 0
+
+    features['bias'] = 1
+    # Add word and tag unigrams
+    for w in (Wn0, Wn1, Wn2, Ws0, Ws1, Ws2, Wn0b1, Wn0b2, Ws0b1, Ws0b2, Ws0f1, Ws0f2):
+        if w:
+            features['w=%s' % w] = 1
+    for t in (Tn0, Tn1, Tn2, Ts0, Ts1, Ts2, Tn0b1, Tn0b2, Ts0b1, Ts0b2, Ts0f1, Ts0f2):
+        if t:
+            features['t=%s' % t] = 1
+
+    # Add word/tag pairs
+    for i, (w, t) in enumerate(((Wn0, Tn0), (Wn1, Tn1), (Wn2, Tn2), (Ws0, Ts0))):
+        if w or t:
+            features['%d w=%s, t=%s' % (i, w, t)] = 1
+
+    # Add some bigrams
+    features['s0w=%s,  n0w=%s' % (Ws0, Wn0)] = 1
+    features['wn0tn0-ws0 %s/%s %s' % (Wn0, Tn0, Ws0)] = 1
+    features['wn0tn0-ts0 %s/%s %s' % (Wn0, Tn0, Ts0)] = 1
+    features['ws0ts0-wn0 %s/%s %s' % (Ws0, Ts0, Wn0)] = 1
+    features['ws0-ts0 tn0 %s/%s %s' % (Ws0, Ts0, Tn0)] = 1
+    features['wt-wt %s/%s %s/%s' % (Ws0, Ts0, Wn0, Tn0)] = 1
+    features['tt s0=%s n0=%s' % (Ts0, Tn0)] = 1
+    features['tt n0=%s n1=%s' % (Tn0, Tn1)] = 1
+
+    # Add some tag trigrams
+    trigrams = ((Tn0, Tn1, Tn2), (Ts0, Tn0, Tn1), (Ts0, Ts1, Tn0), 
+                (Ts0, Ts0f1, Tn0), (Ts0, Ts0f1, Tn0), (Ts0, Tn0, Tn0b1),
+                (Ts0, Ts0b1, Ts0b2), (Ts0, Ts0f1, Ts0f2), (Tn0, Tn0b1, Tn0b2),
+                (Ts0, Ts1, Ts1))
+    for i, (t1, t2, t3) in enumerate(trigrams):
+        if t1 or t2 or t3:
+            features['ttt-%d %s %s %s' % (i, t1, t2, t3)] = 1
+
+    # Add some valency and distance features
+    vw = ((Ws0, Vs0f), (Ws0, Vs0b), (Wn0, Vn0b))
+    vt = ((Ts0, Vs0f), (Ts0, Vs0b), (Tn0, Vn0b))
+    d = ((Ws0, Ds0n0), (Wn0, Ds0n0), (Ts0, Ds0n0), (Tn0, Ds0n0),
+        ('t' + Tn0+Ts0, Ds0n0), ('w' + Wn0+Ws0, Ds0n0))
+    for i, (w_t, v_d) in enumerate(vw + vt + d):
+        if w_t or v_d:
+            features['val/d-%d %s %d' % (i, w_t, v_d)] = 1
+    return features
+</pre>
+<h2>Training</h2>
+<p>Weights are learned using the same algorithm, averaged perceptron, that we used for part-of-speech tagging. Its key strength is that it&#8217;s an online learning algorithm: examples stream in one-by-one, we make our prediction, check the actual answer, and adjust our beliefs (weights) if we were wrong.</p>
+<p>The training loop looks like this:</p>
+<pre class="brush: python; title: ; notranslate" title="">
+class Parser(object):
+    ...
+    def train_one(self, itn, words, gold_tags, gold_heads):
+        n = len(words)
+        i = 2; stack = [1]; parse = Parse(n)
+        tags = self.tagger.tag(words)
+        while stack or (i + 1) &amp;amp;amp;lt; n:
+            features = extract_features(words, tags, i, n, stack, parse)
+            scores = self.model.score(features)
+            valid_moves = get_valid_moves(i, n, len(stack))
+            guess = max(valid_moves, key=lambda move: scores[move])
+            gold_moves = get_gold_moves(i, n, stack, parse.heads, gold_heads)
+            best = max(gold_moves, key=lambda move: scores[move])
+        self.model.update(best, guess, features)
+        i = transition(guess, i, stack, parse)
+    # Return number correct
+    return len([i for i in range(n-1) if parse.heads[i] == gold_heads[i]])
+</pre>
+<p>The most interesting part of the training process is in <tt>get_gold_moves</tt>. The performance of our parser is made possible by an advance by Goldberg and Nivre (2012), who showed that we&#8217;d been doing this wrong for years.</p>
+<p>In the POS-tagging post, I cautioned that during training you need to make sure you pass in the last two <em>predicted</em> tags as features for the current tag, not the last two <em>gold</em> tags. At test time you&#8217;ll only have the predicted tags, so if you base your features on the gold sequence during training, your training contexts won&#8217;t resemble your test-time contexts, so you&#8217;ll learn the wrong weights.</p>
+<p>In parsing, the problem was that we didn&#8217;t know <em>how</em> to pass in the predicted sequence! Training worked by taking the gold-standard tree, and finding a transition sequence that led to it. i.e., you got back a sequence of moves, with the guarantee that if you followed those moves, you&#8217;d get the gold-standard dependencies.</p>
+<p>The problem is, we didn&#8217;t know how to define the &#8220;correct&#8221; move to teach a parser to make if it was in any state that <em>wasn&#8217;t</em> along that gold-standard sequence. Once the parser had made a mistake, we didn&#8217;t know how to train from that example.</p>
+<p>That was a big problem, because it meant that once the parser started making mistakes, it would end up in states unlike any in its training data &#8212; leading to yet more mistakes.<br />
+The problem was specific to greedy parsers: once you use a beam, there&#8217;s a natural way to do structured prediction.</p>
+<p>The solution seems obvious once you know it, like all the best breakthroughs. What we do is define a function that asks &#8220;How many gold-standard dependencies can be recovered from this state?&#8221;. If you can define that function, then you can apply each move in turn, and ask, &#8220;How many gold-standard dependencies can be recovered from <em>this</em> state?&#8221;. If the action you applied allows <em>fewer</em> gold-standard dependencies to be reached, then it is sub-optimal.</p>
+<p>That&#8217;s a lot to take in.</p>
+<p>So we have this function Oracle(state):</p>
+<p>Oracle(state) = | gold_arcs ∩ reachable_arcs(state) |</p>
+<p>We also have a set of actions, each of which returns a new state. We want to know:</p>
+<ul>
+<li>shift_cost = Oracle(state) &#8211; Oracle(shift(state))</li>
+<li>right_cost = Oracle(state) &#8211; Oracle(right(state))</li>
+<li>left_cost = Oracle(state) &#8211; Oracle(left(state))</li>
+</ul>
+<p>Now, at least one of those costs <em>has</em> to be zero. Oracle(state) is asking, &#8220;what&#8217;s the cost of the best path forward?&#8221;, and the first action of that best path has to be shift, right, or left.</p>
+<p>It turns out that we can derive Oracle fairly simply for many transition systems. The derivation for the transition system we&#8217;re using, Arc Hybrid, is in Goldberg and Nivre (2013).</p>
+<p>We&#8217;re going to implement the oracle as a function that returns the zero-cost moves, rather than implementing a function Oracle(state). This prevents us from doing a bunch of costly copy operations. Hopefully the reasoning in the code isn&#8217;t too hard to follow, but you can also consult Goldberg and Nivre&#8217;s papers if you&#8217;re confused and want to get to the bottom of this.</p>
+<pre class="brush: python; title: ; notranslate" title="">
+def get_gold_moves(n0, n, stack, heads, gold):
+    def deps_between(target, others, gold):
+        for word in others:
+            if gold[word] == target or gold[target] == word:
+                return True
+        return False
+
+    valid = get_valid_moves(n0, n, len(stack))
+    if not stack or (SHIFT in valid and gold[n0] == stack[-1]):
+        return [SHIFT]
+    if gold[stack[-1]] == n0:
+        return [LEFT]
+    costly = set([m for m in MOVES if m not in valid])
+    # If the word behind s0 is its gold head, Left is incorrect
+    if len(stack) &amp;amp;amp;gt;= 2 and gold[stack[-1]] == stack[-2]:
+        costly.add(LEFT)
+    # If there are any dependencies between n0 and the stack,
+    # pushing n0 will lose them.
+    if SHIFT not in costly and deps_between(n0, stack, gold):
+        costly.add(SHIFT)
+    # If there are any dependencies between s0 and the buffer, popping
+    # s0 will lose them.
+    if deps_between(stack[-1], range(n0+1, n-1), gold):
+        costly.add(LEFT)
+        costly.add(RIGHT)
+    return [m for m in MOVES if m not in costly]
+</pre>
+<p>Doing this &#8220;dynamic oracle&#8221; training procedure makes a big difference to accuracy &#8212; typically 1-2%, with no difference to the way the run-time works. The old &#8220;static oracle&#8221; greedy training procedure is fully obsolete; there&#8217;s no reason to do it that way any more.</p>
+<h2>Conclusion</h2>
+<p>I have the sense that language technologies, particularly those relating to grammar, are particularly mysterious. I can imagine having no idea what the program might even do.</p>
+<p>I think it therefore seems natural to people that the best solutions would be over-whelmingly complicated. A 200,000 line Java package feels appropriate.</p>
+<p>But, algorithmic code is usually short, when only a single algorithm is implemented. And when you only implement one algorithm, and you know exactly what you want to write before you write a line, you also don&#8217;t pay for any unnecessary abstractions, which can have a big performance impact.</p>
+<h2>Notes</h2>
+<p>[1] I wasn&#8217;t really sure how to count the lines of code in the Stanford parser. Its jar file ships over 200k, but there are a lot of different models in it. It&#8217;s not important, but over 50k seems safe.</p>
+<p>[2] For instance, how would you parse, &#8220;John&#8217;s school of music calls&#8221;? You want to make sure the phrase &#8220;John&#8217;s school&#8221; has a consistent structure in both &#8220;John&#8217;s school calls&#8221; and &#8220;John&#8217;s school of music calls&#8221;. Reasoning about the different &#8220;slots&#8221; you can put a phrase into is a key way we reason about what syntactic analyses look like. You can think of each phrase as having a different shaped connector, which you need to plug into different slots &#8212; which each phrase also has a certain number of, each of a different shape. We&#8217;re trying to figure out what connectors are where, so we can figure out how the sentences are put together.</p>
+<p>[3] There&#8217;s an updated version of the Stanford parser that gets better accuracy, using a &#8220;deep learning&#8221; technique. But, the accuracy of the final model is still way behind the best shift-reduce parsers. It&#8217;s a great paper, and it doesn&#8217;t really matter that the idea was implemented on top of a parser that isn&#8217;t state-of-the-art. It seems very likely that the idea would still work on top of a shift-reduce parser, and I look forward to someone doing that.</p>
+<p>[4] A point of detail: the Stanford dependencies are actually produced automatically given gold-standard phrase-structure trees. See the Stanford Dependency Converter page here: <a href="http://nlp.stanford.edu/software/stanford-dependencies.shtml" rel="nofollow">http://nlp.stanford.edu/software/stanford-dependencies.shtml</a></p>
+<h2>Idle speculation</h2>
+<p>For a long time, incremental language processing algorithms were primarily of scientific interest. If you want to write a parser to test a theory about how the human sentence processor might work, well, that parser needs to build partial interpretations. There&#8217;s a wealth of evidence, including commonsense introspection, that establishes that we don&#8217;t buffer input and analyse it once the speaker has finished.</p>
+<p>But now algorithms with that neat scientific feature are winning! As best as I can tell, the secret to that success is to be:</p>
+<ul>
+<li>Incremental. Earlier words constrain the search.</li>
+<li>Error-driven. Training involves a working hypothesis, which is updated as it makes mistakes.</li>
+</ul>
+<p>The links to human sentence processing seem tantalising. I look forward to seeing whether these engineering breakthroughs lead to any psycholinguistic advances.</p>
+<h2>Bibliography</h2>
+<p>The NLP literature is almost entirely open access. All of the relavant papers can be found here: <a href="http://aclweb.org/anthology/" rel="nofollow">http://aclweb.org/anthology/</a></p>
+<p>The parser I&#8217;ve described is an implementation of the dynamic-oracle Arc-Hybrid system here:</p>
+<pre><code>Goldberg, Yoav; Nivre, Joakim
+Training Deterministic Parsers with Non-Deterministic Oracles
+TACL 2013
+</code></pre>
+<p>However, I wrote my own features for it. The arc-hybrid system was originally described here:</p>
+<pre><code>Kuhlmann, Marco; Gomez-Rodriguez, Carlos; Satta, Giorgio
+Dynamic programming algorithms for transition-based dependency parsers
+ACL 2011
+</code></pre>
+<p>The dynamic oracle training method was first described here:</p>
+<pre><code>A Dynamic Oracle for Arc-Eager Dependency Parsing
+Goldberg, Yoav; Nivre, Joakim
+COLING 2012
+</code></pre>
+<p>This work depended on a big break-through in accuracy for transition-based parsers, when beam-search was properly explored by Zhang and Clark. They have several papers, but the preferred citation is:</p>
+<pre><code>Zhang, Yue; Clark, Steven
+Syntactic Processing Using the Generalized Perceptron and Beam Search
+Computational Linguistics 2011 (1)
+</code></pre>
+<p>Another important paper was this little feature engineering paper, which further improved the accuracy:</p>
+<pre><code>Zhang, Yue;  Nivre, Joakim
+Transition-based Dependency Parsing with Rich Non-local Features
+ACL 2011
+</code></pre>
+<p>The generalised perceptron, which is the learning framework for these beam parsers, is from this paper:</p>
+<pre><code>Collins, Michael
+Discriminative Training Methods for Hidden Markov Models: Theory and Experiments with Perceptron Algorithms
+EMNLP 2002
+</code></pre>
+<h2>Experimental details</h2>
+<p>The results at the start of the post refer to Section 22 of the Wall Street Journal corpus. The Stanford parser was run as follows:</p>
+<pre class="brush: plain; title: ; notranslate" title="">
+java -mx10000m -cp &amp;amp;amp;quot;$scriptdir/*:&amp;amp;amp;quot; edu.stanford.nlp.parser.lexparser.LexicalizedParser \
+-outputFormat &amp;amp;amp;quot;penn&amp;amp;amp;quot; edu/stanford/nlp/models/lexparser/englishFactored.ser.gz $*
+</pre>
+<p>A small post-process was applied, to undo the fancy tokenisation Stanford adds for numbers, to make them match the PTB tokenisation:</p>
+<pre class="brush: python; title: ; notranslate" title="">
+&amp;amp;amp;quot;&amp;amp;amp;quot;&amp;amp;amp;quot;Stanford parser retokenises numbers. Split them.&amp;amp;amp;quot;&amp;amp;amp;quot;&amp;amp;amp;quot;
+import sys
+import re
+
+qp_re = re.compile('\xc2\xa0')
+for line in sys.stdin:
+    line = line.rstrip()
+    if qp_re.search(line):
+        line = line.replace('(CD', '(QP (CD', 1) + ')'
+        line = line.replace('\xc2\xa0', ') (CD ')
+    print line
+</pre>
+<p>The resulting PTB-format files were then converted into dependencies using the Stanford converter:</p>
+<pre class="brush: plain; title: ; notranslate" title="">
+for f in $1/*.mrg; do
+  echo $f
+  grep -v CODE $f &amp;amp;amp;amp;gt; &amp;amp;amp;quot;$f.2&amp;amp;amp;quot;
+  out=&amp;amp;amp;quot;$f.dep&amp;amp;amp;quot;
+  java -mx800m -cp &amp;amp;amp;quot;$scriptdir/*:&amp;amp;amp;quot; edu.stanford.nlp.trees.EnglishGrammaticalStructure \
+   -treeFile &amp;amp;amp;quot;$f.2&amp;amp;amp;quot; -basic -makeCopulaHead -conllx &amp;amp;amp;amp;gt; $out
+done
+</pre>
+<p>I can&#8217;t easily read that anymore, but it should just convert every .mrg file in a folder to a CoNLL-format Stanford basic dependencies file, using the settings common in the dependency literature.</p>
+<p>I then converted the gold-standard trees from WSJ 22, for the evaluation. Accuracy scores refer to unlabelled attachment score (i.e. the head index) of all non-punctuation tokens.</p>
+<p>To train parser.py, I fed the gold-standard PTB trees for WSJ 02-21 into the same conversion script.</p>
+<p>In a nutshell: The Stanford model and parser.py are trained on the same set of sentences, and they each make their predictions on a held-out test set, for which we know the answers. Accuracy refers to how many of the words&#8217; heads we got correct.</p>
+<p>Speeds were measured on a 2.4Ghz Xeon. I ran the experiments on a server, to give the Stanford parser more memory. The parser.py system runs fine on my MacBook Air. I used PyPy for the parser.py experiments; CPython was about half as fast on an early benchmark.</p>
+<p>One of the reasons parser.py is so fast is that it does unlabelled parsing. Based on previous experiments, a labelled parser would likely be about 40x slower, and about 1% more accurate. Adapting the program to labelled parsing would be a good exercise for the reader, if you have access to the data.</p>
+<p>The result from the Redshift parser was produced from commit <tt>b6b624c9900f3bf</tt>, which was run as follows:</p>
+<pre class="brush: plain; title: ; notranslate" title="">
+./scripts/train.py -x zhang+stack -k 8 -p ~/data/stanford/train.conll ~/data/parsers/tmp
+./scripts/parse.py ~/data/parsers/tmp ~/data/stanford/devi.txt /tmp/parse/
+./scripts/evaluate.py /tmp/parse/parses ~/data/stanford/dev.conll
+</pre>
+		<div class="wpcnt">
+			<div class="wpa wpmrec">
+				<a class="wpa-about" href="https://wordpress.com/about-these-ads/" rel="nofollow"></a>
+				<div class="u">
+					<script type='text/javascript'>
+					(function(g){g.__ATA.initAd({sectionId:26942, width:300, height:250});})(window);
+					</script>
+				</div>
+			</div>
+		</div><div id="jp-post-flair" class="sharedaddy sd-like-enabled"><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-10550686-171-563015c7a7de0' data-src='//widgets.wp.com/likes/#blog_id=10550686&amp;post_id=171&amp;origin=honnibal.wordpress.com&amp;obj_id=10550686-171-563015c7a7de0' data-name='like-post-frame-10550686-171-563015c7a7de0'><h3 class='sd-title'>Like this:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height:55px'><span class='button'><span>Like</span></span> <span class="loading">Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div></div>		                <p class="meta">
+
+               		<span class="date">
+                                        <a href="https://honnibal.wordpress.com/2013/12/18/">2013/12/18</a> - <!-- at 4:32 am -->
+                  </span>
+
+									<span class="postedby">
+	                  Posted by	               		<a href="https://honnibal.wordpress.com/author/honnibal/" title="Posts by honnibal" rel="author">honnibal</a> |
+	                  <a href="https://honnibal.wordpress.com/category/uncategorized/" rel="category tag">Uncategorized</a>					  									</span>
+
+                  
+             		</p>
+
+              </div>
+
+              <h2 id="comments">21 Comments	<a href="#postcomment" title="Leave a comment">&raquo;</a>
+</h2>
+
+<ol id="commentlist">
+<li class="comment even thread-even depth-1 highlander-comment" id="comment-202">
+	<div id="div-comment-202">
+	<p>Fantastic work and exposition, thanks for being so clear!</p>
+	<p class="vcard"><cite>
+	<img alt='' src='https://1.gravatar.com/avatar/110115442c5fa2fffecefb49120fb545?s=16&#038;d=identicon&#038;r=G' class='avatar avatar-16' height='16' width='16' />	Comment	by	<span class="fn">Jesus Lopez</span> |
+	2014/04/11 <!-- @ <a href="#comment-202">3:55 am</a> -->
+		 | <a rel='nofollow' class='comment-reply-link' href='https://honnibal.wordpress.com/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/?replytocom=202#respond' onclick='return addComment.moveForm( "div-comment-202", "202", "respond", "171" )' aria-label='Reply to Jesus Lopez'>Reply</a>	</cite></p>
+	</div>
+</li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1 highlander-comment" id="comment-220">
+	<div id="div-comment-220">
+	<p>Having struggled with Stanford parser for a while, this is pure gold. Thank you so much.</p>
+<p>PS: you might want to escape those quotes in the second line of the code example <span class='wp-smiley wp-emoji wp-emoji-smile' title=':)'>:)</span></p>
+	<p class="vcard"><cite>
+	<img alt='' src='https://2.gravatar.com/avatar/b03057d46bfe489c10960a69a7699456?s=16&#038;d=identicon&#038;r=G' class='avatar avatar-16' height='16' width='16' />	Comment	by	<span class="fn"><a href='http://soldaini.net' rel='external nofollow' class='url'>Luca Soldaini</a></span> |
+	2014/04/29 <!-- @ <a href="#comment-220">8:42 am</a> -->
+		 | <a rel='nofollow' class='comment-reply-link' href='https://honnibal.wordpress.com/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/?replytocom=220#respond' onclick='return addComment.moveForm( "div-comment-220", "220", "respond", "171" )' aria-label='Reply to Luca Soldaini'>Reply</a>	</cite></p>
+	</div>
+</li><!-- #comment-## -->
+<li class="comment even thread-even depth-1 parent highlander-comment" id="comment-221">
+	<div id="div-comment-221">
+	<p>Great article&#8211; I won&#8217;t lie I did not finish it yet- but I&#8217;ve put it on my to-read list for tomorrow&#8230; I&#8217;ve been working with python-NLTK, maltparser, (and various other tools) &#8211; developing NLP tools and little webapps with the goal of assiting people with learning disabilities in language giving them an alternitive way to help then master language (I, myself am included in this group of individuals). [The tools I currently have online are all experiments not polished tools]</p>
+<p>I will definitly be spending time looking over your blog <span class='wp-smiley wp-emoji wp-emoji-smile' title=':)'>:)</span></p>
+<p>Keep up the good work!</p>
+	<p class="vcard"><cite>
+	<img alt='' src='https://0.gravatar.com/avatar/f6778b5afea96193ae03c5fe53708f59?s=16&#038;d=identicon&#038;r=G' class='avatar avatar-16' height='16' width='16' />	Comment	by	<span class="fn"><a href='http://cognitivelanguagemachine.com' rel='external nofollow' class='url'>Jon Klopfer</a></span> |
+	2014/04/29 <!-- @ <a href="#comment-221">12:51 pm</a> -->
+		 | <a rel='nofollow' class='comment-reply-link' href='https://honnibal.wordpress.com/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/?replytocom=221#respond' onclick='return addComment.moveForm( "div-comment-221", "221", "respond", "171" )' aria-label='Reply to Jon Klopfer'>Reply</a>	</cite></p>
+	</div>
+<ul class="children">
+<li class="comment byuser comment-author-honnibal comment-author-is-site-member bypostauthor odd alt depth-2 highlander-comment" id="comment-225">
+	<div id="div-comment-225">
+	<p>Ah great &#8212; you&#8217;ll find that using tools you really know the internals of, with your own glue, is actually easier, as well as much more flexible!</p>
+<p>For tokenisation, I recommend the Splitta Python library.</p>
+	<p class="vcard"><cite>
+	<img alt='' src='https://0.gravatar.com/avatar/caa271203ff18e1c13defdbdf1f38069?s=16&#038;d=identicon&#038;r=G' class='avatar avatar-16' height='16' width='16' />	Comment	by	<span class="fn"><a href='http://honnibal.wordpress.com' rel='external nofollow' class='url'>honnibal</a></span> |
+	2014/04/29 <!-- @ <a href="#comment-225">3:20 pm</a> -->
+		 | <a rel='nofollow' class='comment-reply-link' href='https://honnibal.wordpress.com/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/?replytocom=225#respond' onclick='return addComment.moveForm( "div-comment-225", "225", "respond", "171" )' aria-label='Reply to honnibal'>Reply</a>	</cite></p>
+	</div>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment even thread-odd thread-alt depth-1 parent highlander-comment" id="comment-222">
+	<div id="div-comment-222">
+	<p>Regarding benchmarks: Super fast &#8220;greedy&#8221; mode: over 1,000 sentences per second at 91.5% accuracy and the slowest mode is 100 sentences per second. How many cores do you use to benchmark?</p>
+	<p class="vcard"><cite>
+	<img alt='' src='https://1.gravatar.com/avatar/a0caef7bdf3e305945e2a366fb109744?s=16&#038;d=identicon&#038;r=G' class='avatar avatar-16' height='16' width='16' />	Comment	by	<span class="fn"><a href='http://twitter.com/srchvrs' rel='external nofollow' class='url'>Leonid Boytsov (@srchvrs)</a></span> |
+	2014/04/29 <!-- @ <a href="#comment-222">2:02 pm</a> -->
+		 | <a rel='nofollow' class='comment-reply-link' href='https://honnibal.wordpress.com/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/?replytocom=222#respond' onclick='return addComment.moveForm( "div-comment-222", "222", "respond", "171" )' aria-label='Reply to Leonid Boytsov (@srchvrs)'>Reply</a>	</cite></p>
+	</div>
+<ul class="children">
+<li class="comment byuser comment-author-honnibal comment-author-is-site-member bypostauthor odd alt depth-2 highlander-comment" id="comment-226">
+	<div id="div-comment-226">
+	<p>Single core, for all settings. All parsers process each sentence independently, so can parallelise on the sentences in the same way.</p>
+	<p class="vcard"><cite>
+	<img alt='' src='https://0.gravatar.com/avatar/caa271203ff18e1c13defdbdf1f38069?s=16&#038;d=identicon&#038;r=G' class='avatar avatar-16' height='16' width='16' />	Comment	by	<span class="fn"><a href='http://honnibal.wordpress.com' rel='external nofollow' class='url'>honnibal</a></span> |
+	2014/04/29 <!-- @ <a href="#comment-226">3:22 pm</a> -->
+		 | <a rel='nofollow' class='comment-reply-link' href='https://honnibal.wordpress.com/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/?replytocom=226#respond' onclick='return addComment.moveForm( "div-comment-226", "226", "respond", "171" )' aria-label='Reply to honnibal'>Reply</a>	</cite></p>
+	</div>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment even thread-even depth-1 highlander-comment" id="comment-229">
+	<div id="div-comment-229">
+	<p>So, this is 400 sentences in the slow mode and 1000 sentences in the greedy mode on a reasonably new hardware. Interesting, thank you for the clarification!</p>
+	<p class="vcard"><cite>
+	<img alt='' src='https://1.gravatar.com/avatar/a0caef7bdf3e305945e2a366fb109744?s=16&#038;d=identicon&#038;r=G' class='avatar avatar-16' height='16' width='16' />	Comment	by	<span class="fn"><a href='http://twitter.com/srchvrs' rel='external nofollow' class='url'>Leonid Boytsov (@srchvrs)</a></span> |
+	2014/04/29 <!-- @ <a href="#comment-229">11:33 pm</a> -->
+		 | <a rel='nofollow' class='comment-reply-link' href='https://honnibal.wordpress.com/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/?replytocom=229#respond' onclick='return addComment.moveForm( "div-comment-229", "229", "respond", "171" )' aria-label='Reply to Leonid Boytsov (@srchvrs)'>Reply</a>	</cite></p>
+	</div>
+</li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1 parent highlander-comment" id="comment-230">
+	<div id="div-comment-230">
+	<p>Hi,<br />
+Great article. I was wondering if you knew any easy way to say convert the PTB corpus from nltk into a usable format for parser.py ? A toy data example might also be great.</p>
+	<p class="vcard"><cite>
+	<img alt='' src='https://1.gravatar.com/avatar/734bc2ff4cc537d045813b4bdb400f1d?s=16&#038;d=identicon&#038;r=G' class='avatar avatar-16' height='16' width='16' />	Comment	by	<span class="fn">Artyom</span> |
+	2014/04/30 <!-- @ <a href="#comment-230">1:55 am</a> -->
+		 | <a rel='nofollow' class='comment-reply-link' href='https://honnibal.wordpress.com/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/?replytocom=230#respond' onclick='return addComment.moveForm( "div-comment-230", "230", "respond", "171" )' aria-label='Reply to Artyom'>Reply</a>	</cite></p>
+	</div>
+<ul class="children">
+<li class="comment even depth-2 parent highlander-comment" id="comment-231">
+	<div id="div-comment-231">
+	<p>I guess you mean to train a model. If so, I have been trying with this tool (<a href="http://nlp.cs.lth.se/software/treebank_converter/" rel="nofollow">http://nlp.cs.lth.se/software/treebank_converter/</a>). Works fine to convert from PTB to CONLL, but when trying to train the model with the converted output, I get an error:</p>
+<p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;<br />
+Traceback (most recent call last):<br />
+File “./scripts/train.py”, line 54, in<br />
+plac.call(main)<br />
+File “/Library/Python/2.7/site-packages/plac-0.9.1-py2.7.egg/plac_core.py”, line 309, in call<br />
+cmd, result = parser_from(obj).consume(arglist)<br />
+File “/Library/Python/2.7/site-packages/plac-0.9.1-py2.7.egg/plac_core.py”, line 195, in consume<br />
+return cmd, self.func(*(args + varargs + extraopts), **kwargs)<br />
+File “./scripts/train.py”, line 49, in main<br />
+parser.train(train_data, n_iter=n_iter)<br />
+File “parser.pyx”, line 134, in redshift.parser.BaseParser.train (redshift/parser.cpp:4378)<br />
+File “parser.pyx”, line 433, in redshift.parser.GreedyParser.static_train (redshift/parser.cpp:8647)<br />
+File “transitions.pyx”, line 165, in redshift.transitions.TransitionSystem.transition (redshift/transitions.cpp:3186)<br />
+StandardError: 77<br />
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</p>
+	<p class="vcard"><cite>
+	<img alt='' src='https://i2.wp.com/pbs.twimg.com/profile_images/1217975311/r4_normal.jpg?resize=16%2C16' class='avatar avatar-16' height='16' width='16' />	Comment	by	<span class="fn"><a href='http://twitter.com/ralarconm' rel='external nofollow' class='url'>Rodrigo Alarcón (@ralarconm)</a></span> |
+	2014/05/01 <!-- @ <a href="#comment-231">8:26 pm</a> -->
+		 | <a rel='nofollow' class='comment-reply-link' href='https://honnibal.wordpress.com/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/?replytocom=231#respond' onclick='return addComment.moveForm( "div-comment-231", "231", "respond", "171" )' aria-label='Reply to Rodrigo Alarcón (@ralarconm)'>Reply</a>	</cite></p>
+	</div>
+<ul class="children">
+<li class="comment byuser comment-author-honnibal comment-author-is-site-member bypostauthor odd alt depth-3 highlander-comment" id="comment-232">
+	<div id="div-comment-232">
+	<p>At a glance, I would guess:</p>
+<p>I think the LTH converter produces non-projective trees for a minority of constructions. This violates an assumption of the transition system/training oracle. The implementation (and underlying algorithm) only works for projective trees.</p>
+	<p class="vcard"><cite>
+	<img alt='' src='https://0.gravatar.com/avatar/caa271203ff18e1c13defdbdf1f38069?s=16&#038;d=identicon&#038;r=G' class='avatar avatar-16' height='16' width='16' />	Comment	by	<span class="fn"><a href='http://honnibal.wordpress.com' rel='external nofollow' class='url'>honnibal</a></span> |
+	2014/05/01 <!-- @ <a href="#comment-232">8:29 pm</a> -->
+			</cite></p>
+	</div>
+</li><!-- #comment-## -->
+<li class="comment even depth-3 highlander-comment" id="comment-235">
+	<div id="div-comment-235">
+	<p>@honnibal, thanks for the hint. Training works with trees formatted to CONLL with the StanfordParser, as you described in Experimental Details&#8230;</p>
+	<p class="vcard"><cite>
+	<img alt='' src='https://i2.wp.com/pbs.twimg.com/profile_images/1217975311/r4_normal.jpg?resize=16%2C16' class='avatar avatar-16' height='16' width='16' />	Comment	by	<span class="fn"><a href='http://twitter.com/ralarconm' rel='external nofollow' class='url'>Rodrigo Alarcón (@ralarconm)</a></span> |
+	2014/05/02 <!-- @ <a href="#comment-235">1:10 am</a> -->
+			</cite></p>
+	</div>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment byuser comment-author-honnibal comment-author-is-site-member bypostauthor odd alt depth-2 highlander-comment" id="comment-233">
+	<div id="div-comment-233">
+	<p>Well, the LDC claims that OntoNotes 5 is free for non-members. I&#8217;m asking them whether I can distribute it. In the meantime, you can go through their sign-up rigmarole and obtain the corpus.</p>
+	<p class="vcard"><cite>
+	<img alt='' src='https://0.gravatar.com/avatar/caa271203ff18e1c13defdbdf1f38069?s=16&#038;d=identicon&#038;r=G' class='avatar avatar-16' height='16' width='16' />	Comment	by	<span class="fn"><a href='http://honnibal.wordpress.com' rel='external nofollow' class='url'>honnibal</a></span> |
+	2014/05/01 <!-- @ <a href="#comment-233">8:30 pm</a> -->
+		 | <a rel='nofollow' class='comment-reply-link' href='https://honnibal.wordpress.com/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/?replytocom=233#respond' onclick='return addComment.moveForm( "div-comment-233", "233", "respond", "171" )' aria-label='Reply to honnibal'>Reply</a>	</cite></p>
+	</div>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment even thread-even depth-1 parent highlander-comment" id="comment-282">
+	<div id="div-comment-282">
+	<p>Pushing Ontonotes 5 through Jinho Choi&#8217;s dependency converter produces a small fraction of non-projective trees. I&#8217;ve got some preliminary results with malt and MaltOptimizer for a set where each partition is a superset of the corresponding WSJ partition. Would like<br />
+to compare. As far as I know, there is no standard split for the non-WSJ parts of ontonotes. Does anyone know of one? Not an advocate of standard splits, but nonetheless reviewers want them.</p>
+	<p class="vcard"><cite>
+	<img alt='' src='https://i0.wp.com/graph.facebook.com/691375626/picture?q=type%3Dlarge%26_md5%3Daeb254628fb90983656e5664bb6d6b57&#038;resize=16%2C16' class='avatar avatar-16' height='16' width='16' />	Comment	by	<span class="fn"><a href='https://www.facebook.com/brew.chris' rel='external nofollow' class='url'>Chris Brew</a></span> |
+	2014/06/05 <!-- @ <a href="#comment-282">1:21 pm</a> -->
+		 | <a rel='nofollow' class='comment-reply-link' href='https://honnibal.wordpress.com/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/?replytocom=282#respond' onclick='return addComment.moveForm( "div-comment-282", "282", "respond", "171" )' aria-label='Reply to Chris Brew'>Reply</a>	</cite></p>
+	</div>
+<ul class="children">
+<li class="comment byuser comment-author-honnibal comment-author-is-site-member bypostauthor odd alt depth-2 highlander-comment" id="comment-283">
+	<div id="div-comment-283">
+	<p>I don&#8217;t think the community&#8217;s settled on a standard split for the other OntoNotes sections. I see people do cross-fold validation on those sometimes. Personally I don&#8217;t like cross-fold, as I think it makes it easier to make mistakes.</p>
+<p>If you&#8217;re comparing the PTB WSJ and OntoNotes WSJ, you might want to use the Vadas and Curran NP-bracket annotations for the PTB before you feed the corpus through the converter. As far as I know OntoNotes has full NP-bracketing, which is one of the reasons parsers score lower on it.</p>
+	<p class="vcard"><cite>
+	<img alt='' src='https://0.gravatar.com/avatar/caa271203ff18e1c13defdbdf1f38069?s=16&#038;d=identicon&#038;r=G' class='avatar avatar-16' height='16' width='16' />	Comment	by	<span class="fn"><a href='http://honnibal.wordpress.com' rel='external nofollow' class='url'>honnibal</a></span> |
+	2014/06/05 <!-- @ <a href="#comment-283">3:14 pm</a> -->
+		 | <a rel='nofollow' class='comment-reply-link' href='https://honnibal.wordpress.com/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/?replytocom=283#respond' onclick='return addComment.moveForm( "div-comment-283", "283", "respond", "171" )' aria-label='Reply to honnibal'>Reply</a>	</cite></p>
+	</div>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment even thread-odd thread-alt depth-1 parent highlander-comment" id="comment-327">
+	<div id="div-comment-327">
+	<p>Thanks for a great overview.  Your explanation of the Oracle idea to improve greedy parsing was very clear.  On beam-search you mention: &#8220;This work depended on a big break-through in accuracy for transition-based parsers, when beam-search was properly explored by Zhang and Clark.&#8221;  Could you elaborate on the exact nature of the break-through?  The only non-standard trick they use seems to be the early-update strategy of Collins and Roark (2004).  Is there some other idea (other than great feature engineering) that makes your 93.6 possible?</p>
+	<p class="vcard"><cite>
+	<img alt='' src='https://0.gravatar.com/avatar/933974b03ea4d87273e6ff89ab450166?s=16&#038;d=identicon&#038;r=G' class='avatar avatar-16' height='16' width='16' />	Comment	by	<span class="fn"><a href='http://www.denizyuret.com' rel='external nofollow' class='url'>Deniz Yuret</a></span> |
+	2014/07/04 <!-- @ <a href="#comment-327">3:43 am</a> -->
+		 | <a rel='nofollow' class='comment-reply-link' href='https://honnibal.wordpress.com/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/?replytocom=327#respond' onclick='return addComment.moveForm( "div-comment-327", "327", "respond", "171" )' aria-label='Reply to Deniz Yuret'>Reply</a>	</cite></p>
+	</div>
+<ul class="children">
+<li class="comment byuser comment-author-honnibal comment-author-is-site-member bypostauthor odd alt depth-2 highlander-comment" id="comment-329">
+	<div id="div-comment-329">
+	<p>The Zhang and Nivre (2011) version of the Zhang and Clark beam search parser really could have been done in 2004.</p>
+<p>I think it&#8217;s quite interesting, really.</p>
+<p>The way I read the history &#8212; and I wasn&#8217;t publishing at the time, mind! &#8212; is that the MALT parser was interesting but low accuracy, and was seen as something that you did for languages other than English, or when you really wanted speed over accuracy.</p>
+<p>It wasn&#8217;t until 2008 that Zhang and Clark implemented the beam-search with the parser properly, with a global model and early update (know since Collins (2002)). The contribution in the Zhang and Clark (2011) CL paper is &#8220;hey this beam-search framework works really well on a variety of problems&#8221;, which I think is a very interesting finding. I think there are still lots of problems just waiting to have that model run on them.</p>
+<p>But, the accuracy of the model was still quite low, because they naturally just adopted Nivre&#8217;s features, figuring he and his grad students had optimised them well. And they had: on the greedy parser with the _static_ oracle!</p>
+<p>The catch is that the static oracle punishes you for conditioning too much on your parse state, because your parse state will be different at training and test time. So if you add higher-order features to the static model, you risk your accuracy _decreasing_.</p>
+<p>So, Zhang and Nivre (2011) publish this little short paper with extra features, and suddenly the accuracy of their model is very strong.</p>
+<p>The story actually continues a little, but this part hasn&#8217;t made it into the publication record yet. Goldberg and Nivre ran their experiments with the Zhang and Nivre feature set, which has been tuned for beam-search parsing. The beam setting is more forgiving for feature engineering, because even if you have constructions which are not locally decidable with your feature set, you can rely on the beam a little.</p>
+<p>I said that a bit confusingly, but the point is just this: the greedy model gets no second chances, so actually needs more features. I&#8217;ve chatted to Jin-ho Choi about this, and he&#8217;s found he can get the greedy model up to about 92% accuracy. I&#8217;ve found something similar. The same features help the beam parser with narrow beams, but are only slightly useful at wide beams.</p>
+<p>All up, I&#8217;d say the story is this: the narrower your search, the more you rely on feature engineering. But, feature engineering _can_ compensate for narrow search, and when you get the features right, you get better results than broad-search, narrow features.</p>
+<p>Come to think of it, the MALT parser used a polynomial kernel, didn&#8217;t it? A similar story is at work with linear models.</p>
+	<p class="vcard"><cite>
+	<img alt='' src='https://0.gravatar.com/avatar/caa271203ff18e1c13defdbdf1f38069?s=16&#038;d=identicon&#038;r=G' class='avatar avatar-16' height='16' width='16' />	Comment	by	<span class="fn"><a href='http://honnibal.wordpress.com' rel='external nofollow' class='url'>honnibal</a></span> |
+	2014/07/05 <!-- @ <a href="#comment-329">2:54 am</a> -->
+		 | <a rel='nofollow' class='comment-reply-link' href='https://honnibal.wordpress.com/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/?replytocom=329#respond' onclick='return addComment.moveForm( "div-comment-329", "329", "respond", "171" )' aria-label='Reply to honnibal'>Reply</a>	</cite></p>
+	</div>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment byuser comment-author-denizyuret even thread-even depth-1 parent highlander-comment" id="comment-331">
+	<div id="div-comment-331">
+	<p>I noticed you used arc-hybrid in parser.py and arc-eager in redshift.  Any reason to choose one vs the other?</p>
+	<p class="vcard"><cite>
+	<img alt='' src='https://0.gravatar.com/avatar/933974b03ea4d87273e6ff89ab450166?s=16&#038;d=identicon&#038;r=G' class='avatar avatar-16' height='16' width='16' />	Comment	by	<span class="fn">denizyuret</span> |
+	2014/07/05 <!-- @ <a href="#comment-331">10:37 am</a> -->
+		 | <a rel='nofollow' class='comment-reply-link' href='https://honnibal.wordpress.com/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/?replytocom=331#respond' onclick='return addComment.moveForm( "div-comment-331", "331", "respond", "171" )' aria-label='Reply to denizyuret'>Reply</a>	</cite></p>
+	</div>
+<ul class="children">
+<li class="comment byuser comment-author-honnibal comment-author-is-site-member bypostauthor odd alt depth-2 highlander-comment" id="comment-334">
+	<div id="div-comment-334">
+	<p>Everything about the blog post implementation is optimized for ease of explanation, not accuracy or efficiency.</p>
+<p>Redshift has whatever I needed for my experiments, for whatever paper I was working on at the time. It made sense to replicate the Goldberg and Nivre (2012) result for my CoNLL paper with Yoav and Mark. I then replicated the Zhang and Nivre (2011) beam result when I was working on my TACL 2014 paper. I&#8217;ve been using arc-hybrid beam parsing lately, because I find it easy to think about the dynamic oracle for that system.</p>
+<p>I think the accuracy advantage we&#8217;re seeing for arc-eager is probably just feature tuning, and arc-hybrid can be just as good. And it&#8217;s much simpler to explain, because words never sit on the stack with heads already assigned to them, and there are no pre-conditions.</p>
+<p>On the other hand, maybe I&#8217;m wrong. I still haven&#8217;t gotten the arc-hybrid accuracy quite to the level of the arc-eager. Maybe it really is a good idea to make a label prediction early to use as a feature, and to create dependencies between the same pair of context tokens (S0 and N0), where the arc-hybrid creates between (S1, S0) and (S0, N0).</p>
+	<p class="vcard"><cite>
+	<img alt='' src='https://0.gravatar.com/avatar/caa271203ff18e1c13defdbdf1f38069?s=16&#038;d=identicon&#038;r=G' class='avatar avatar-16' height='16' width='16' />	Comment	by	<span class="fn"><a href='http://honnibal.wordpress.com' rel='external nofollow' class='url'>honnibal</a></span> |
+	2014/07/06 <!-- @ <a href="#comment-334">2:48 am</a> -->
+		 | <a rel='nofollow' class='comment-reply-link' href='https://honnibal.wordpress.com/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/?replytocom=334#respond' onclick='return addComment.moveForm( "div-comment-334", "334", "respond", "171" )' aria-label='Reply to honnibal'>Reply</a>	</cite></p>
+	</div>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment even thread-odd thread-alt depth-1 parent highlander-comment" id="comment-374">
+	<div id="div-comment-374">
+	<p>Fantastic Posting! (which I&#8217;m now trying to re-implement in Scala, &#8216;just because&#8217;)  </p>
+<p>In your gist for this, it looks like (in lines 441-451) that you train the POS and Dependency parser at the same time, except : (a) the POS tagger is only trained for the first 5 of the 15 overall iterations; and (b) the Dependency parser is always using GoldTags for learning (even though it uses the POS tagger output for its parsing features).</p>
+<p>Is there any benefit to training the two simultaneously at the beginning (or is there some interplay between them)?  Or might it make sense to train  the POS tagger first, and then use its output tags in the training of the Dependency parser? </p>
+<p>One thing that&#8217;s had me confused is that the Perceptron.weights are doing double-duty : During training they relate to the most current value in the search for a good classifier (and are naturally ints), whereas once they&#8217;re averaged, they really stand for something other than the &#8216;bleeding edge&#8217; (and will be floats, which then entirely define the state of the Perceptron model in the pickle).</p>
+<p>Thanks again for writing this up : It&#8217;s excellent to be able to see something boiled down to its essence by an expert.</p>
+	<p class="vcard"><cite>
+	<img alt='' src='https://0.gravatar.com/avatar/67771bd9a113aa1d6f3c9669fd0464d4?s=16&#038;d=identicon&#038;r=G' class='avatar avatar-16' height='16' width='16' />	Comment	by	<span class="fn"><a href='http://mdda.net/' rel='external nofollow' class='url'>Martin Andrews</a></span> |
+	2014/08/01 <!-- @ <a href="#comment-374">5:49 am</a> -->
+		 | <a rel='nofollow' class='comment-reply-link' href='https://honnibal.wordpress.com/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/?replytocom=374#respond' onclick='return addComment.moveForm( "div-comment-374", "374", "respond", "171" )' aria-label='Reply to Martin Andrews'>Reply</a>	</cite></p>
+	</div>
+<ul class="children">
+<li class="comment byuser comment-author-honnibal comment-author-is-site-member bypostauthor odd alt depth-2 highlander-comment" id="comment-375">
+	<div id="div-comment-375">
+	<p>You&#8217;re right that they&#8217;re trained simultaneously, but not that the parser is trained from gold_tags. The implementation is a bit misleading about this &#8212; I&#8217;m passing gold_tags to Parser.train_one, but it&#8217;s not used.</p>
+<p>Training the two models &#8220;online&#8221; like this is a bit non-standard. The usual approach is to cross-fold train the tagger, predicting on the folds excluded from training, so that you have a set of predicted tags for the parser training data. Note that you don&#8217;t want to train the tagger, and then predict on its own training data &#8212; those tags will be more accurate than the tags you&#8217;ll see at test time.</p>
+<p>Training the two together allows the parser to see the tagger making mistakes, as the tagger hasn&#8217;t achieved high accuracy yet. I&#8217;ve found it&#8217;s effective enough, and it&#8217;s much simpler, imo. I don&#8217;t like having intermediate data-files in my experiments. I try to avoid relying on file-system state.</p>
+<p>Finally, the nice thing about averaging the weights in-place is that you get to call the same Parser.predict function during training and run-time, and you don&#8217;t have to branch on a flag like Parser.is_trained within Parser.predict.</p>
+	<p class="vcard"><cite>
+	<img alt='' src='https://0.gravatar.com/avatar/caa271203ff18e1c13defdbdf1f38069?s=16&#038;d=identicon&#038;r=G' class='avatar avatar-16' height='16' width='16' />	Comment	by	<span class="fn"><a href='http://honnibal.wordpress.com' rel='external nofollow' class='url'>honnibal</a></span> |
+	2014/08/01 <!-- @ <a href="#comment-375">7:08 am</a> -->
+		 | <a rel='nofollow' class='comment-reply-link' href='https://honnibal.wordpress.com/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/?replytocom=375#respond' onclick='return addComment.moveForm( "div-comment-375", "375", "respond", "171" )' aria-label='Reply to honnibal'>Reply</a>	</cite></p>
+	</div>
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="pingback even thread-even depth-1 highlander-comment" id="comment-556">
+	<div id="div-comment-556">
+	<p>[&#8230;] &#8220;There are a number of deep learning packages out there. However most sacrifice readability for efficiency. This has two disadvantages: (1) It is difficult for a beginner student to understand what the code is doing, which is a shame because sometimes the code can be a lot simpler than the underlying math. (2) Every other day new ideas come out for optimization, regularization, etc. If the package used already has the trick implemented, great. But if not, it is difficult for a researcher to test the new idea using impenetrable code with a steep learning curve. So I started writing KUnet.jl which currently implements backprop with basic units like relu, standard loss functions like softmax, dropout for generalization, L1-L2 regularization, and optimization using SGD, momentum, ADAGRAD, Nesterov&#8217;s accelerated gradient etc. in less than 500 lines of Julia code. Its speed is competitive with the fastest GPU packages (here is a benchmark). For installation and usage information, please refer to the GitHub repo. The remainder of this post will present (a slightly cleaned up version of) the code as a beginner&#8217;s neural network tutorial (modeled after Honnibal&#8217;s excellent parsing example)&#8230;&#8221; [&#8230;]</p>
+	<p class="vcard"><cite>
+		Pingback	by	<span class="fn"><a href='http://irrlab.com/2015/03/02/beginning-deep-learning-with-500-lines-of-julia/' rel='external nofollow' class='url'>Beginning deep learning with 500 lines of Julia | thoughts...</a></span> |
+	2015/03/03 <!-- @ <a href="#comment-556">12:19 am</a> -->
+		 | <a rel='nofollow' class='comment-reply-link' href='https://honnibal.wordpress.com/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/?replytocom=556#respond' onclick='return addComment.moveForm( "div-comment-556", "556", "respond", "171" )' aria-label='Reply to Beginning deep learning with 500 lines of Julia | thoughts...'>Reply</a>	</cite></p>
+	</div>
+</li><!-- #comment-## -->
+</ol>
+
+<div class="navigation">
+	<div class="alignleft"></div>
+	<div class="alignright"></div>
+</div>
+<br />
+
+
+							<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="https://honnibal.wordpress.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																										
+
+
+												<input type="hidden" id="highlander_comment_nonce" name="highlander_comment_nonce" value="08d0373c63" /><input type="hidden" name="_wp_http_referer" value="/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/" />
+<input type="hidden" name="hc_post_as" id="hc_post_as" value="guest" />
+
+<div class="comment-form-field comment-textarea">
+	<label for="comment">Enter your comment here...</label>
+	<div id="comment-form-comment"><textarea id="comment" name="comment" title="Enter your comment here..."></textarea></div>
+</div>
+
+<div id="comment-form-identity">
+
+	<div id="comment-form-nascar">
+		<p>Fill in your details below or click an icon to log in:</p>
+		<ul>
+			<li class="selected" style="display:none;">
+				<a href="#comment-form-guest" id="postas-guest" title="Guest">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:WordPress.com" id="postas-wordpress" title="WordPress.com">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Twitter" id="postas-twitter" title="Twitter">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Facebook" id="postas-facebook" title="Facebook">
+					<span></span>
+				</a>
+			</li>
+			<li>
+			<iframe id="googleplus-sign-in" name="googleplus-sign-in" src="https://public-api.wordpress.com/connect/?googleplus-sign-in=https%3A%2F%2Fhonnibal.wordpress.com" width="24" height="24" scrolling="no" allowtransparency="true" seamless="seamless" frameborder="0"></iframe>
+			</li>
+		</ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank">				<img src="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" alt="Gravatar" width="25" class="no-grav" />
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">Email <span class="required">(required)</span> <span class="nopublish">(Address never made public)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email" value="" /></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">Name <span class="required">(required)</span></label>
+					<div class="comment-form-input"><input id="author" name="author" type="text" value="" /></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">Website</label>
+					<div class="comment-form-input"><input id="url" name="url" type="text" value="" /></div>
+				</div>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="https://s2.wp.com/wp-content/mu-plugins/highlander-comments/images/wplogo.png" alt="WordPress.com Logo" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="" />
+				<input type="hidden" name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="" />
+				<input type="hidden" name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="" />
+				<p class="comment-form-posting-as pa-wordpress"><strong></strong> You are commenting using your WordPress.com account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'wordpress' );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" alt="Twitter picture" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="" />
+				<input type="hidden" name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="" />
+				<input type="hidden" name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="" />
+				<p class="comment-form-posting-as pa-twitter"><strong></strong> You are commenting using your Twitter account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'twitter' );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" alt="Facebook photo" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="" />
+				<input type="hidden" name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="" />
+				<input type="hidden" name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="" />
+				<p class="comment-form-posting-as pa-facebook"><strong></strong> You are commenting using your Facebook account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'facebook' );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-googleplus" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" alt="Google+ photo" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="googleplus_avatar" id="googleplus-avatar" class="comment-meta-googleplus" value="" />
+				<input type="hidden" name="googleplus_user_id" id="googleplus-user_id" class="comment-meta-googleplus" value="" />
+				<input type="hidden" name="googleplus_access_token" id="googleplus-access_token" class="comment-meta-googleplus" value="" />
+				<p class="comment-form-posting-as pa-googleplus"><strong></strong> You are commenting using your Google+ account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'googleplus' );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();">Cancel</a></div>
+		<p>Connecting to %s</p>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+var highlander_expando_javascript = function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+}
+jQuery(document).ready( highlander_expando_javascript );
+</script>
+
+<div id="comment-form-subscribe">
+	<p class="comment-subscription-form"><input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" tabindex="6"/> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Notify me of new comments via email.</label></p></div>
+
+						
+						<p class="form-submit"><input name="submit" type="submit" id="comment-submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='171' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="f0a24c93f6" /></p>
+<input type="hidden" name="genseq" value="1445991879" />
+<p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="140"/></p>					</form>
+							</div><!-- #respond -->
+			<div style="clear: both"></div>
+              <p class="pagenav"><a href="https://honnibal.wordpress.com/2013/09/11/a-good-part-of-speechpos-tagger-in-about-200-lines-of-python/">&laquo; Previous</a> | <a href="https://honnibal.wordpress.com/2014/10/21/writing-c-in-cython/">Next &raquo;</a></p>
+
+          
+        
+      </div>
+
+      
+
+<div id="right">
+<div class="sidebar-about">
+<h2>About </h2>
+<p>My name is Matthew Honnibal. I develop NLP libraries and do research. In particular, if you&#8217;re doing NLP with Python, you should use my library, spaCy: <a href="http://spacy.io/" rel="nofollow">http://spacy.io/</a></p>
+<p>Publications here: <a href="http://scholar.google.com.au/citations?user=FXwlnmAAAAAJ&#038;hl=en" rel="nofollow">http://scholar.google.com.au/citations?user=FXwlnmAAAAAJ&#038;hl=en</a></p>
+<p>Code here: <a href="http://github.com/honnibal/" rel="nofollow">http://github.com/honnibal/</a></p>
+<p>My gmail is honnibal.</p>
+</div>
+
+<div class="subcontainer">
+  <ul class="rightsub">
+   <li>
+    <h2>Recent</h2>
+    <ul>
+      	<li><a href='https://honnibal.wordpress.com/2015/01/25/alpha-release-of-spacy-a-library-for-industrial-strength-nlp-with-pythoncython/'>Alpha release of spaCy: A library for industrial-strength NLP with&nbsp;Python/Cython</a></li>
+	<li><a href='https://honnibal.wordpress.com/2014/10/21/writing-c-in-cython/'>Writing C in&nbsp;Cython</a></li>
+	<li><a href='https://honnibal.wordpress.com/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/'>Parsing English with 500 lines of&nbsp;Python</a></li>
+	<li><a href='https://honnibal.wordpress.com/2013/09/11/a-good-part-of-speechpos-tagger-in-about-200-lines-of-python/'>A good POS tagger in about 200 lines of&nbsp;Python</a></li>
+	<li><a href='https://honnibal.wordpress.com/2009/11/18/a-simple-extractive-summarisation-system/'>A Simple Extractive Summarisation&nbsp;System</a></li>
+    </ul>
+   </li>
+   <li>
+    <h2>Links</h2>
+    <ul>
+      <li><a href="http://wordpress.com/">WordPress.com</a></li>
+<li><a href="http://wordpress.org/">WordPress.org</a></li>
+    </ul>
+   </li>
+  </ul>
+
+  <ul class="rightsub2">
+   <li>
+    <h2>Archives</h2>
+    <ul>
+      	<li><a href='https://honnibal.wordpress.com/2015/01/'>January 2015</a>&nbsp;(1)</li>
+	<li><a href='https://honnibal.wordpress.com/2014/10/'>October 2014</a>&nbsp;(1)</li>
+	<li><a href='https://honnibal.wordpress.com/2013/12/'>December 2013</a>&nbsp;(1)</li>
+	<li><a href='https://honnibal.wordpress.com/2013/09/'>September 2013</a>&nbsp;(1)</li>
+	<li><a href='https://honnibal.wordpress.com/2009/11/'>November 2009</a>&nbsp;(1)</li>
+    </ul>
+   </li>
+   <li>
+    <h2>Categories</h2>
+    <ul class="sellLi">
+      	<li class="cat-item cat-item-1"><a href="https://honnibal.wordpress.com/category/uncategorized/" >Uncategorized</a>
+</li>
+    </ul>
+   </li>
+   <li>
+    <h2>RSS</h2>
+      <a href="https://honnibal.wordpress.com/feed/">Entries RSS</a><br />
+      <a href="https://honnibal.wordpress.com/comments/feed/">Comments RSS</a>
+   </li>
+  </ul>
+</div>
+</div>
+
+      
+<div id="footer">
+	<h2 class="hide">Site info</h2>
+	<span>Computational Linguistics</span><br />
+	<a href="https://wordpress.com/themes/andreas04/" title="Learn more about this theme">The Andreas04 Theme</a>. <a href="https://wordpress.com/?ref=footer_blog">Blog at WordPress.com</a>.
+</div>
+
+
+    </div>
+
+  </div>
+
+<!-- wpcom_wp_footer -->
+<script type='text/javascript' src='//0.gravatar.com/js/gprofiles.js?ver=201544y'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s2.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781g'></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	<div class="grofile-hash-map-110115442c5fa2fffecefb49120fb545">
+	</div>
+	<div class="grofile-hash-map-b03057d46bfe489c10960a69a7699456">
+	</div>
+	<div class="grofile-hash-map-f6778b5afea96193ae03c5fe53708f59">
+	</div>
+	<div class="grofile-hash-map-caa271203ff18e1c13defdbdf1f38069">
+	</div>
+	<div class="grofile-hash-map-a0caef7bdf3e305945e2a366fb109744">
+	</div>
+	<div class="grofile-hash-map-734bc2ff4cc537d045813b4bdb400f1d">
+	</div>
+	<div class="grofile-hash-map-281e368ed7797ff88c507c2839cd0cf7">
+	</div>
+	<div class="grofile-hash-map-9dff9e34098cc24c69222c87e0fac44b">
+	</div>
+	<div class="grofile-hash-map-933974b03ea4d87273e6ff89ab450166">
+	</div>
+	<div class="grofile-hash-map-933974b03ea4d87273e6ff89ab450166">
+	</div>
+	<div class="grofile-hash-map-67771bd9a113aa1d6f3c9669fd0464d4">
+	</div>
+	</div>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"https:\/\/honnibal.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"https:\/\/honnibal.wordpress.com\/wp-login.php?action=logout&_wpnonce=f8fe221273","homeURL":"https:\/\/honnibal.wordpress.com\/","postID":"171","gravDefault":"identicon","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"0","userIsLoggedIn":"","isJetpack":"0","text_direction":"ltr"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s2.wp.com/_static/??/wp-content/js/jquery/jquery.autoresize.js,/wp-content/mu-plugins/highlander-comments/script.js?m=1424115551j'></script>
+
+	<div id="bit" class="loggedout-follow-normal">
+		<a class="bsub" href="javascript:void(0)"><span id='bsub-text'>Follow</span></a>
+		<div id="bitsubscribe">
+
+					<h3><label for="loggedout-follow-field">Follow &ldquo;Computational Linguistics&rdquo;</label></h3>
+
+			<form action="https://subscribe.wordpress.com" method="post" accept-charset="utf-8" id="loggedout-follow">
+			<p>Get every new post delivered to your Inbox.</p>
+
+			<p id="loggedout-follow-error" style="display: none;"></p>
+
+						<p class="bit-follow-count">Join 55 other followers</p>
+			<p><input type="email" name="email" placeholder="Enter your email address" id="loggedout-follow-field"/></p>
+
+			<input type="hidden" name="action" value="subscribe"/>
+			<input type="hidden" name="blog_id" value="10550686"/>
+			<input type="hidden" name="source" value="https://honnibal.wordpress.com/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/"/>
+			<input type="hidden" name="sub-type" value="loggedout-follow"/>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="7224dc9b6c" /><input type="hidden" name="_wp_http_referer" value="/2013/12/18/a-simple-fast-algorithm-for-natural-language-dependency-parsing/" />
+			<p id='bsub-subscribe-button'><input type="submit" value="Sign me up" /></p>
+			</form>
+					<div id='bsub-credit'><a href="https://wordpress.com/?ref=lof">Build a website with WordPress.com</a></div>
+		</div><!-- #bitsubscribe -->
+	</div><!-- #bit -->
+		<iframe src='https://widgets.wp.com/likes/master.html?ver=20141028#ver=20141028&amp;mp6=1' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+		<div id='likes-other-gravatars'><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+		<script type="text/javascript">
+		//<![CDATA[
+			var jetpackLikesWidgetQueue = [];
+			var jetpackLikesWidgetBatch = [];
+			var jetpackLikesMasterReady = false;
+
+			function JetpackLikespostMessage( message, target ) {
+				if ( "string" === typeof message ){
+					try{
+						message = JSON.parse( message );
+					}
+					catch(e) {
+						return;
+					}
+				}
+
+				pm( {
+					target: target,
+					type: 'likesMessage',
+					data: message,
+					origin: '*'
+				} );
+			}
+
+			function JetpackLikesBatchHandler() {
+				var requests = [];
+				jQuery( 'div.jetpack-likes-widget-unloaded' ).each( function( i ) {
+					if ( jetpackLikesWidgetBatch.indexOf( this.id ) > -1 )
+						return;
+					jetpackLikesWidgetBatch.push( this.id );
+					var regex = /like-(post|comment)-wrapper-(\d+)-(\d+)-(\w+)/;
+					var match = regex.exec( this.id );
+					if ( ! match || match.length != 5 )
+						return;
+
+					var info = {
+						blog_id: match[2],
+						width:   this.width
+					};
+
+					if ( 'post' == match[1] ) {
+						info.post_id = match[3];
+					} else if ( 'comment' == match[1] ) {
+						info.comment_id = match[3];
+					}
+
+					info.obj_id = match[4];
+
+					requests.push( info );
+				});
+
+				if ( requests.length > 0 ) {
+					JetpackLikespostMessage( { event: 'initialBatch', requests: requests }, window.frames['likes-master'] );
+				}
+			}
+
+			function JetpackLikesMessageListener( event ) {
+				if ( "undefined" == typeof event.event )
+					return;
+
+				if ( 'masterReady' == event.event ) {
+					jQuery( document ).ready( function() {
+						jetpackLikesMasterReady = true;
+
+						var stylesData = {
+								event: 'injectStyles'
+						};
+
+						if ( jQuery( 'iframe.admin-bar-likes-widget' ).length > 0 ) {
+							JetpackLikespostMessage( { event: 'adminBarEnabled' }, window.frames[ 'likes-master' ] );
+
+							stylesData.adminBarStyles = {
+								background: jQuery( '#wpadminbar .quicklinks li#wp-admin-bar-wpl-like > a' ).css( 'background' ),
+								isRtl: ( 'rtl' == jQuery( '#wpadminbar' ).css( 'direction' ) )
+							};
+						}
+
+						if ( !window.addEventListener )
+							jQuery( '#wp-admin-bar-admin-bar-likes-widget' ).hide();
+
+						stylesData.textStyles = {
+							color: jQuery( '.sd-text-color').css( 'color' ),
+							fontFamily: jQuery( '.sd-text-color' ).css( 'font-family' ),
+							fontSize: jQuery( '.sd-text-color' ).css( 'font-size' ),
+							direction: jQuery( '.sd-text-color' ).css( 'direction' ),
+							fontWeight: jQuery( '.sd-text-color' ).css( 'font-weight' ),
+							fontStyle: jQuery( '.sd-text-color' ).css( 'font-style' ),
+							textDecoration: jQuery( '.sd-text-color' ).css('text-decoration')
+						};
+
+						stylesData.linkStyles = {
+							color: jQuery( '.sd-link-color' ).css('color'),
+							fontFamily: jQuery( '.sd-link-color' ).css('font-family'),
+							fontSize: jQuery( '.sd-link-color' ).css('font-size'),
+							textDecoration: jQuery( '.sd-link-color' ).css('text-decoration'),
+							fontWeight: jQuery( '.sd-link-color' ).css( 'font-weight' ),
+							fontStyle: jQuery( '.sd-link-color' ).css( 'font-style' )
+						};
+
+						JetpackLikespostMessage( stylesData, window.frames[ 'likes-master' ] );
+
+						JetpackLikesBatchHandler();
+
+						jQuery( document ).on( 'inview', 'div.jetpack-likes-widget-unloaded', function() {
+							jetpackLikesWidgetQueue.push( this.id );
+						});
+					});
+				}
+
+				if ( 'showLikeWidget' == event.event ) {
+					jQuery( '#' + event.id + ' .post-likes-widget-placeholder'  ).fadeOut( 'fast', function() {
+						jQuery( '#' + event.id + ' .post-likes-widget' ).fadeIn( 'fast', function() {
+							JetpackLikespostMessage( { event: 'likeWidgetDisplayed', blog_id: event.blog_id, post_id: event.post_id, obj_id: event.obj_id }, window.frames['likes-master'] );
+						});
+					});
+				}
+
+				if ( 'clickReblogFlair' == event.event ) {
+					wpcom_reblog.toggle_reblog_box_flair( event.obj_id );
+				}
+
+				if ( 'showOtherGravatars' == event.event ) {
+					var $container = jQuery( '#likes-other-gravatars' );
+					var $list = $container.find( 'ul' );
+
+					$container.hide();
+					$list.html( '' );
+
+					$container.find( '.likes-text span' ).text( event.total );
+
+					jQuery.each( event.likers, function( i, liker ) {
+						$list.append( '<li class="' + liker.css_class + '"><a href="' + liker.profile_URL + '" class="wpl-liker" rel="nofollow" target="_parent"><img src="' + liker.avatar_URL + '" alt="' + liker.name + '" width="30" height="30" style="padding-right: 3px;" /></a></li>');
+					} );
+
+					var offset = jQuery( "[name='" + event.parent + "']" ).offset();
+
+					$container.css( 'left', offset.left + event.position.left - 10 + 'px' );
+					$container.css( 'top', offset.top + event.position.top - 33 + 'px' );
+
+					var rowLength = Math.floor( event.width / 37 );
+					var height = ( Math.ceil( event.likers.length / rowLength ) * 37 ) + 13;
+					if ( height > 204 ) {
+						height = 204;
+					}
+
+					$container.css( 'height', height + 'px' );
+					$container.css( 'width', rowLength * 37 - 7 + 'px' );
+
+					$list.css( 'width', rowLength * 37 + 'px' );
+
+					$container.fadeIn( 'slow' );
+
+					var scrollbarWidth = $list[0].offsetWidth - $list[0].clientWidth;
+					if ( scrollbarWidth > 0 ) {
+						$container.width( $container.width() + scrollbarWidth );
+						$list.width( $list.width() + scrollbarWidth );
+					}
+				}
+			}
+
+			pm.bind( 'likesMessage', function(e) { JetpackLikesMessageListener(e); } );
+
+			jQuery( document ).click( function( e ) {
+				var $container = jQuery( '#likes-other-gravatars' );
+
+				if ( $container.has( e.target ).length === 0 ) {
+					$container.fadeOut( 'slow' );
+				}
+			});
+
+			function JetpackLikesWidgetQueueHandler() {
+				var wrapperID;
+				if ( ! jetpackLikesMasterReady ) {
+					setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+					return;
+				}
+
+				if ( jetpackLikesWidgetQueue.length > 0 ) {
+					// We may have a widget that needs creating now
+					var found = false;
+					while( jetpackLikesWidgetQueue.length > 0 ) {
+						// Grab the first member of the queue that isn't already loading.
+						wrapperID = jetpackLikesWidgetQueue.splice( 0, 1 )[0];
+						if ( jQuery( '#' + wrapperID ).hasClass( 'jetpack-likes-widget-unloaded' ) ) {
+							found = true;
+							break;
+						}
+					}
+					if ( ! found ) {
+						setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+						return;
+					}
+				} else if ( jQuery( 'div.jetpack-likes-widget-unloaded' ).length > 0 ) {
+					// Grab any unloaded widgets for a batch request
+					JetpackLikesBatchHandler();
+
+					// Get the next unloaded widget
+					wrapperID = jQuery( 'div.jetpack-likes-widget-unloaded' ).first()[0].id;
+					if ( ! wrapperID ) {
+						// Everything is currently loaded
+						setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+						return;
+					}
+				}
+
+				if ( 'undefined' === typeof wrapperID ) {
+					setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+					return;
+				}
+
+				var $wrapper = jQuery( '#' + wrapperID );
+				$wrapper.find( 'iframe' ).remove();
+
+				if ( $wrapper.hasClass( 'slim-likes-widget' ) ) {
+					$wrapper.find( '.post-likes-widget-placeholder' ).after( "<iframe class='post-likes-widget jetpack-likes-widget' name='" + $wrapper.data( 'name' ) + "' height='22px' width='68px' frameBorder='0' scrolling='no' src='" + $wrapper.data( 'src' ) + "'></iframe>" );
+				} else {
+					$wrapper.find( '.post-likes-widget-placeholder' ).after( "<iframe class='post-likes-widget jetpack-likes-widget' name='" + $wrapper.data( 'name' ) + "' height='55px' width='100%' frameBorder='0' src='" + $wrapper.data( 'src' ) + "'></iframe>" );
+				}
+
+				$wrapper.removeClass( 'jetpack-likes-widget-unloaded' ).addClass( 'jetpack-likes-widget-loading' );
+
+				$wrapper.find( 'iframe' ).load( function( e ) {
+					var $iframe = jQuery( e.target );
+					$wrapper.removeClass( 'jetpack-likes-widget-loading' ).addClass( 'jetpack-likes-widget-loaded' );
+
+					JetpackLikespostMessage( { event: 'loadLikeWidget', name: $iframe.attr( 'name' ), width: $iframe.width() }, window.frames[ 'likes-master' ] );
+
+					if ( $wrapper.hasClass( 'slim-likes-widget' ) ) {
+						$wrapper.find( 'iframe' ).Jetpack( 'resizeable' );
+					}
+				});
+				setTimeout( JetpackLikesWidgetQueueHandler, 250 );
+			}
+			JetpackLikesWidgetQueueHandler();
+		//]]>
+		</script>
+<script type='text/javascript' src='https://s1.wp.com/wp-content/mu-plugins/akismet-3.0/_inc/form.js?m=1404442431g'></script>
+<script type='text/javascript' src='https://s1.wp.com/_static/??-eJzTLy/QTc7PK0nNK9EvyClNz8wr1i+uzCtJrMjITM/IAeKS1CJMEWP94uSizIISoOIM5/yiVL2sYh19yo1yKiotzgioLMnIz6OqiTmJmSAD7XNtDU2MjIxNjAyNTbIAsaJg1Q=='></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "https://s0.wp.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "https://s0.wp.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?m=1363304414g&amp;ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var JetpackEmojiSettings = {"base_url":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/emoji\/twemoji\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJyNyzEOwjAMheELkRqqStABcRbkWpVN7FgkoeX2lCFDJ5je8H8PFg+YrJAVkAwTvRjJ107yAbbEhrFOlL8Nk+rGwpM8vjtla6j9tQaPdWbLQJqEoSy7/emFit/xEf7TTd30ehr6sR8vx+EsHyz+TOE='></script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="//stats.wp.com/w.js?48" type="text/javascript" async defer></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'10550686','blog_tz':'11','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'10550686','v':'wpcom','tz':'11','user_id':'0','post':'171','subd':'honnibal'}]);
+_stq.push(['extra', {'crypt':'UE5XaGUuOTlwaD85flAmcm1mcmZsaDhkV11YdWFnNncxc1tjZG9XVXhRTS4tP1tuLkN1bEJXSU1VS2x2R2Y5RT9tNGslY1ZLdTdXMi5WYiZXVm1saFBUU19QSWxrdDdCT0tNMW5ybE5KZzZBaFFYMXJkVUNTJTdKcWtBTVloUktfVjREOWlfPVMlTzNQVFk4QjV6YX5aNzBDQm1xSD1Yb08lVGtxUH49YVJkM35nJXhQMExNRHE4ejgvJnVSJU9xVXZqfGx6WlJMRU5GQVZtZHxiM1lmUWIwN3NfJi83MkwrXzlXUmcxTERtMU1BMVpreFs0STVPbENqdXRnZXJEbH5MUGx6XVdv'}]);
+_stq.push([ 'clickTrackerInit', '10550686', '171' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+</body>
+</html>
