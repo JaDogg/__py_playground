@@ -31,7 +31,7 @@ class InfixTree(PackratParser):
             ],
             "exp3": [
                 [r"[\(]", "_", "exp0", r"[\)]", "_"],
-                [r"([-+])", "_", "exp1", "@do_math"],
+                [r"([\-])", "_", "exp1", "@do_math"],
                 [r"(\d+)", "_", "@to_int"]
             ],
             "_": [
@@ -101,8 +101,28 @@ class InfixToPostfixCompiler(InfixTree):
 
 class TestCalculator(unittest.TestCase):
     def test_calculator(self):
-        t = r"""5++2+2-1*3"""
+        t = r"""5+2+2-1*3"""
         p = Calculator(t)
         _, _, t_ = p.parse()
         t_, = t_
-        display((t_, eval(t)))
+        print(t_)
+
+    def test_random_sequences(self):
+        import random
+        for _ in range(200):
+            opers = ["+", "-", "*", "/"]
+            numbers = (random.randrange(-100, 100) for _ in range(
+                random.randrange(20, 30)))
+            numbers = map(str, numbers)
+            prob = [numbers[0]]
+            for number in numbers[1:]:
+                prob.append(opers[random.randrange(0, 3)])
+                prob.append(number)
+            prob = "".join(prob)
+            self.assertEqual(eval(prob), self.calc(prob))
+
+    def calc(self, t):
+        p = Calculator(t)
+        _, _, t_ = p.parse()
+        t_, = t_
+        return t_
