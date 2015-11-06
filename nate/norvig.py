@@ -3,11 +3,13 @@ Peter Norvig's spell corrector
 http://norvig.com/spell-correct.html
 """
 
-from __future__ import absolute_import, print_function
+from __future__ import absolute_import
+from __future__ import print_function
 
 import collections
-import os
 import re
+
+from nate.util import read_data
 
 
 def words(text):
@@ -21,8 +23,7 @@ def train(features):
     return model
 
 
-N_WORDS = train(words(file(os.path.join(os.path.dirname(os.path.abspath(
-    __file__)), "data/big.txt")).read()))
+N_WORDS = train(words(read_data("big.txt")))
 
 ALPHABET = 'abcdefghijklmnopqrstuvwxyz'
 

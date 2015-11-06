@@ -9,8 +9,7 @@ import sys
 
 import nltk
 from nltk.corpus import stopwords
-from pyexpat import native_encoding
-import nate_
+
 
 _IS_PYTHON_3 = sys.version_info.major == 3
 
@@ -49,7 +48,7 @@ def compare_sents(sent1, sent2):
     if not len(sent1) or not len(sent2):
         return 0
     return len(set(only_important(sent1)) & set(only_important(sent2))) / (
-    (len(sent1) + len(sent2)) / 2.0)
+        (len(sent1) + len(sent2)) / 2.0)
 
 
 def compare_sents_bounded(sent1, sent2):
@@ -111,6 +110,10 @@ class Summary(object):
         else:
             return self.__unicode__().encode('utf8')
 
+    @property
+    def summary(self):
+        return '\n'.join(self.summaries)
+
 
 def summarize_blocks(blocks):
     summaries = [re.sub('\s+', ' ', summarize_block(block) or '').strip()
@@ -133,6 +136,3 @@ def summarize_page(url):
 
 def summarize_text(text, block_sep='\n\n', url=None, title=None):
     return Summary(url, None, title, summarize_blocks(text.split(block_sep)))
-
-
-print(summarize_text(nate_.text_))

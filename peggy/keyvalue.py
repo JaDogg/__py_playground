@@ -1,4 +1,7 @@
+from __future__ import absolute_import
+
 import unittest
+
 from peggy.peggy import *
 
 
@@ -11,8 +14,8 @@ class KeyValueParser(PackratParser):
                 []
             ],
             "line": [
-                ["spaces", "keyValue", "end_line"],
-                ["spaces", "end_line"]
+                ["_", "keyValue", "end_line"],
+                ["_", "end_line"]
             ],
             "keyValue": [
                 ["key", "separatorAndValue", "@create_pair"]
@@ -21,9 +24,9 @@ class KeyValueParser(PackratParser):
                 [r"([^=]+)"]
             ],
             "separatorAndValue": [
-                [r"([=])(.*)", "@create_value"]
+                [r"[=](.*)", "@create_value"]
             ],
-            "spaces": [
+            "_": [
                 [r"\s*"]
             ],
             "end_line": [
@@ -40,8 +43,17 @@ class KeyValueParser(PackratParser):
         return (key, value),
 
     @staticmethod
-    def create_value(_, value):
+    def create_value(value):
         return value,
+
+
+class KeyValueListParser(KeyValueParser):
+    def parse(self):
+        return self.parse_text()
+
+
+def parse_keyvalue(data, parser=KeyValueParser):
+    return parser(data).parse()
 
 
 class TestKeyValue(unittest.TestCase):

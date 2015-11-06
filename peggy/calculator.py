@@ -1,5 +1,5 @@
+from __future__ import absolute_import
 import unittest
-from display import display
 
 from peggy.peggy import *
 

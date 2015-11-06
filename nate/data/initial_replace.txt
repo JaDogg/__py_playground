@@ -1,0 +1,9 @@
+won't=will not
+can't=cannot
+([i|I])'m=\g<1> am
+ain't=is not
+(\w+)'ll=\g<1> will
+(\w+)n't=\g<1> not
+(\w+)'ve=\g<1> have
+(\w+)'re=\g<1> are
+(\w+)'d=\g<1> would

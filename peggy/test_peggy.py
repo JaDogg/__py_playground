@@ -1,5 +1,8 @@
+from __future__ import absolute_import
+
 import unittest
-from peggy import memoize_
+
+from peggy.peggy import memoize_
 
 
 class TestPeggy(unittest.TestCase):
