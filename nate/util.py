@@ -28,3 +28,15 @@ def get_data_file(filename):
 def read_data(filename):
     with open(get_data_file(filename), "r") as handle:
         return handle.read()
+
+
+PY3 = sys.version_info[0] == 3
+
+if PY3:
+    STRING_TYPES = str,
+else:
+    STRING_TYPES = basestring,
+
+
+def is_str(elem):
+    return isinstance(elem, STRING_TYPES)

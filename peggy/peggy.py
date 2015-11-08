@@ -22,7 +22,7 @@ def memoize_(func):
 
 def flatten(items):
     for item in items:
-        if isinstance(item, tuple):
+        if isinstance(item, (tuple, list)):
             for item_ in flatten(item):
                 yield item_
         else:
@@ -113,18 +113,21 @@ class PackratParser(TupleUtils):
             return rightmost, current_pos, () if current_pos is None \
                 else values + current_values
 
-        # Call a label function
-        matched = _LABEL_FUNCTION.match(token)
-
-        if matched:
-            func = getattr(self, matched.group("name"))
+        func = self.get_callable(token)
+        if func:
             return position, position, func(*values)
 
         # Do a regex match on current text position
         return self.match_regex(position, token, values)
 
+    def get_callable(self, token):
+        if token.startswith("@"):
+            func_name = token[1:]
+            func = getattr(self, func_name)
+            return func
+        return None
+
     def match_regex(self, position, token, values):
-        # Do a regex match on current text position
         subtext = self._text[position:]
         matched = re.match(token, subtext)
 

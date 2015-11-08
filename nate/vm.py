@@ -51,4 +51,8 @@ class NateVm(deque, object):
 
     def push(self, *atoms):
         for atom in atoms:
-            self.stack.appendleft(atom)
+            self.appendleft(atom)
+
+    def get(self):
+        self.reverse()
+        return list(self)
