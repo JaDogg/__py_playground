@@ -5,7 +5,7 @@ import re
 import pattern.en as english
 import pattern.en.wordnet as wordnet
 
-from peggy.keyvalue import parse_keyvalue, KeyValueListParser
+from peggy_test.keyvalue import parse_keyvalue, KeyValueListParser
 from nate.util import *
 
 DEFAULT_REPLACEMENTS = parse_keyvalue(read_data("initial_replace.txt"),
@@ -46,14 +46,14 @@ class Nate(object):
 
     def process(self):
         text = self._regex.replace(self._text)
-        pt = english.parsetree(text)
+        pt = english.parsetree(text, relations=True, lemmata=True)
         with GrabStdOut() as p:
             english.pprint(pt)
-        # txt = ""
-        for sent in pt:
-            for wd in sent:
-                print (wd.string, wd.tag),
-            print
+            print "---------------------------"
+            for sent in pt:
+                for wd in sent:
+                    print (wd.string, wd.tag),
+                print
         self._text = p.text
 
     @property

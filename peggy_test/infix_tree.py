@@ -48,7 +48,7 @@ class InfixTree(PackratParser):
 
 class TestCalculator(unittest.TestCase):
     def test_calculator(self):
-        t = r"""2"""
+        t = r"""2*5+1/2*2+3"""
         p = InfixTree(t)
         _, _, t_ = p.parse()
         render_labeled(t_)

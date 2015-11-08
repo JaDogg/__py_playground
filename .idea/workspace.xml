@@ -3,17 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="e26f7475-ab20-41f1-aec4-4cc4a094df6d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/__py_playground.iml" afterPath="$PROJECT_DIR$/.idea/__py_playground.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/peggy/display.py" afterPath="$PROJECT_DIR$/peggy/display.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nate/nate_.py" afterPath="$PROJECT_DIR$/nate/nate_.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nate/nate_ui.py" afterPath="$PROJECT_DIR$/nate/nate_ui.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nate/norvig.py" afterPath="$PROJECT_DIR$/nate/norvig.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nate/summarize.py" afterPath="$PROJECT_DIR$/nate/summarize.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/peggy/peggy.py" afterPath="$PROJECT_DIR$/peggy/peggy.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\calculator.py" afterPath="$PROJECT_DIR$/peggy/calculator.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\infix_tree.py" afterPath="$PROJECT_DIR$/peggy/infix_tree.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\json_parser.py" afterPath="$PROJECT_DIR$/peggy/json_parser.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\keyvalue.py" afterPath="$PROJECT_DIR$/peggy/keyvalue.py" />
-      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\test_peggy.py" afterPath="$PROJECT_DIR$/peggy/test_peggy.py" />
+      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\peggy\calculator.py" afterPath="$PROJECT_DIR$/peggy_test/calculator.py" />
+      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\peggy\infix_tree.py" afterPath="$PROJECT_DIR$/peggy_test/infix_tree.py" />
+      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\peggy\json_parser.py" afterPath="$PROJECT_DIR$/peggy_test/json_parser.py" />
+      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\peggy\keyvalue.py" afterPath="$PROJECT_DIR$/peggy_test/keyvalue.py" />
+      <change type="MOVED" beforePath="D:\PROJECTS\P\__py_playground\peggy\test_peggy.py" afterPath="$PROJECT_DIR$/peggy_test/test_peggy.py" />
     </list>
     <ignored path="__py_playground.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,15 +29,18 @@
     <SUITE FILE_PATH="coverage/__py_playground$Unittest_NateTestCase_test_tok.coverage" NAME="Unittest NateTestCase.test_tok Coverage Results" MODIFIED="1446717521551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/nate" />
     <SUITE FILE_PATH="coverage/__py_playground$algo.coverage" NAME="algo Coverage Results" MODIFIED="1446694846553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/peggy" />
     <SUITE FILE_PATH="coverage/__py_playground$summarize.coverage" NAME="summarize Coverage Results" MODIFIED="1446695391305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/nat" />
-    <SUITE FILE_PATH="coverage/__py_playground$Unittest_TestJsonParser_test_json_basic.coverage" NAME="Unittest TestJsonParser.test_json_basic Coverage Results" MODIFIED="1446222916278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__py_playground$Unittest_TestJsonParser_test_json_basic.coverage" NAME="Unittest TestJsonParser.test_json_basic Coverage Results" MODIFIED="1446947605347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/peggy" />
     <SUITE FILE_PATH="coverage/__py_playground$Unittest_TestCalculator_test_calculator.coverage" NAME="Unittest TestCalculator.test_calculator Coverage Results" MODIFIED="1446726470546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/__py_playground$nate.coverage" NAME="nate Coverage Results" MODIFIED="1446727632210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/nate" />
+    <SUITE FILE_PATH="coverage/__py_playground$Unittest_TestNateParser_test_basic.coverage" NAME="Unittest TestNateParser.test_basic Coverage Results" MODIFIED="1446965419941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/nate" />
     <SUITE FILE_PATH="coverage/__py_playground$Unittests_in_TestCalculator__1_.coverage" NAME="Unittests in TestCalculator (1) Coverage Results" MODIFIED="1445768433866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/__py_playground$nate__1_.coverage" NAME="nate (1) Coverage Results" MODIFIED="1446802309974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/nate" />
+    <SUITE FILE_PATH="coverage/__py_playground$nate__1_.coverage" NAME="nate (1) Coverage Results" MODIFIED="1446817863586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/nate" />
     <SUITE FILE_PATH="coverage/__py_playground$Unittests_in_TestPeg.coverage" NAME="Unittests in TestPeg Coverage Results" MODIFIED="1445767237991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/__py_playground$Unittest_TestCalculator_test_calculator__2_.coverage" NAME="Unittest TestCalculator.test_calculator (2) Coverage Results" MODIFIED="1446224325123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/__py_playground$Unittest_TestKeyValue_test_key_value_parser.coverage" NAME="Unittest TestKeyValue.test_key_value_parser Coverage Results" MODIFIED="1445962947702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/__py_playground$Unittest_TestCalculator_test_calculator__1_.coverage" NAME="Unittest TestCalculator.test_calculator (1) Coverage Results" MODIFIED="1446124637050" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__py_playground$nate_ui.coverage" NAME="nate_ui Coverage Results" MODIFIED="1446947849362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/nate" />
+    <SUITE FILE_PATH="coverage/__py_playground$Unittest_TestCalculator_test_calculator__1_.coverage" NAME="Unittest TestCalculator.test_calculator (1) Coverage Results" MODIFIED="1446947665598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/peggy_test" />
+    <SUITE FILE_PATH="coverage/__py_playground$Unittest_TestNateParser_test_loli_euler_1.coverage" NAME="Unittest TestNateParser.test_loli_euler_1 Coverage Results" MODIFIED="1446954282737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/nate" />
     <SUITE FILE_PATH="coverage/__py_playground$Unittests_in_infix_tree.coverage" NAME="Unittests in infix_tree Coverage Results" MODIFIED="1446222994213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/__py_playground$tuple_test.coverage" NAME="tuple_test Coverage Results" MODIFIED="1445914095144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/reference/playground" />
     <SUITE FILE_PATH="coverage/__py_playground$Unittest_TestPeg_test_calculator__1_.coverage" NAME="Unittest TestPeg.test_calculator (1) Coverage Results" MODIFIED="1445766805487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -60,20 +61,121 @@
         <entry file="file://$PROJECT_DIR$/nate/nate_ui.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="54" column="11" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
+              <caret line="30" column="53" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nate_.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nate/nate_.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="77" column="49" selection-start-line="77" selection-start-column="49" selection-end-line="77" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/peggy_test/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nate_.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/nate/nate_.py">
+      <file leaf-file-name="nate.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nate/data/nate.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.14782609">
+              <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nate_parser.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nate/nate_parser.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+              <caret line="61" column="24" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vm.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nate/vm.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+              <folding>
+                <marker date="1446963474085" expanded="true" signature="0:68" placeholder="import ..." />
+                <marker date="1446963474085" expanded="true" signature="97:145" placeholder="..." />
+                <marker date="1446963474085" expanded="true" signature="132:145" placeholder="..." />
+                <marker date="1446963474085" expanded="true" signature="173:382" placeholder="..." />
+                <marker date="1446963474085" expanded="true" signature="262:302" placeholder="..." />
+                <marker date="1446963474085" expanded="true" signature="327:382" placeholder="..." />
+                <marker date="1446963474085" expanded="true" signature="409:614" placeholder="..." />
+                <marker date="1446963474085" expanded="true" signature="440:468" placeholder="..." />
+                <marker date="1446963474085" expanded="true" signature="645:847" placeholder="..." />
+                <marker date="1446963474085" expanded="true" signature="792:847" placeholder="..." />
+                <marker date="1446963474085" expanded="true" signature="878:1151" placeholder="..." />
+                <marker date="1446963474085" expanded="true" signature="902:931" placeholder="..." />
+                <marker date="1446963474085" expanded="true" signature="964:1055" placeholder="..." />
+                <marker date="1446963474085" expanded="true" signature="1084:1151" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="peggy.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/peggy/peggy.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="infix_tree.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/peggy_test/infix_tree.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="json_parser.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/peggy_test/json_parser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="93" column="17" selection-start-line="93" selection-start-column="17" selection-end-line="93" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calculator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/peggy_test/calculator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="68" column="29" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -102,12 +204,10 @@
         <option value="$PROJECT_DIR$/keyvalue.py" />
         <option value="$PROJECT_DIR$/json_parser.py" />
         <option value="$PROJECT_DIR$/reference/playground/tuple_test.py" />
-        <option value="$PROJECT_DIR$/peggy/peggy.py" />
         <option value="$PROJECT_DIR$/peggy/dot_render.py" />
         <option value="$PROJECT_DIR$/calc_tree.py" />
         <option value="$PROJECT_DIR$/peggy/data/template.html" />
         <option value="$PROJECT_DIR$/peggy/data/example.html" />
-        <option value="$PROJECT_DIR$/peggy/display.py" />
         <option value="$PROJECT_DIR$/peggy/data/dot_renderer.html" />
         <option value="$PROJECT_DIR$/calculator.py" />
         <option value="$PROJECT_DIR$/infix_tree.py" />
@@ -122,11 +222,18 @@
         <option value="$PROJECT_DIR$/nate/data/test.txt" />
         <option value="$PROJECT_DIR$/nate/data/initial_replace.txt" />
         <option value="$PROJECT_DIR$/peggy/calculator.py" />
-        <option value="$PROJECT_DIR$/peggy/infix_tree.py" />
         <option value="$PROJECT_DIR$/peggy/test_peggy.py" />
         <option value="$PROJECT_DIR$/peggy/keyvalue.py" />
-        <option value="$PROJECT_DIR$/nate/nate_.py" />
         <option value="$PROJECT_DIR$/nate/nate_ui.py" />
+        <option value="$PROJECT_DIR$/nate/data/nate.yml" />
+        <option value="$PROJECT_DIR$/peggy/display.py" />
+        <option value="$PROJECT_DIR$/peggy/peggy.py" />
+        <option value="$PROJECT_DIR$/peggy/infix_tree.py" />
+        <option value="$PROJECT_DIR$/nate/nate_.py" />
+        <option value="$PROJECT_DIR$/peggy_test/__init__.py" />
+        <option value="$PROJECT_DIR$/nate/vm.py" />
+        <option value="$PROJECT_DIR$/nate/nate_parser.py" />
+        <option value="$PROJECT_DIR$/nate/data/nate.txt" />
       </list>
     </option>
   </component>
@@ -139,10 +246,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1376" />
-    <option name="height" value="784" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -195,7 +302,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="peggy" />
+              <option name="myItemId" value="peggy_test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -234,33 +341,15 @@
       <recent name="D:\PROJECTS\P\__py_playground" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PROJECTS\P\__py_playground\peggy_test" />
       <recent name="D:\PROJECTS\P\__py_playground\peggy" />
       <recent name="D:\PROJECTS\P\__py_playground\nate" />
       <recent name="D:\PROJECTS\P\__py_playground\reference" />
       <recent name="D:\PROJECTS\P\__py_playground\nat" />
-      <recent name="D:\PROJECTS\P\__py_playground\peggy\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.nate (1)">
-    <configuration default="false" name="summarize" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nat" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="__py_playground" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/nat/summarize.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittest NateTestCase.test_tok" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Unittest TestNateParser.test_basic">
+    <configuration default="false" name="Unittest TestNateParser.test_basic" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -271,9 +360,9 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="__py_playground" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\PROJECTS\P\__py_playground\nate\nate_.py" />
-      <option name="CLASS_NAME" value="NateTestCase" />
-      <option name="METHOD_NAME" value="test_tok" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/nate/nate_parser.py" />
+      <option name="CLASS_NAME" value="TestNateParser" />
+      <option name="METHOD_NAME" value="test_basic" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
@@ -283,56 +372,84 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="nate" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nate" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="__py_playground" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\PROJECTS\P\__py_playground\nate\nate_.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="nate (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nate" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="__py_playground" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\PROJECTS\P\__py_playground\nate\nate_ui.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittest TestCalculator.test_calculator" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Unittest TestCalculator.test_calculator (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/peggy_test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="__py_playground" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\PROJECTS\P\__py_playground\peggy\infix_tree.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/peggy_test/infix_tree.py" />
       <option name="CLASS_NAME" value="TestCalculator" />
       <option name="METHOD_NAME" value="test_calculator" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest TestJsonParser.test_json_basic" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/peggy" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="__py_playground" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\PROJECTS\P\__py_playground\peggy_test\json_parser.py" />
+      <option name="CLASS_NAME" value="TestJsonParser" />
+      <option name="METHOD_NAME" value="test_json_basic" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="nate_ui" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nate" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="__py_playground" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/nate/nate_ui.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest TestNateParser.test_loli_euler_1" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nate" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="__py_playground" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/nate/nate_parser.py" />
+      <option name="CLASS_NAME" value="TestNateParser" />
+      <option name="METHOD_NAME" value="test_loli_euler_1" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
@@ -531,19 +648,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.summarize" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest NateTestCase.test_tok" />
-      <item index="2" class="java.lang.String" itemvalue="Python.nate" />
-      <item index="3" class="java.lang.String" itemvalue="Python.nate (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestCalculator.test_calculator" />
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest TestNateParser.test_basic" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest TestCalculator.test_calculator (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestJsonParser.test_json_basic" />
+      <item index="3" class="java.lang.String" itemvalue="Python.nate_ui" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestNateParser.test_loli_euler_1" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.nate (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.nate" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestCalculator.test_calculator" />
-        <item index="3" class="java.lang.String" itemvalue="Python.summarize" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest NateTestCase.test_tok" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest TestNateParser.test_basic" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest TestNateParser.test_loli_euler_1" />
+        <item index="2" class="java.lang.String" itemvalue="Python.nate_ui" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestCalculator.test_calculator (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestJsonParser.test_json_basic" />
       </list>
     </recent_temporary>
   </component>
@@ -569,29 +686,29 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1376" height="784" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19485295" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32513368" sideWeight="0.50303954" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32721382" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32700422" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2542194" sideWeight="0.4969605" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4647239" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1390625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39969373" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29051986" sideWeight="0.4969605" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32618684" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39969373" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -634,41 +751,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/peggy/peggy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="161" column="47" selection-start-line="161" selection-start-column="47" selection-end-line="161" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reference/parson/eg_calc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/peggy/peggy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reference/parson/eg_calc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reference/parson/parson.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/reference/parson/parson.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -865,13 +947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/peggy/display.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nate/data/big.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="5392.0225">
@@ -935,63 +1010,136 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/peggy/test_peggy.py">
+    <entry file="file://$PROJECT_DIR$/peggy_test/test_peggy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/peggy/json_parser.py">
+    <entry file="file://$PROJECT_DIR$/peggy_test/keyvalue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7747989">
+          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/peggy/display.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="64" selection-start-line="69" selection-start-column="64" selection-end-line="69" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/peggy_test/calculator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="29" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nate/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/peggy/infix_tree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/peggy/calculator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/peggy/peggy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.0335464">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nate/nate_ui.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="11" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
+          <caret line="30" column="53" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/peggy_test/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/peggy/keyvalue.py">
+    <entry file="file://$PROJECT_DIR$/nate/vm.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+          <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+          <folding>
+            <marker date="1446963474085" expanded="true" signature="0:68" placeholder="import ..." />
+            <marker date="1446963474085" expanded="true" signature="97:145" placeholder="..." />
+            <marker date="1446963474085" expanded="true" signature="132:145" placeholder="..." />
+            <marker date="1446963474085" expanded="true" signature="173:382" placeholder="..." />
+            <marker date="1446963474085" expanded="true" signature="262:302" placeholder="..." />
+            <marker date="1446963474085" expanded="true" signature="327:382" placeholder="..." />
+            <marker date="1446963474085" expanded="true" signature="409:614" placeholder="..." />
+            <marker date="1446963474085" expanded="true" signature="440:468" placeholder="..." />
+            <marker date="1446963474085" expanded="true" signature="645:847" placeholder="..." />
+            <marker date="1446963474085" expanded="true" signature="792:847" placeholder="..." />
+            <marker date="1446963474085" expanded="true" signature="878:1151" placeholder="..." />
+            <marker date="1446963474085" expanded="true" signature="902:931" placeholder="..." />
+            <marker date="1446963474085" expanded="true" signature="964:1055" placeholder="..." />
+            <marker date="1446963474085" expanded="true" signature="1084:1151" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/peggy_test/infix_tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/peggy_test/json_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="93" column="17" selection-start-line="93" selection-start-column="17" selection-end-line="93" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/peggy/peggy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nate/nate_.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+          <caret line="77" column="49" selection-start-line="77" selection-start-column="49" selection-end-line="77" selection-end-column="49" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nate/nate_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="24" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nate/data/nate.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14782609">
+          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>

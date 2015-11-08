@@ -78,12 +78,9 @@ class PackratParser(TupleUtils):
     def try_parse(self, start="parse"):
         rightmost, pos, tokens = self.parse_rule(start)
         if pos is None:
-            err_text = "{start}\n{text}\n{arrow}\n{end}\n".format(
-                start="=" * 50, end="=" * 50,
-                text=self._text, arrow=" " * rightmost + "^")
-            raise ValueError(
-                "Cannot parse. Error at position {0}\n{1}".format(rightmost,
-                                                                  err_text))
+            text = self._text[:rightmost] + "<--ERROR-->" + self._text[rightmost:]
+            err_text = "{sep}{sep}\n{text}\n{sep}{sep}\n".format(sep="=" * 50, text=text)
+            raise ValueError("Cannot parse. Error at position {0}\n{1}".format(rightmost, err_text))
         return tokens
 
     @memoize_
@@ -124,7 +121,12 @@ class PackratParser(TupleUtils):
             return position, position, func(*values)
 
         # Do a regex match on current text position
-        matched = re.match(token, self._text[position:])
+        return self.match_regex(position, token, values)
+
+    def match_regex(self, position, token, values):
+        # Do a regex match on current text position
+        subtext = self._text[position:]
+        matched = re.match(token, subtext)
 
         if matched:
             new_position = position + matched.end()

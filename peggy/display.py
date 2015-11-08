@@ -67,7 +67,7 @@ def display(items, depth=1):
         if isinstance(item, tuple):
             display(item, depth + 1)
         else:
-            print("{t}({i})".format(t="  " * depth, i=item))
+            print("{t}({i})".format(t="  " * depth, i=repr(item)))
 
 
 def display_labeled(items, depth=1):
